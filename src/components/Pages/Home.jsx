@@ -73,6 +73,32 @@ const Home = () => {
    </div>
   </section2>
 
+  <section3>
+  <h3 className="textoCentral">NUESTROS PROFESIONALES</h3>
+  <div className="tab library">
+      <div className="animation-show">
+          <img src="src/img/9.png"></img>
+          <h3 className="especialista">Doctora Carmen Brizuela</h3>
+          <p className="especialista">Especialista en Cardiología y Clínica</p>
+      </div>
+      <div className="animation-show">
+          <img src="src/img/10.png"></img>
+          <h3 className="especialista">Doctor Rodrigo Ponce</h3>
+          <p className="especialista">Especialista en Cirugías</p>
+      </div>
+      <div className="animation-show">
+          <img src="src/img/11.png"></img>
+          <h3 className="especialista">Doctora Daniela Díaz</h3>
+          <p className="especialista">Especialista en Medicina Preventiva</p>
+      </div>
+      <div className="animation-show">
+          <img src="src/img/12.png"></img>
+          <h3 className="especialista">Doctor Luis Martínez</h3>
+          <p className="especialista">Especialista en Laboratorio</p>
+      </div>
+  </div>
+</section3>
+
 </div>
   )
 }
