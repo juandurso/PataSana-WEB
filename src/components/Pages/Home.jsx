@@ -99,6 +99,10 @@ const Home = () => {
     </div>
   </section3>
 
+  <section4 class="planes">
+    <img src="src/img/curva2.png" alt=""></img>
+   </section4>
+
 </div>
   )
 }
