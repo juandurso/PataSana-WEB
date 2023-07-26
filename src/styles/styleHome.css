@@ -238,14 +238,14 @@ main {
 /* FIN PROFESIONALES */
 
 /* DIVISIÓN */
-.planes img{
+.imagDiv img{
     position: relative;
     width: 100%;
     top: 0;
     left: 0;
   }
   @media screen and (max-width: 768px){
-    .planes img{
+    .imagDiv img{
         height: auto
     }
   }

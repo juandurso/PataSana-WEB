@@ -99,7 +99,7 @@ const Home = () => {
     </div>
   </section3>
 
-  <section4 class="planes">
+  <section4 class="imagDiv">
     <img src="src/img/curva2.png" alt="png"></img>
   </section4>
 
@@ -245,6 +245,14 @@ const Home = () => {
       </div>
   </div>
 </sectionSlader>
+
+<section5 className="imagDiv">
+  <img src="src/img/alimento.png" alt="png"></img>
+ </section5>
+
+<section5 className="imagDiv">
+  <img src="src/img/curva3.png" alt="png"></img>
+ </section5>
 
 
 
