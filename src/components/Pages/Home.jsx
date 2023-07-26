@@ -4,7 +4,7 @@ import '../../styles/styleHome.css';
 const Home = () => {
   return (
 <div>
-    <main>
+  <main>
       <section className="hero">
         <div className="row container">
           <div className="column">
@@ -21,9 +21,9 @@ const Home = () => {
         </div>
         <img src="src/img/website-images/images/bg-bottom-hero.png" alt="" className="curveImg" />
       </section>
-    </main>
+  </main>
 
-    <section2>
+  <section2>
     <div className="wrapper">
       <div className="box">
          <div className="front-face">
@@ -74,8 +74,8 @@ const Home = () => {
   </section2>
 
   <section3>
-  <h3 className="textoCentral">NUESTROS PROFESIONALES</h3>
-  <div className="tab library">
+    <h3 className="textoCentral">NUESTROS PROFESIONALES</h3>
+    <div className="tab library">
       <div className="animation-show">
           <img src="src/img/9.png"></img>
           <h3 className="especialista">Doctora Carmen Brizuela</h3>
@@ -96,8 +96,8 @@ const Home = () => {
           <h3 className="especialista">Doctor Luis Martínez</h3>
           <p className="especialista">Especialista en Laboratorio</p>
       </div>
-  </div>
-</section3>
+    </div>
+  </section3>
 
 </div>
   )

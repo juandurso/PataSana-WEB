@@ -193,4 +193,49 @@ main {
   }
 /* FIN SECTION2 SERVICIOS */
 
+/* PROFESIONALES */
+.textoCentral {
+  background-color: #f1efec;
+  line-height: 50px;
+  margin-top: 50px;
+  text-align:center;
+  color: #013d37;
+}
+.especialista {
+  text-align: center;
+  color: #013d37;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.library{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  color: #fff;
+}
+.library img{
+  width: 90%;
+  height: 400px;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px){
+  .library{
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .library img{
+      height: 500px;
+  }
+}
+@media screen and (max-width: 390px){
+  .library{
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .library img{
+      height: 300px;
+  }
+}
+/* FIN PROFESIONALES */
+
+
 
