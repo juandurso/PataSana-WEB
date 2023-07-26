@@ -119,7 +119,6 @@ const Home = () => {
         <li>
           <span className="list-name">PLAN PRIMEROS PASOS - CACHORROS</span>
         </li>
-        {/* <li></li> */}
         <li>
           <span className="list-name">Servicio completo para mascotas de 0 a 5 años.</span>
         </li>
@@ -144,7 +143,6 @@ const Home = () => {
         <li>
           <span className="list-name">PLAN CRECIMIENTO - MASCOTAS MADURAS</span>
         </li>
-        {/* <li></li> */}
         <li>
           <span className="list-name">Servicio completo para mascotas de 5 a 10 años.</span>
         </li>
@@ -168,7 +166,6 @@ const Home = () => {
         <li>
           <span className="list-name">PLAN CUIDADOS - MASCOTAS ADULTAS</span>
         </li>
-        {/* <li></li> */}
         <li>
           <span className="list-name">Servicio para mascotas mayores a 10 años.</span>
         </li>
@@ -180,6 +177,74 @@ const Home = () => {
     </div>
   </div>
 </section4>
+
+<sectionSlader>
+    <div className="slider">
+      <div className="slide-track">
+          <div className="slide">
+              <img src="src/img/a.webp" alt="webp"></img>
+          </div>
+          <div className="slide">
+              <img src="src/img/b.webp" alt="webp"></img>
+          </div>
+          <div className="slide">
+              <img src="src/img/c.webp" alt="webp"></img>
+          </div>
+          <div className="slide">
+              <img src="src/img/d.webp" alt="webp"></img>
+          </div>
+          <div className="slide">
+              <img src="src/img/e.webp" alt="webp"></img>
+          </div>
+          <div className="slide">
+              <img src="src/img/f.webp" alt="webp"></img>
+          </div>
+          <div className="slide">
+              <img src="src/img/g.webp" alt="webp"></img>
+          </div>
+          <div className="slide">
+              <img src="src/img/h.webp" alt="webp"></img>
+          </div>
+          <div className="slide">
+              <img src="src/img/i.webp" alt="webp"></img>
+          </div>
+          <div className="slide">
+              <img src="src/img/j.webp" alt="webp"></img>
+          </div>
+          
+          <div className="slide">
+            <img src="src/img/a.webp" alt="webp"></img>
+        </div>
+        <div className="slide">
+            <img src="src/img/b.webp" alt="webp"></img>
+        </div>
+        <div className="slide">
+            <img src="src/img/c.webp" alt="webp"></img>
+        </div>
+        <div className="slide">
+            <img src="src/img/d.webp" alt="webp"></img>
+        </div>
+        <div className="slide">
+            <img src="src/img/e.webp" alt="webp"></img>
+        </div>
+        <div className="slide">
+            <img src="src/img/f.webp" alt="webp"></img>
+        </div>
+        <div className="slide">
+            <img src="src/img/g.webp" alt="webp"></img>
+        </div>
+        <div className="slide">
+            <img src="src/img/h.webp" alt="webp"></img>
+        </div>
+        <div className="slide">
+            <img src="src/img/i.webp" alt="webp"></img>
+        </div>
+        <div className="slide">
+            <img src="src/img/j.webp" alt="webp"></img>
+        </div>
+      </div>
+  </div>
+</sectionSlader>
 
 
 
