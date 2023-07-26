@@ -19,7 +19,7 @@ const Home = () => {
             <img src="src/img/website-images/images/hero.png" alt="heroImg" class="hero_img"/>
           </div>
         </div>
-        <img src="src/img/website-images/images/bg-bottom-hero.png" alt="" className="curveImg" />
+        <img src="src/img/website-images/images/bg-bottom-hero.png" alt="png" className="curveImg" />
       </section>
   </main>
 
@@ -43,7 +43,7 @@ const Home = () => {
       <div className="box">
          <div className="front-face">
             <div className="icon">
-               <img src="src/img/iconoEspecialidades.png" alt=""></img>
+               <img src="src/img/iconoEspecialidades.png" alt="png"></img>
             </div>
             <span>SERVICIOS: Especialidades y Laboratorio</span>
          </div>
@@ -58,7 +58,7 @@ const Home = () => {
       <div className="box">
          <div className="front-face">
             <div className="icon">
-               <img src="src/img/iconoMedIntegral.png" alt=""></img>
+               <img src="src/img/iconoMedIntegral.png" alt="png"></img>
             </div>
             <span>SERVICIO: Medicina Preventiva</span>
          </div>
@@ -100,8 +100,89 @@ const Home = () => {
   </section3>
 
   <section4 class="planes">
-    <img src="src/img/curva2.png" alt=""></img>
-   </section4>
+    <img src="src/img/curva2.png" alt="png"></img>
+  </section4>
+
+  <section4>
+   <div className="wrapper2">
+    <div className="table basic">
+      <div className="price-section">
+        <div className="price-area">
+          <div className="inner-area">
+            <span className="text"></span>
+            <span className="price">0-5</span>
+          </div>
+        </div>
+      </div>
+      <div className="package-name"></div>
+      <ul className="features">
+        <li>
+          <span className="list-name">PLAN PRIMEROS PASOS - CACHORROS</span>
+        </li>
+        <li></li>
+        <li>
+          <span className="list-name">Servicio completo para mascotas de 0 a 5 años.</span>
+        </li>
+        <li>
+          <span className="list-name">¡Entrá a ver los detalles del plan y todo lo que incluye!</span>
+        </li>
+      </ul>
+      <div className="btn2"><button>Detalles Plan</button></div>
+    </div>
+    <div className="table premium">
+      <div className="ribbon"><span>Promoción</span></div>
+      <div className="price-section">
+        <div className="price-area">
+          <div className="inner-area">
+            <span className="text"></span>
+            <span className="price">5-10</span>
+          </div>
+        </div>
+      </div>
+      <div className="package-name"></div>
+      <ul className="features">
+        <li>
+          <span className="list-name">PLAN CRECIMIENTO - MASCOTAS MADURAS</span>
+        </li>
+        <li></li>
+        <li>
+          <span className="list-name">Servicio completo para mascotas de 5 a 10 años.</span>
+        </li>
+        <li>
+          <span className="list-name">¡Entrá a ver los detalles del plan y todo lo que incluye!</span>
+        </li>
+      </ul>
+      <div className="btn2"><button>Detalles Plan</button></div>
+    </div>
+    <div className="table ultimate">
+      <div className="price-section">
+        <div className="price-area">
+          <div className="inner-area">
+            <span className="text"></span>
+            <span className="price">+ 10</span>
+          </div>
+        </div>
+      </div>
+      <div className="package-name"></div>
+      <ul className="features">
+        <li>
+          <span className="list-name">PLAN CUIDADOS - MASCOTAS ADULTAS</span>
+        </li>
+        <li></li>
+        <li>
+          <span className="list-name">Servicio completo para mascotas mayores a 10 años.</span>
+        </li>
+        <li>
+          <span className="list-name">¡Entrá a ver los detalles del plan y todo lo que incluye!</span>
+        </li>
+      </ul>
+      <div className="btn2"><button>Detalles Plan</button></div>
+    </div>
+  </div>
+</section4>
+
+
+
 
 </div>
   )
