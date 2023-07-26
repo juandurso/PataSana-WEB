@@ -2,16 +2,18 @@ import React from "react";
 import NavbarComponent from "./components/Navegation/navbar";
 import Footer from "./components/footer";
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
-import Adminpacientes from "./components/Pages/Admin-pacientes";
-import Adminturnos from "./components/Pages/Admin-turnos";
-import Signin from "./components/Pages/signin";
-import Signup from "./components/Pages/signup";
-import Home from "./components/Pages/Home";
+import Adminpacientes from "./Pages/Admin-pacientes";
+import Adminturnos from "./Pages/Admin-turnos";
+import Signin from "./Pages/signin";
+import Signup from "./Pages/signup";
+import Home from "./Pages/Home";
+import DetallesDePlanes from "./Pages/DetallesDePlanes"
+
 
 //<NavbarComponent />
 
 const App = () => {
-  return (
+	return (
     
     <div>
       <BrowserRouter>
@@ -22,12 +24,13 @@ const App = () => {
           <Route path="/Admin-turnos" element={<Adminturnos/>}/>
           <Route path="/Signin" element={<Signin/>}/>
           <Route path="/Signup" element={<Signup/>}/>
+          <Route path="/DetallesDePlanes"element={<DetallesDePlanes/>}/>
       </Routes>
       </BrowserRouter>
       <Footer/>
       
     </div>
-      );
+	);
 };
 
 
