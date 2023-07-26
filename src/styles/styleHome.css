@@ -1,3 +1,4 @@
+/* INICIO HOME */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -18,7 +19,7 @@ main {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background: url(img/website-images/images/bg-dot.png), url(img/website-images/images/bg-dot.png), url(img/website-images/images/bg-round.png), url(img/website-images/images/bg-tree.png);
+  background: url(src/img/website-images/images/bg-dot.png), url(src/img/website-images/images/bg-dot.png), url(src/img/website-images/images/bg-round.png), url(src/img/website-images/images/bg-tree.png);
   background-position: 10px 10px, bottom 215px right 10px, left 55% top -1%, left 45% bottom -1px;
   background-repeat: no-repeat;
 }
@@ -106,3 +107,4 @@ main {
     padding: 10px 16px;
   }
 }
+/* FIN HOME */

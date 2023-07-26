@@ -3,7 +3,7 @@ import '../../styles/styleHome.css';
 
 const Home = () => {
   return (
-    // paginaPrincipal
+<div>
     <main>
       <section className="hero">
         <div className="row container">
@@ -22,7 +22,58 @@ const Home = () => {
         <img src="src/img/website-images/images/bg-bottom-hero.png" alt="" className="curveImg" />
       </section>
     </main>
-    // FinPaginaPrincipal
+
+    <section2>
+    <div className="wrapper">
+      <div className="box">
+         <div className="front-face">
+            <div className="icon img">
+               <img src="src/img/iconoCirugia.png" alt="png"></img>
+            </div>
+            <span>SERVICIOS: Clínica y Cirugías</span>
+         </div>
+         <div class="back-face">
+            <span>Clinica y Cirugías</span>
+            <p>
+               ¡Entra para conocer nuestros servicios especializados en cirugía y clinica!
+            </p>
+            <button className="btn">Más información</button>
+         </div>
+      </div>
+      <div className="box">
+         <div className="front-face">
+            <div className="icon">
+               <img src="src/img/iconoEspecialidades.png" alt=""></img>
+            </div>
+            <span>SERVICIOS: Especialidades y Laboratorio</span>
+         </div>
+         <div className="back-face">
+            <span>Especialidades y Laboratorio</span>
+            <p>
+               ¡Entra y conoce los servicios de laboratorio y especialidades!
+            </p>
+            <button className="btn">Más información</button>
+         </div>
+      </div>
+      <div className="box">
+         <div className="front-face">
+            <div className="icon">
+               <img src="src/img/iconoMedIntegral.png" alt=""></img>
+            </div>
+            <span>SERVICIO: Medicina Preventiva</span>
+         </div>
+         <div className="back-face">
+            <span>Medicina Preventiva</span>
+            <p>
+               ¡Entra para conocer más sobre el chequeo médico integral para tu mascota!
+            </p>
+            <button className="btn">Más información</button>
+         </div>
+      </div>
+   </div>
+  </section2>
+
+</div>
   )
 }
 
