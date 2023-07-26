@@ -251,6 +251,230 @@ main {
   }
 /* FIN DIVISIÓN */
 
+/* PLANES DE SALUD */
+.wrapper2{
+    max-width: 1090px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .wrapper2 .table{
+    background: #01655b;
+    width: calc(33% - 20px);
+    padding: 30px 30px;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  .table .price-section{
+    display: flex;
+    justify-content: center;
+  }
+  .table .price-area{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .price-area .inner-area{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    line-height: 117px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  .price-area .inner-area .text{
+    font-size: 25px;
+    font-weight: 400;
+    position: absolute;
+    top: -10px;
+    left: 17px;
+  }
+  .price-area .inner-area .price{
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 5px;
+  }
+  .table .package-name{
+    width: 100%;
+    height: 2px;
+    margin: 35px 0;
+    position: relative;
+  }
+  .table .package-name::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 25px;
+    font-weight: 500;
+    background: #ffffff;
+    padding: 0 15px;
+    transform: translate(-50%, -50%);
+  }
+  .table .features li{
+    margin-bottom: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .features li .list-name{
+    background-color: #01655b;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .table .btn2{
+    width: 100%;
+    display: flex;
+    margin-top: 35px;
+    justify-content: center;
+  }
+  .table .btn2 button{
+    width: 80%;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .table .btn2 button:hover{
+    border-radius: 5px;
+  }
+  .basic .features li::selection{
+    background: #d5b143;
+  }
+  .basic ::selection,
+  .basic .price-area,
+  .basic .inner-area{
+    background: #eac041;
+  }
+  .basic .btn2 button{
+    border: 2px solid #edb611;
+    background: #fff;
+    color: #ffbf00;
+  }
+  .basic .btn2 button:hover{
+    background: #ffd861;
+    color: #fff;
+  }
+  .premium ::selection,
+  .premium .price-area,
+  .premium .inner-area,
+  .premium .btn2 button{
+    background: #6d37c2;
+  }
+  .premium .btn2 button:hover{
+    background: #652ebe;
+  }
+  .ultimate ::selection,
+  .ultimate .price-area,
+  .ultimate .inner-area{
+    background: #2da45f;
+  }
+  .ultimate .btn2 button{
+    border: 2px solid #0c7f3c;
+    color: #09a449;
+    background: #fff;
+  }
+  .ultimate .btn2 button:hover{
+    background: #43ef8b;
+    color: #fff;
+  }
+  .basic .package-name{
+    background: #f7ba03;
+  }
+  .premium .package-name{
+    background: #640af6;
+  }
+  .ultimate .package-name{
+    background: #05db5e;
+  }
+  .basic .package-name::before{
+    content: "Años";
+    font-size: 25px;
+    background: #eec13b;
+    color: #fff;
+  }
+  .premium .package-name::before{
+    content: "Años";
+    font-size: 24px;
+    background-color:#4606ac;
+    color: #fff;
+  }
+  .ultimate .package-name::before{
+    content: "Años";
+    font-size: 24px;
+    background-color: #00f867;
+    color: #fff;
+  }
+  @media (max-width: 1020px) {
+    .wrapper2 .table{
+      width: calc(50% - 20px);
+      margin-bottom: 40px;
+    }
+  }
+  @media (max-width: 698px) {
+    .wrapper2 .table{
+      width: 85%;
+      margin: auto;
+      margin-top: 15px;
+    }
+  }
+  ::selection{
+    color: #fff;
+  }
+  .table .ribbon{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    overflow: hidden;
+  }
+  .table .ribbon::before,
+  .table .ribbon::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+    display: block;
+    border: 7px solid #4606ac;
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+  .table .ribbon::before{
+    top: 0px;
+    right: 15px;
+  }
+  .table .ribbon::after{
+    bottom: 15px;
+    left: 0px;
+  }
+  .table .ribbon span{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    transform: rotate(-45deg);
+    width: 200px;
+    background: #a26bfa;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+  }
+
+/* FIN PLANES DE SALUD */
+
+
 
 
 

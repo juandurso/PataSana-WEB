@@ -119,7 +119,7 @@ const Home = () => {
         <li>
           <span className="list-name">PLAN PRIMEROS PASOS - CACHORROS</span>
         </li>
-        <li></li>
+        {/* <li></li> */}
         <li>
           <span className="list-name">Servicio completo para mascotas de 0 a 5 años.</span>
         </li>
@@ -127,7 +127,7 @@ const Home = () => {
           <span className="list-name">¡Entrá a ver los detalles del plan y todo lo que incluye!</span>
         </li>
       </ul>
-      <div className="btn2"><button>Detalles Plan</button></div>
+      <div className="btn2"><button>Detalles</button></div>
     </div>
     <div className="table premium">
       <div className="ribbon"><span>Promoción</span></div>
@@ -144,7 +144,7 @@ const Home = () => {
         <li>
           <span className="list-name">PLAN CRECIMIENTO - MASCOTAS MADURAS</span>
         </li>
-        <li></li>
+        {/* <li></li> */}
         <li>
           <span className="list-name">Servicio completo para mascotas de 5 a 10 años.</span>
         </li>
@@ -152,7 +152,7 @@ const Home = () => {
           <span className="list-name">¡Entrá a ver los detalles del plan y todo lo que incluye!</span>
         </li>
       </ul>
-      <div className="btn2"><button>Detalles Plan</button></div>
+      <div className="btn2"><button>Detalles</button></div>
     </div>
     <div className="table ultimate">
       <div className="price-section">
@@ -168,15 +168,15 @@ const Home = () => {
         <li>
           <span className="list-name">PLAN CUIDADOS - MASCOTAS ADULTAS</span>
         </li>
-        <li></li>
+        {/* <li></li> */}
         <li>
-          <span className="list-name">Servicio completo para mascotas mayores a 10 años.</span>
+          <span className="list-name">Servicio para mascotas mayores a 10 años.</span>
         </li>
         <li>
           <span className="list-name">¡Entrá a ver los detalles del plan y todo lo que incluye!</span>
         </li>
       </ul>
-      <div className="btn2"><button>Detalles Plan</button></div>
+      <div className="btn2"><button>Detalles</button></div>
     </div>
   </div>
 </section4>
