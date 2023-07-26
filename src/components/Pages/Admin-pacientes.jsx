@@ -6,6 +6,8 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import '../../styles/styleNavBar.css';
+
 
 const Adminpacientes = () => {
   const [validated, setValidated] = useState(false);
@@ -75,48 +77,50 @@ const Adminpacientes = () => {
   };
 
   return (
-    <div className="container text-center my-5">
-      <h1>CRUD DE PACIENTES</h1>
+    <div className="container text-center mt-1">
+      <h1>ADMINISTRACION DE PACIENTES</h1>
       <div>
-        <h2>Lista de pacientes</h2>
+        <h2 className='mt-5'>LISTA DE PACIENTES</h2>
         <input
           type="text"
-          className="form-control my-5"
+          className="form-control "
           placeholder="Nuevo Paciente"
           value={newPatient}
           onChange={handlePatientInputChange}
+          maxLength={25}
+          
         />
-        <button className="btn btn-primary mb-5" onClick={handleAddPatient}>
+        <button className="btn btn-outline-warning my-5 " onClick={handleAddPatient}>
           Agregar Paciente
         </button>
       </div>
 
       <Accordion>
         {patients.map((patient, index) => (
-          <Accordion.Item eventKey={index.toString()} key={index}>
-            <Accordion.Header onClick={() => setOpenPatientIndex(index)}>
+          <Accordion.Item eventKey={index.toString()} key={index}  >
+            <Accordion.Header onClick={() => setOpenPatientIndex(index)}  >
               {patient.mascota} {patient.lastName}
             </Accordion.Header>
-            <Accordion.Body>
+            <Accordion.Body className='warning'>
               {openPatientIndex === index && (
-                <Form noValidate validated={validated} onSubmit={(event) => handleSubmit(event, index)}>
+                <Form noValidate validated={validated} onSubmit={(event) => handleSubmit(event, index)} className='' >
                   <Row className="mb-3">
                     <Form.Group as={Col} md="3" controlId="validationCustom04">
-                      <Form.Label>Nombre Mascota</Form.Label>
-                      <Form.Control type="text" name="mascota" placeholder="Nombre" className="sm" defaultValue={patient.mascota} required />
+                      <Form.Label></Form.Label>
+                      <Form.Control type="text" name="mascota" placeholder="Nombre" className="sm" defaultValue={patient.mascota} maxLength={15} required />
                       <Form.Control.Feedback type="invalid">
                         Olvidaste poner el nombre de la mascota.
                       </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="3" controlId="validationCustom05">
-                      <Form.Label>Raza</Form.Label>
-                      <Form.Control type="text" name="raza" placeholder="Raza" defaultValue={patient.raza} required />
+                      <Form.Label></Form.Label>
+                      <Form.Control type="text" name="raza" placeholder="Raza" defaultValue={patient.raza} maxLength={15} required />
                       <Form.Control.Feedback type="invalid">
                         Olvidaste poner la raza.
                       </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="3" controlId="validationCustom06">
-                      <Form.Label>Especie</Form.Label>
+                      <Form.Label></Form.Label>
                       <Form.Control type="text" name="especie" placeholder="Especie" defaultValue={patient.especie} required />
                       <Form.Control.Feedback type="invalid">
                         Olvidaste poner la especie.
@@ -125,7 +129,7 @@ const Adminpacientes = () => {
                   </Row>
                   <Row className="mb-3">
                     <Form.Group as={Col} md="3" controlId="validationCustom01">
-                      <Form.Label>Nombre del dueño</Form.Label>
+                      <Form.Label></Form.Label>
                       <Form.Control
                         required
                         type="text"
@@ -136,7 +140,7 @@ const Adminpacientes = () => {
                       <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="3" controlId="validationCustom02">
-                      <Form.Label>Apellido</Form.Label>
+                      <Form.Label></Form.Label>
                       <Form.Control
                         required
                         type="text"
@@ -147,7 +151,7 @@ const Adminpacientes = () => {
                       <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="3" controlId="validationCustom03">
-                      <Form.Label>Celular</Form.Label>
+                      <Form.Label></Form.Label>
                       <Form.Control
                         required
                         type="text"
@@ -158,7 +162,7 @@ const Adminpacientes = () => {
                       <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="3" controlId="validationCustomUsername">
-                      <Form.Label>Mail</Form.Label>
+                      <Form.Label></Form.Label>
                       <InputGroup hasValidation>
                         <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                         <Form.Control
@@ -183,7 +187,7 @@ const Adminpacientes = () => {
                       feedbackType="invalid"
                     />
                   </Form.Group>
-                  <Button type="submit" className="my-5 mx-2">Editar datos del paciente</Button>
+                  <Button type="submit" >Editar datos del paciente</Button>
                   <Button
                     variant="danger"
                     className="my-5 mx-2"
