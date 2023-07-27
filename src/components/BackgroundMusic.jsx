@@ -6,6 +6,7 @@ const BackgroundMusic = () => {
 
     // Iniciamos la reproducción cuando el componente se monte
     audio.play();
+    
 
     // Detenemos y reiniciamos la música cuando el componente se desmonte
     return () => {
