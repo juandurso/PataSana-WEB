@@ -1,0 +1,58 @@
+.padre {
+  background-color: #efd79f;
+  background-image: url("/fondo3.jpg");
+
+}
+
+/* video {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+} */
+
+.acerca{
+  opacity: 80%;
+}
+
+.nombres{
+  /* color: aqua; */
+  color: #eca400;
+}
+
+.juan {
+  color: aqua;
+}
+
+.texto {
+  font-family: "Cabin", sans-serif;
+  color: rgb(221, 180, 93);
+}
+
+.img-fluid {
+  width: 230px;
+  height: 230px;
+  border-radius: 40%;
+  border: 5px solid #eca400;
+  /* border: 5px solid aqua ; */
+}
+
+.container {
+  background-color: #000000;
+  opacity: 90%;
+}
+
+.parrafos {
+  width: 75%;
+}
+
+.player {
+  width: 25%;
+}
+
+
