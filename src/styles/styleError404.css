@@ -1,0 +1,35 @@
+/* .padre {
+    background-color: aquamarine;
+    background-image: url("/public/error404.jpg")
+} */
+
+/* .container {
+  background-image: url("/error404.jpg"); 
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+} */
+
+/* .fondo {
+  background-image: url(/error404.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+/* .container{
+  margin: 0;
+  padding: 0;
+} */
+
+.cont-titulo {
+  background-color: #241d18  ;
+}
+
+
+.titulo{
+  color: #9C6B4B;
+  /* color: #01655B */
+}
+
