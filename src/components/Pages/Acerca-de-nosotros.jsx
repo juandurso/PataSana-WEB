@@ -24,7 +24,7 @@ function AcercaDeNosotros() {
               muted
         >
         </video>  
-        <div className='padre m-3'>
+        <div className='padre m-5'>
           {/* <audio 
                 src="/audioCorto.mp3"
                 type="audio"
