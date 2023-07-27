@@ -29,14 +29,14 @@ function AcercaDeNosotros() {
       ></video> */}
 
       {/* hijo 1 */}
-      <h1 className='text-center pt-4 text-warning display-2 fw-normal acerca'>Acerca de nosotros</h1>
+      <h1 className='text-center pt-4 text-warning display-2 fw-normal acerca mx-2'>Acerca de nosotros</h1>
 
       {/* hijo 2 */}
       {/* <!-- fila 1 --> */}
       <div className="container-fluid py-3 text-white">
         <div className="row col-12 mb-4">
 
-          <div className="col-8 col-sm-8 col-md-4 container-fluid text-center mt-5">
+          <div className="col-8 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-4">
             <img
               className="img-fluid rounded-circle"
               src="/juan.jpg"
@@ -45,7 +45,7 @@ function AcercaDeNosotros() {
             <p className="nombres h6 mt-2">Juan Durso <span className='juan'><i>(scrum-master)</i></span></p>
           </div>
 
-          <div className="col-8 col-sm-8 col-md-4 container-fluid text-center mt-5">
+          <div className="col-8 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-4">
             <img
               className="img-fluid rounded-circle"
               src="/fabian.jpg"
@@ -54,7 +54,7 @@ function AcercaDeNosotros() {
             <p className="nombres h6 mt-2">Fabián Brizuela</p>
           </div>
 
-          <div className="col-8 col-sm-8 col-md-4 container-fluid text-center mt-5">
+          <div className="col-8 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-4">
             <img
               className="img-fluid rounded-circle"
               src="/nacho.jpg"
@@ -63,7 +63,7 @@ function AcercaDeNosotros() {
             <p className="nombres h6 mt-2">Nacho Castro</p>
           </div>
 
-          <div className="col-8 col-sm-8 col-md-4 container-fluid text-center mt-5">
+          <div className="col-8 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5">
             <img
               className="img-fluid rounded-circle"
               src="/mariano.jpg"
@@ -72,7 +72,7 @@ function AcercaDeNosotros() {
             <p className="nombres h6 mt-2">Mariano Ghidara</p>
           </div>
 
-          <div className="col-8 col-sm-8 col-md-4 container-fluid text-center mt-5">
+          <div className="col-8 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5">
             <img
               className="img-fluid rounded-circle"
               src="/conty.jpg"
@@ -81,7 +81,7 @@ function AcercaDeNosotros() {
             <p className="nombres h6 mt-2">Constanza López</p>
           </div>
 
-          <div className="col-8 col-sm-8 col-md-4 container-fluid text-center mt-5">
+          <div className="col-8 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5">
             <img
               className="img-fluid rounded-circle"
               src="/santiago.jpg"
