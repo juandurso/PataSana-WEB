@@ -243,3 +243,23 @@ header {
   transform: scale(1.03);
   border-radius: 0;
 }
+/* Modal contactos */
+.ModalContacto{
+	font-family: "Poppins", sans-serif;
+	max-width: 50%;
+	max-width: 40%;
+
+  padding: 30px;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  }
+  
+.formulario-modal{
+	display: grid;
+	
+}
