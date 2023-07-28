@@ -2,39 +2,29 @@ import React from 'react'
 import "../styles/styleError404.css"
 
 
-const Error404 = () => {
+const error404Copia2 = () => {
 
   return (
-    <div 
-      className='container'
-      style={{
-        margin: '0',
-        padding: '0',
-        backgroundColor: '#014F47',
-        // backgroundImage: `url(${process.env.PUBLIC_URL}/error404.jpg)`,
-        backgroundImage: `url(/error404-b.jpg)`,
-        // backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        // height: '100%',
-        width: '100vw',
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        minHeight: '100vh',
-        minWidth: '100vw'
+    <div className='granPadre text-center'>
 
-        // alignItems: 'center',
-        // color: 'white',
-        // fontSize: '24px',
-      }}
-    > 
-      
-      <h1 className='titulo mt-2 text-center display-4 fw-normal'>Página no encontrada - Error 404</h1>
-      
+      <div className='padre'>
+
+        <div className='row col-12 mx-auto'>
+          <div className=' col-12 col-md-10 col-lg-6 mx-auto'>
+            <h1 className='hijoSuperior py-1 text-center display-6 fw-normal'>Página no encontrada - Error 404</h1>
+            
+            
+            <img className='img-fluid mx-auto' src="/error404-b.jpg" alt="imagen de pagina de error 404"/>
+
+          </div>
+        </div>
+        
+        
+        
+      </div>      
       
     </div>
   )
 }
 
-export default Error404
+export default error404Copia2
