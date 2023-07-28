@@ -1,7 +1,7 @@
 .padre {
   background-color: #efd79f;
   background-image: url("/fondo3.jpg");
-  opacity: 95%;
+  opacity: 90%;
 }
 
 
@@ -29,6 +29,7 @@ video {
 .nombres{
   /* color: aqua; */
   color: #eca400;
+  /* color: aqua; */
 }
 
 .juan {
@@ -38,6 +39,7 @@ video {
 .texto {
   font-family: "Cabin", sans-serif;
   color: rgb(221, 180, 93);
+  /* color: aqua; */
 }
 
 .img-fluid {
@@ -45,6 +47,7 @@ video {
   height: 230px;
   border-radius: 40%;
   border: 5px solid #eca400;
+  /* border: 5px solid aqua; */
   /* border: 5px solid aqua ; */
 }
 

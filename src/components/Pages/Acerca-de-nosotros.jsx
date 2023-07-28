@@ -6,8 +6,6 @@ import BackgroundMusic from '../BackgroundMusic';
 
 
 
-
-
 function AcercaDeNosotros() {
 
   // const audioFile = '/audioCorto.mp3'
@@ -16,6 +14,7 @@ function AcercaDeNosotros() {
     <div>
 
       <div>
+
         {/* <!-- video --> */}
         <video
               src="/videoFuturo.mp4"
@@ -24,6 +23,7 @@ function AcercaDeNosotros() {
               muted
         >
         </video>  
+
         <div className='padre m-5'>
           {/* <audio 
                 src="/audioCorto.mp3"
