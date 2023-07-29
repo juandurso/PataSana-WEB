@@ -2,6 +2,7 @@ import { data } from '../data/DataPlanes';
 import ReactModal from 'react-modal';
 import React, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com'; // Cambiamos el import para usar el paquete emailjs-com
+import toast, { Toaster } from 'react-hot-toast';
 
 export const ProductList = ({
   allProducts,
@@ -59,9 +60,27 @@ export const ProductList = ({
           console.log(result.text);
           // Después de enviar el formulario, cerramos la ventana modal
           handleCloseModal();
+		  //toast
+		  toast.success('Formulario enviado correctamente!', {
+			style: {
+			  background: '#013D37',
+			  color: '#fff',
+			  padding: '12px',
+			  fontFamily: 'Poppins, sans-serif',
+			},
+		  });
         },
         (error) => {
           console.log(error.text);
+		  //toast error 
+		  toast.error('Error al enviar el formulario.', {
+			style: {
+			  background: '#f44336',
+			  color: '#fff',
+			  padding: '12px',
+			  fontFamily: 'Poppins, sans-serif',
+			},
+		  });
         }
       );
   };
@@ -86,6 +105,9 @@ export const ProductList = ({
           </div>
         </div>
       ))}
+	   <Toaster
+  position="bottom-right"
+  reverseOrder={false} />
       <ReactModal
         className='ModalContacto'
         ariaHideApp={false}
