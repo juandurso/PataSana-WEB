@@ -94,11 +94,12 @@ export const ProductList = ({
         onRequestClose={handleCloseModal}
       >
         {/* Contenido de la ventana modal */}
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='contacto-from'>
 		<h2>Contacto</h2>
           <div className='formulario-modal'>
             <label htmlFor='name'>Nombre:</label>
             <input
+			className='label-style'
               type='text'
               id='name'
               name='name'
@@ -110,6 +111,7 @@ export const ProductList = ({
           <div className='formulario-modal'>
             <label htmlFor='email'>Email:</label>
             <input
+			className='label-style'
               type='email'
               id='email'
               name='email'
@@ -118,9 +120,10 @@ export const ProductList = ({
 			  required
             />
           </div>
-          <div className='formulario-modal'>
+          <div className='formulario-modal form-group-textarea'>
             <label htmlFor='message'>Mensaje:</label>
             <textarea
+			className='label-style'
               id='message'
               name='message'
               value={formData.message}
@@ -128,8 +131,10 @@ export const ProductList = ({
 			  required
             />
           </div>
-          <button type='submit'>Enviar</button>
-		  <button onClick={handleCloseModal}>Cerrar</button>
+		  <div className='formulario-modal'>
+          <button type='submit'className='label-style button1'>Enviar</button>
+		  <button onClick={handleCloseModal}className='label-style button2'>Cerrar</button>
+		  </div>
         </form>
       </ReactModal>
     </div>
