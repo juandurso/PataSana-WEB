@@ -1,13 +1,11 @@
 import React from 'react';
-import '../../styles/styleAboutUs.css';
-import BackgroundMusic from '../BackgroundMusic';
-
+import '../styles/styleAboutUs.css';
+import BackgroundMusic from '../components/BackgroundMusic.jsx';
 
 
 
 
 function AcercaDeNosotros() {
-
 
 
   return (
@@ -90,11 +88,8 @@ function AcercaDeNosotros() {
                 <p className="nombres h6 mt-2">Santiago Mamaní</p>
               </div>
 
-
-
-
-
             </div>
+            
           </div>
 
           {/* hijo 3 */}

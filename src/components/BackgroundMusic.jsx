@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+
+
 const BackgroundMusic = () => {
 
   useEffect(() => {
@@ -18,5 +20,7 @@ const BackgroundMusic = () => {
 
   return null; // No renderizamos nada, ya que este componente solo maneja la reproducción de música.
 };
+
+
 
 export default BackgroundMusic;
