@@ -5,11 +5,6 @@
 }
 
 
-/* video {
-  width: 100%;
-  height: 100%
-} */
-
 video {
   position: fixed;
   min-width: 100%;
@@ -27,9 +22,7 @@ video {
 }
 
 .nombres{
-  /* color: aqua; */
   color: #eca400;
-  /* color: aqua; */
 }
 
 .juan {
@@ -39,7 +32,6 @@ video {
 .texto {
   font-family: "Cabin", sans-serif;
   color: rgb(221, 180, 93);
-  /* color: aqua; */
 }
 
 .img-fluid {
@@ -47,8 +39,6 @@ video {
   height: 230px;
   border-radius: 40%;
   border: 5px solid #eca400;
-  /* border: 5px solid aqua; */
-  /* border: 5px solid aqua ; */
 }
 
 .container-texto {
@@ -60,8 +50,6 @@ video {
   width: 75%;
 }
 
-.player {
-  width: 25%;
-}
+
 
 

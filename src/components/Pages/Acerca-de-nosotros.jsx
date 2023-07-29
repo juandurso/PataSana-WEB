@@ -1,14 +1,14 @@
 import React from 'react';
 import '../../styles/styleAboutUs.css';
 import BackgroundMusic from '../BackgroundMusic';
-// import Player1 from '../Player1';
+
 
 
 
 
 function AcercaDeNosotros() {
 
-  // const audioFile = '/audioCorto.mp3'
+
 
   return (
     <div>
@@ -17,19 +17,15 @@ function AcercaDeNosotros() {
 
         {/* <!-- video --> */}
         <video
-              src="/videoFuturo.mp4"
-              autoPlay
-              loop
-              muted
+          src="/videoFuturo.mp4"
+          autoPlay
+          loop
+          muted
         >
-        </video>  
+        </video>
 
         <div className='padre m-5'>
-          {/* <audio 
-                src="/audioCorto.mp3"
-                type="audio"
-                loop        
-              ></audio> */}
+
 
 
           {/* hijo 1 */}
@@ -53,7 +49,7 @@ function AcercaDeNosotros() {
                 <img
                   className="img-fluid rounded-circle"
                   src="/fabian.jpg"
-                  alt="Juan"
+                  alt="foto de Fabian Brizuela"
                 />
                 <p className="nombres h6 mt-2">Fabián Brizuela</p>
               </div>
@@ -62,7 +58,7 @@ function AcercaDeNosotros() {
                 <img
                   className="img-fluid rounded-circle"
                   src="/nacho.jpg"
-                  alt="Gisela"
+                  alt="foto de Nacho Castro"
                 />
                 <p className="nombres h6 mt-2">Nacho Castro</p>
               </div>
@@ -71,7 +67,7 @@ function AcercaDeNosotros() {
                 <img
                   className="img-fluid rounded-circle"
                   src="/mariano.jpg"
-                  alt="Juan"
+                  alt="foto de Mariano Ghidara"
                 />
                 <p className="nombres h6 mt-2">Mariano Ghidara</p>
               </div>
@@ -80,7 +76,7 @@ function AcercaDeNosotros() {
                 <img
                   className="img-fluid rounded-circle"
                   src="/conty.jpg"
-                  alt="Constanza"
+                  alt="foto de Constanza López"                  
                 />
                 <p className="nombres h6 mt-2">Constanza López</p>
               </div>
@@ -89,7 +85,7 @@ function AcercaDeNosotros() {
                 <img
                   className="img-fluid rounded-circle"
                   src="/santiago.jpg"
-                  alt="Flor"
+                  alt="foto de Santiago Mamaní"
                 />
                 <p className="nombres h6 mt-2">Santiago Mamaní</p>
               </div>
@@ -191,18 +187,14 @@ function AcercaDeNosotros() {
             </div>
           </div>
 
-          {/* <div className='player mx-auto'>
-                <Player1 />
-              </div>               */}
-
-          <BackgroundMusic />
 
         </div>
 
-        
+
       </div>
+      
 
-
+      <BackgroundMusic />
 
     </div>
 

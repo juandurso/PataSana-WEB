@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 
 const BackgroundMusic = () => {
+
   useEffect(() => {
-    const audio = new Audio('/audioCorto.mp3'); // Ajusta la ruta al archivo de audio.
+    const audio = new Audio('/audio.mp3'); // Ajusta la ruta al archivo de audio.
 
     // Iniciamos la reproducción cuando el componente se monte
     audio.play();
