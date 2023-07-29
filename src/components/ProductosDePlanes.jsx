@@ -99,6 +99,7 @@ export const ProductList = ({
           <div className='formulario-modal'>
             <label htmlFor='name'>Nombre:</label>
             <input
+			maxlength="20"
 			className='label-style'
               type='text'
               id='name'
@@ -111,6 +112,7 @@ export const ProductList = ({
           <div className='formulario-modal'>
             <label htmlFor='email'>Email:</label>
             <input
+			maxlength="35"
 			className='label-style'
               type='email'
               id='email'
@@ -123,6 +125,7 @@ export const ProductList = ({
           <div className='formulario-modal form-group-textarea'>
             <label htmlFor='message'>Mensaje:</label>
             <textarea
+			maxlength="60"
 			className='label-style'
               id='message'
               name='message'
