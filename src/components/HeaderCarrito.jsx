@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 export const Header = ({
 	allProducts,
@@ -25,7 +26,30 @@ export const Header = ({
 		setTotal(0);
 		setCountProducts(0);
 	};
-
+	const handleBuyNow = () => {
+		if (allProducts.length === 0) {
+		  // Si el carrito está vacío, mostramos un toast de advertencia
+		  toast.error('El carrito está vacío. Agrega productos antes de comprar.', {
+			style: {
+			  fontFamily: 'Poppins, sans-serif', // Aplica la fuente Poppins al toast
+			},
+		  });
+		} else {
+		  // Si el carrito tiene productos, mostramos un toast de éxito
+		  toast.error('Por el momento no esta habilitada la compra de de planes, te sujerimos que nos envies una comentario mediante el formulario para saber de tu situacion especifica ', {
+			style: {
+				background:'#f44336',
+				color:'#fff',
+			  fontFamily: 'Poppins, sans-serif', // Aplica la fuente Poppins al toast
+			},
+			duration: 5000,
+		  });
+	
+		  // También puedes realizar aquí alguna acción adicional para procesar la compra
+		  // Por ejemplo, vaciar el carrito y redirigir al usuario a una página de confirmación
+		  onCleanCart();
+		}
+	}
 	return (
 		<header>
              <h1>Planes</h1>
@@ -100,6 +124,9 @@ export const Header = ({
 
 							<button className='btn-clear-all' onClick={onCleanCart}>
 								Vaciar Carrito
+							</button>
+							<button className='btn-clear-all-2'onClick={handleBuyNow}>
+								Comprar Ahora
 							</button>
 						</>
 					) : (
