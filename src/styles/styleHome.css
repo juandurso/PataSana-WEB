@@ -354,6 +354,8 @@ main {
   .premium .inner-area,
   .premium .btn2 button{
     background: #6d37c2;
+    color: #fff;
+
   }
   .premium .btn2 button:hover{
     background: #652ebe;
