@@ -96,13 +96,15 @@ main {
 /* API CLIMA */
 #contenedor {
   position: relative;
-  width: 50%;
-  left:600px;
-  top:-50px;
+  width: 40%;
+  left:700px;
+  top:-120px;
   text-align: center;
+  text-transform: capitalize;
+  color:#01655b;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5px;
+  /* grid-gap:0; */
 }
 
 @media (max-width: 530px) {

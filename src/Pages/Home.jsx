@@ -107,16 +107,16 @@ const Home = () => {
 
   <div id="contenedor">
         <div id="caja1">
-            <h1 id="temperatura-valor"></h1>
-            <h2 id="temperatura-descripcion"></h2>
+            <h1 id="temperatura-valor" className='fs-2'></h1>
+            <h2 id="temperatura-descripcion" className='fs-4'></h2>
         </div>
         <div id="caja2">
-            <h2 id="ubicacion"></h2>
+            <h2 id="ubicacion" className='fs-4'></h2>
             <img id="icono-animado" src="" alt="" height="150" width="150"></img>
         </div>
         <div id="caja3">
-            <h3>Velocidad del Viento</h3>
-            <h1 id="viento-velocidad"></h1>
+            <h3 className='fs-4'>Velocidad del Viento</h3>
+            <h1 id="viento-velocidad" className='fs-2'></h1>
         </div>
   </div>
 
