@@ -256,32 +256,32 @@ const Home = () => {
   <img src="src/img/curva3.png" alt="png"></img>
  </section6>
 
- <section7>
+<section7>
   <div className="containerCarrito">
-    <header className="fondo">
-        <h3>PRODUCTOS DESTACADOS</h3>
-        <div className="iconCart">
-            <img src="icon.png"></img>
+      <header className="fondo">
+          <h3>PRODUCTOS DESTACADOS</h3>
+          <div className="iconCart">
+            <img src="src/img/icono-carrito.png"></img>
             <div className="totalQuantity">0</div>
-        </div>
-    </header>
+          </div>
+      </header>
 
-    <div className="listProduct">
+      <div className="listProduct">
         <div className="item">
-            <img src="img/1.webp.png" alt=""></img>
+            <img src="src/img/1.webp.png" alt=""></img>
             <h2>CoPilot / Black / Automatic</h2>
             <div className="price">$550</div>
             <button>Añadir</button>
         </div>
+      </div>
     </div>
-</div>
-<div className="cart">
+  <div className="cart">
     <h2>
         CARRITO
     </h2>
     <div className="listCart">
         <div className="item">
-            <img src="img/1.webp.png"></img>
+            <img src="src/img/1.webp.png"></img>
             <div className="content">
                 <div className="name">CoPilot / Black / Automatic</div>
                 <div className="price">$550 / 1 product</div>
@@ -301,7 +301,7 @@ const Home = () => {
             <a href="checkout.html">COMPRAR</a>
         </div>
     </div>
-</div>
+  </div>
 </section7>
 
 
