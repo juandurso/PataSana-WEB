@@ -15,7 +15,7 @@ function AcercaDeNosotros() {
 
         {/* <!-- video --> */}
         <video
-          src="/videoFuturo.mp4"
+          src='/videoFuturo.mp4'
           autoPlay
           loop
           muted
