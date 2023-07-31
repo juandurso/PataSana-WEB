@@ -93,6 +93,40 @@ main {
 }
 /* FIN HOME */
 
+/* API CLIMA */
+#contenedor {
+  position: relative;
+  width: 50%;
+  left:600px;
+  top:-50px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+
+@media (max-width: 530px) {
+  #contenedor, #caja1, #caja2, #caja3{
+    margin: auto;
+    top: 5px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    left: 100px;
+  }
+}
+@media (max-width: 1237px) {
+  #contenedor, #caja1, #caja2, #caja3{
+    margin: auto;
+    width: -80px;
+    /* display: inline-block; */
+    text-align: center;
+    vertical-align: middle;
+    left: 100px;
+  }
+}
+/* FIN API CLIMA */
+
 /* SECTION2 SERVICIOS */
 .wrapper{
     display: grid;

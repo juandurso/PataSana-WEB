@@ -42,36 +42,35 @@ window.addEventListener('load', () => {
           console.log(data.weather[0].main);
           switch (data.weather[0].main) {
             case 'Thunderstorm':
-              iconoAnimado.src = 'animated/thunder.svg';
+              iconoAnimado.src = 'src/animated/thunder.svg';
               console.log('TORMENTA');
               break;
             case 'Drizzle':
-              iconoAnimado.src = 'animated/rainy-2.svg';
+              iconoAnimado.src = 'src/animated/rainy-2.svg';
               console.log('LLOVIZNA');
               break;
             case 'Rain':
-              iconoAnimado.src = 'animated/rainy-7.svg';
+              iconoAnimado.src = 'src/animated/rainy-7.svg';
               console.log('LLUVIA');
               break;
             case 'Snow':
-              iconoAnimado.src = 'animated/snowy-6.svg';
+              iconoAnimado.src = 'src/animated/snowy-6.svg';
               console.log('NIEVE');
               break;
             case 'Clear':
-              iconoAnimado.src = 'animated/night.svg';
-              iconoAnimado.src = 'animated/day.svg';
+              iconoAnimado.src = 'src/animated/day.svg';
               console.log('LIMPIO');
               break;
             case 'Atmosphere':
-              iconoAnimado.src = 'animated/weather.svg';
+              iconoAnimado.src = 'src/animated/weather.svg';
               console.log('ATMOSFERA');
               break;
             case 'Clouds':
-              iconoAnimado.src = 'animated/cloudy-day-1.svg';
+              iconoAnimado.src = 'src/animated/cloudy-day-1.svg';
               console.log('NUBES');
               break;
             default:
-              iconoAnimado.src = 'animated/cloudy-day-1.svg';
+              iconoAnimado.src = 'src/animated/cloudy-day-1.svg';
               console.log('por defecto');
           }
         })
@@ -81,8 +80,6 @@ window.addEventListener('load', () => {
     });
   }
 });
-
-
 
 const Home = () => {
   return (
@@ -108,7 +105,7 @@ const Home = () => {
       </section>
   </main>
 
-<div id="contenedor">
+  <div id="contenedor">
         <div id="caja1">
             <h1 id="temperatura-valor"></h1>
             <h2 id="temperatura-descripcion"></h2>
@@ -121,7 +118,7 @@ const Home = () => {
             <h3>Velocidad del Viento</h3>
             <h1 id="viento-velocidad"></h1>
         </div>
-</div>
+  </div>
 
   <section2>
     <div className="wrapper">
@@ -276,9 +273,9 @@ const Home = () => {
       <div className="btn2"><button>Detalles</button></div>
     </div>
   </div>
-</section4>
+  </section4>
 
-<sectionSlader>
+  <sectionSlader>
     <div className="slider">
       <div className="slide-track">
           <div className="slide">
@@ -344,17 +341,17 @@ const Home = () => {
         </div>
       </div>
   </div>
-</sectionSlader>
+  </sectionSlader>
 
-<section5 className="imagDiv">
-  <img src="src/img/alimento.png" alt="png"></img>
- </section5>
+  <section5 className="imagDiv">
+      <img src="src/img/alimento.png" alt="png"></img>
+  </section5>
 
-<section6 className="imagDiv">
-  <img src="src/img/curva3.png" alt="png"></img>
- </section6>
+  <section6 className="imagDiv">
+       <img src="src/img/curva3.png" alt="png"></img>
+  </section6>
 
-<section7>
+  <section7>
   <div className="containerCarrito">
       <header className="fondo">
           <h3>PRODUCTOS DESTACADOS</h3>
@@ -400,7 +397,7 @@ const Home = () => {
         </div>
     </div>
   </div>
-</section7>
+  </section7>
 
 
 
