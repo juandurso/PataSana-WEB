@@ -7,12 +7,12 @@ import '../../src/img/logonavbar.png'
 const Footer = () => {
   return (
     <footer className="nav-bg text-light mt-5 justify-content-center ">
-      <Container>
+      <Container fluid>
         <Row className='text-center'>
-        <Col xs={12} md={2} className='text-center md-0 '>
+        <Col xs={12} md={3} className='border-end'>
         <Image src="../../src/img/logonavbar.png" alt="logo" width={165} height={115} className='my-1 me-0' />
           </Col>
-          <Col xs={12} md={3} >
+          <Col xs={12} md={3} className='border-end'>
             <h5 className='my-1'>
               Nuestras Redes
             </h5>
@@ -33,7 +33,7 @@ const Footer = () => {
                 </a>
             
           </Col>
-          <Col xs={12} md={3} >
+          <Col xs={12} md={3} className='border-end'>
             <h5 className='my-2'>Ubicación</h5>
             <p>Manantial</p>
           </Col>

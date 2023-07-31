@@ -84,8 +84,8 @@ function AdminTurnos() {
   };
 
   return (
-    <Container fluid="sm" className="my-5">
-      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+    <Container fluid="sm" className="my-5 font-navbar">
+      <Form noValidate validated={validated} onSubmit={handleSubmit} >
         <Row className="mb-3">
           <Form.Group as={Col} md="6" controlId="validationCustom01">
             <Form.Label></Form.Label>
@@ -186,7 +186,7 @@ function AdminTurnos() {
         </Form.Group>
 
         <Form.Group className="mb-3 d-flex justify-content-center">
-          <Button type="submit">
+          <Button type="submit" className='btn-warning'>
             {editIndex !== -1 ? 'Agregar Turno' : 'Agregar Turno'}
           </Button>
         </Form.Group>
@@ -214,10 +214,10 @@ function AdminTurnos() {
               <td>{turno.date}</td>
               <td>{turno.time}</td>
               <td>
-                <Button variant="info" className='mx-2' onClick={() => handleEdit(index)}>
+                <Button variant="warning" className='mx-2' onClick={() => handleEdit(index)}>
                   Editar
                 </Button>
-                <Button variant="danger" onClick={() => handleDelete(index)}>
+                <Button variant="warning" onClick={() => handleDelete(index)}>
                   Borrar
                 </Button>
               </td>
@@ -335,10 +335,10 @@ function AdminTurnos() {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
+          <Button variant="warning" onClick={() => setShowModal(false)}>
             Cerrar
           </Button>
-          <Button type="submit" onClick={handleSubmit}>
+          <Button type="submit"  variant='warning' onClick={handleSubmit}>
             Guardar
           </Button>
         </Modal.Footer>

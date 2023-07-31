@@ -15,9 +15,9 @@ import Image from 'react-bootstrap/Image';
 
 function NavbarComponent() {
   return (
-    <Navbar expand="lg" className="nav-bg w-100"  data-bs-theme="dark">
+    <Navbar expand="lg" className="nav-bg w-100 font-navbar"  data-bs-theme="dark">
       <Container fluid className="w-100">
-        <Navbar.Brand as={Link} to="/Home"><Image src="../../../src/img/logonavbar.png" alt="logo"  width={100} height={70}   /></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/Home" className='mx-3'><Image src="../../../src/img/logonavbar.png" alt="logo"  width={100} height={70}   /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="nav-bg"/>
         <Navbar.Collapse id="basic-navbar-nav" className="nav-bg">
           <Nav className="nav-bg me-auto" >
