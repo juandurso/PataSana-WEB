@@ -81,6 +81,149 @@ window.addEventListener('load', () => {
   }
 });
 
+
+
+let iconCart = document.querySelector('.iconCart');
+let cart = document.querySelector('.cart');
+let container = document.querySelector('.container');
+let close = document.querySelector('.close');
+
+iconCart.addEventListener('click', function(){
+    if(cart.style.right == '-100%'){
+        cart.style.right = '0';
+        container.style.transform = 'translateX(-400px)';
+    }else{
+        cart.style.right = '-100%';
+        container.style.transform = 'translateX(0)';
+    }
+})
+close.addEventListener('click', function (){
+    cart.style.right = '-100%';
+    container.style.transform = 'translateX(0)';
+})
+
+
+let products = null;
+// obtengo datos de json
+fetch('product.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        addDataToHTML();
+})
+
+//muestra el producto de datos en la lista 
+function addDataToHTML(){
+    // elimina los datos predeterminados de HTML
+    let listProductHTML = document.querySelector('.listProduct');
+    listProductHTML.innerHTML = '';
+
+    // agregar nuevas datos
+    if(products != null) // si tiene datos
+
+    {
+        products.forEach(product => {
+            let newProduct = document.createElement('div');
+            newProduct.classList.add('item');
+            newProduct.innerHTML = 
+            `<img src="src/${product.image}" alt="">
+            <h2>${product.name}</h2>
+            <div class="price">$${product.price}</div>
+            <button onclick="addCart(${product.id})">COMPRAR</button>`;
+
+            listProductHTML.appendChild(newProduct);
+
+        });
+    }
+}
+//usa una cookie para que el carrito no se pierda al actualizar la página
+
+
+let listCart = [];
+function checkCart(){
+    var cookieValue = document.cookie
+    .split('; ')
+    .find(row => row.startsWith('listCart='));
+    if(cookieValue){
+        listCart = JSON.parse(cookieValue.split('=')[1]);
+    }else{
+        listCart = [];
+    }
+}
+checkCart();
+function addCart($idProduct){
+    let productsCopy = JSON.parse(JSON.stringify(products));
+    // si este producto no esta en el carrito
+    if(!listCart[$idProduct]) 
+    {
+        listCart[$idProduct] = productsCopy.filter(product => product.id == $idProduct)[0];
+        listCart[$idProduct].quantity = 1;
+    }else{
+        //si este producto ya esta en el carrito
+        //aumeto cantidad
+        listCart[$idProduct].quantity++;
+    }
+    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+
+    addCartToHTML();
+}
+addCartToHTML();
+function addCartToHTML(){
+    // borrar datos por defecto
+    let listCartHTML = document.querySelector('.listCart');
+    listCartHTML.innerHTML = '';
+
+    let totalHTML = document.querySelector('.totalQuantity');
+    let totalQuantity = 0;
+    // si tiene producto en el carrito
+    if(listCart){
+        listCart.forEach(product => {
+            if(product){
+                let newCart = document.createElement('div');
+                newCart.classList.add('item');
+                newCart.innerHTML = 
+                    `<img src="${product.image}">
+                    <div class="content">
+                        <div class="name">${product.name}</div>
+                        <div class="price">$${product.price} / 1 product</div>
+                    </div>
+                    <div class="quantity">
+                        <button onclick="changeQuantity(${product.id}, '-')">-</button>
+                        <span class="value">${product.quantity}</span>
+                        <button onclick="changeQuantity(${product.id}, '+')">+</button>
+                    </div>`;
+                listCartHTML.appendChild(newCart);
+                totalQuantity = totalQuantity + product.quantity;
+            }
+        })
+    }
+    totalHTML.innerText = totalQuantity;
+}
+function changeQuantity($idProduct, $type){
+    switch ($type) {
+        case '+':
+            listCart[$idProduct].quantity++;
+            break;
+        case '-':
+            listCart[$idProduct].quantity--;
+
+            // si la cantidad <= 0 entonces elimina el producto del carrito
+            if(listCart[$idProduct].quantity <= 0){
+                delete listCart[$idProduct];
+            }
+            break;
+    
+        default:
+            break;
+    }
+    // guardar nuevos datos en la cookie
+    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+    //  recargar el carrito de vista html
+    addCartToHTML();
+}
+
+
+
 const Home = () => {
   return (
 <div>
@@ -175,22 +318,22 @@ const Home = () => {
     <div className="tab library">
       <div className="animation-show">
           <img src="src/img/9.png"></img>
-          <h3 className="especialista">Doctora Carmen Brizuela</h3>
+          <h3 className="especialista fs-5">Doctora Carmen Brizuela</h3>
           <p className="especialista">Especialista en Cardiología y Clínica</p>
       </div>
       <div className="animation-show">
           <img src="src/img/10.png"></img>
-          <h3 className="especialista">Doctor Rodrigo Ponce</h3>
+          <h3 className="especialista fs-5">Doctor Rodrigo Ponce</h3>
           <p className="especialista">Especialista en Cirugías</p>
       </div>
       <div className="animation-show">
           <img src="src/img/11.png"></img>
-          <h3 className="especialista">Doctora Daniela Díaz</h3>
+          <h3 className="especialista fs-5">Doctora Daniela Díaz</h3>
           <p className="especialista">Especialista en Medicina Preventiva</p>
       </div>
       <div className="animation-show">
           <img src="src/img/12.png"></img>
-          <h3 className="especialista">Doctor Luis Martínez</h3>
+          <h3 className="especialista fs-5">Doctor Leandro Martínez</h3>
           <p className="especialista">Especialista en Laboratorio</p>
       </div>
     </div>

@@ -98,13 +98,18 @@ main {
   position: relative;
   width: 40%;
   left:700px;
-  top:-120px;
+  top:-80px;
   text-align: center;
   text-transform: capitalize;
   color:#01655b;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   /* grid-gap:0; */
+}
+#icono-animado {
+  position: relative;
+  width: auto;
+  top:-45px
 }
 
 @media (max-width: 530px) {
@@ -145,6 +150,7 @@ main {
     width: 350px;
     margin: 0 auto;
     position: relative;
+    top: -60px;
     perspective: 1000px;
   }
   .wrapper .box .front-face{
@@ -224,6 +230,7 @@ main {
 .especialista {
   text-align: center;
   color: #013d37;
+  text-transform: capitalize;
   margin-left: 15px;
   margin-top: 5px;
 }
