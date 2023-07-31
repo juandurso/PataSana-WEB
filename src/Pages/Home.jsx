@@ -17,7 +17,7 @@ const Home = () => {
             </div>
           </div>
           <div className="col-lg-6 my-5">
-            <img src="src/img/website-images/images/hero.png" alt="heroImg" class="hero_img"/>
+            <img src="src/img/website-images/images/hero.png" alt="heroImg" className="hero_img"/>
           </div>
           </div>
         </div>
@@ -34,7 +34,7 @@ const Home = () => {
             </div>
             <span>SERVICIOS: Clínica y Cirugías</span>
          </div>
-         <div class="back-face">
+         <div className="back-face">
             <span>Clinica y Cirugías</span>
             <p>
                ¡Entra para conocer nuestros servicios especializados en cirugía y clinica!
@@ -101,7 +101,7 @@ const Home = () => {
     </div>
   </section3>
 
-  <section4 class="imagDiv">
+  <section4 className="imagDiv">
     <img src="src/img/curva2.png" alt="png"></img>
   </section4>
 
@@ -252,9 +252,59 @@ const Home = () => {
   <img src="src/img/alimento.png" alt="png"></img>
  </section5>
 
-<section5 className="imagDiv">
+<section6 className="imagDiv">
   <img src="src/img/curva3.png" alt="png"></img>
- </section5>
+ </section6>
+
+ <section7>
+  <div className="containerCarrito">
+    <header className="fondo">
+        <h3>PRODUCTOS DESTACADOS</h3>
+        <div className="iconCart">
+            <img src="icon.png"></img>
+            <div className="totalQuantity">0</div>
+        </div>
+    </header>
+
+    <div className="listProduct">
+        <div className="item">
+            <img src="img/1.webp.png" alt=""></img>
+            <h2>CoPilot / Black / Automatic</h2>
+            <div className="price">$550</div>
+            <button>Añadir</button>
+        </div>
+    </div>
+</div>
+<div className="cart">
+    <h2>
+        CARRITO
+    </h2>
+    <div className="listCart">
+        <div className="item">
+            <img src="img/1.webp.png"></img>
+            <div className="content">
+                <div className="name">CoPilot / Black / Automatic</div>
+                <div className="price">$550 / 1 product</div>
+            </div>
+            <div className="quantity">
+                <button>-</button>
+                <span className="value">3</span>
+                <button>+</button>
+            </div>
+        </div>
+    </div>
+    <div className="buttons">
+        <div className="close">
+            CERRAR
+        </div>
+        <div className="checkout">
+            <a href="checkout.html">COMPRAR</a>
+        </div>
+    </div>
+</div>
+</section7>
+
+
 
 
 
