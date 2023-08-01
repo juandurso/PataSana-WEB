@@ -5,35 +5,11 @@
 	
 }
 
-.App{
-	background:#1f9cff;
-	height:100vh;
-	color:white;
-	
-	
-	  /* la imagen a ser mostrada a pantalla completa */
-    background:url('https://cdn.pixabay.com/photo/2021/07/17/18/59/waterfall-6473754_960_720.jpg') no-repeat center center;
- /* https://cdn.pixabay.com/photo/2019/03/21/20/27/south-tyrol-4071865_960_720.jpg */
-    /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
-    min-height:100%;
- 
-    /* Propiedad a utilizar para la imagen */
-    background-size:cover;
-
-	display:flex;
-	justify-content: center;
-	align-items: center;
-
-}
-
-
-
 .Login{
 	background:#131111b8;
 	width:400px;
 	padding:10px;
 	border-radius:20px;
-
 }
 
 .form-login{
