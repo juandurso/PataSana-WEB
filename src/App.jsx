@@ -7,6 +7,7 @@ import Adminturnos from "./Pages/Admin-turnos";
 import Signin from "./Pages/Login/Login";
 import Signup from "./Pages/signup";
 import Home from "./Pages/Home";
+import Login from "./Pages/Login/Login";
 
 //<NavbarComponent />
 
