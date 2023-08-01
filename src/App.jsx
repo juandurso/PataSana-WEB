@@ -5,7 +5,7 @@ import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import Adminpacientes from "./Pages/Admin-pacientes";
 import Adminturnos from "./Pages/Admin-turnos";
 import Signin from "./Pages/Login/Login";
-import Signup from "./Pages/signup";
+import Signup from "./Pages/Login/register";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login/Login";
 
