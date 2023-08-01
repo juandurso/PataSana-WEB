@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/styleAboutUs.css';
-import BackgroundMusic from '../components/BackgroundMusic.jsx';
-
+import v from "../assets/videoBgAboutUs.mp4"
 
 
 
@@ -15,16 +14,15 @@ function AcercaDeNosotros() {
 
         {/* <!-- video --> */}
         <video
-          src='/videoFuturo.mp4'
+          src={v}
           autoPlay
           loop
           muted
         >
         </video>
 
+
         <div className='padre m-5'>
-
-
 
           {/* hijo 1 */}
           <h1 className='text-center pt-4 text-warning display-2 fw-normal acerca mx-2'>Acerca de nosotros</h1>
@@ -182,14 +180,13 @@ function AcercaDeNosotros() {
             </div>
           </div>
 
-
         </div>
 
 
       </div>
       
 
-      <BackgroundMusic />
+
 
     </div>
 

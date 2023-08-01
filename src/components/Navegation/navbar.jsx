@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 function NavbarComponent() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary w-100" bg="dark" data-bs-theme="dark">
+    <Navbar expand="lg" className="bg-body-tertiary w-100" bg="dark" data-bs-theme="dark" style= {{zIndex: 1000}}>
       <Container fluid className="w-100">
         <Navbar.Brand as={Link} to="/Home">PataSana</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
