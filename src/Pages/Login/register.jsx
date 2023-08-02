@@ -98,7 +98,7 @@ export default function Login() {
                         <label htmlFor="psw"><b>Contraseña</b></label>
                         <input type="password" placeholder="Ingrese Contraseña" name="psw" onChange={e => setPassword(e.target.value)} required />
                         <label htmlFor="psw"><b>Repetir Contraseña</b></label>
-								<input type="password" placeholder="Ingrese Contraseña" name="psw" onChange={e => setPassword(e.target.value)} required />
+								<input type="password" placeholder="Repetir Contraseña" name="psw" onChange={e => setPassword(e.target.value)} required />
 
                         <button type="submit">Registrarse</button>
                     </div>

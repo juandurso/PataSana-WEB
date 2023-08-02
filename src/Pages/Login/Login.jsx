@@ -89,7 +89,7 @@ export default function Login(){
  if(!token){
 		return(		
 				<div className="Login">
-					<h1 className="titel-login">Bienvenido</h1>
+					<h1 className="titel-login">Bienvenido </h1>
 						<form className="form-login" onSubmit={handleSubmit}> 		
 							 <div className="container">
 								<label htmlFor="uname"><b>Nombre de Usuario</b></label>
