@@ -82,7 +82,7 @@ window.addEventListener('load', () => {
 });
 
 
-
+//CARRITO
 let iconCart = document.querySelector('.iconCart');
 let cart = document.querySelector('.cart');
 let container = document.querySelector('.container');
@@ -221,6 +221,8 @@ function changeQuantity($idProduct, $type){
     //  recargar el carrito de vista html
     addCartToHTML();
 }
+
+//FIN CARRITO
 
 
 
