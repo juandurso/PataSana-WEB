@@ -7,6 +7,8 @@ import Adminturnos from "./components/Pages/Admin-turnos";
 import Signin from "./components/Pages/signin";
 import Signup from "./components/Pages/signup";
 import Home from "./components/Pages/Home";
+import Contacto from "./Pages/Contacto";
+
 
 //<NavbarComponent />
 
@@ -22,6 +24,7 @@ const App = () => {
           <Route path="/Admin-turnos" element={<Adminturnos/>}/>
           <Route path="/Signin" element={<Signin/>}/>
           <Route path="/Signup" element={<Signup/>}/>
+          <Route path="/Contacto" element={<Contacto/>}/>
       </Routes>
       </BrowserRouter>
       <Footer/>
