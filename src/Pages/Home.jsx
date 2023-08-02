@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/styleHome.css';
 
-
 window.addEventListener('load', () => {
   let lon;
   let lat;
@@ -545,14 +544,14 @@ const Home = () => {
   </section7>
 
   <section8>
-  <div className="wrapper">
+  <div className="wrapper2">
     <div className="box">
       <i className="fas fa-quote-left quote"></i>
       <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
       <div className="content">
         <div className="info">
           <div className="name">Julieta Castro</div>
-          <div className="job">Facebook | Juli Castro</div>
+          <div className="job">2:52pm | 20 jun 2023</div>
           <div className="stars">
             <i className="fas fa-star"></i>
             <i className="fas fa-star"></i>
@@ -562,7 +561,7 @@ const Home = () => {
           </div>
         </div>
         <div class="image">
-          <img src="images/profile-1.jpeg" alt=""></img>
+          <img src="src/img/comentario2.jpg" alt=""></img>
         </div>
       </div>
     </div>
@@ -572,7 +571,7 @@ const Home = () => {
       <div className="content">
         <div className="info">
           <div className="name">Marcelo Lobos</div>
-          <div className="job">Facebook | Marce Wolf</div>
+          <div className="job">8:33pm | 3 marzo 2023</div>
           <div className="stars">
             <i className="fas fa-star"></i>
             <i className="fas fa-star"></i>
@@ -582,7 +581,7 @@ const Home = () => {
           </div>
         </div>
         <div className="image">
-          <img src="images/profile-2.jpeg" alt=""></img>
+          <img src="src/img/comentario1.jpg" alt=""></img>
         </div>
       </div>
     </div>
@@ -592,7 +591,7 @@ const Home = () => {
       <div className="content">
         <div className="info">
           <div className="name">Karina Medina</div>
-          <div className="job">Facebook | Karina Medina</div>
+          <div className="job">9:05am | 2 agosto 2023</div>
           <div className="stars">
             <i className="fas fa-star"></i>
             <i className="fas fa-star"></i>
@@ -602,7 +601,7 @@ const Home = () => {
           </div>
         </div>
         <div className="image">
-          <img src="images/profile-3.jpeg" alt=""></img>
+          <img src="src/img/comentario3.jpg" alt=""></img>
         </div>
       </div>
     </div>
