@@ -494,7 +494,7 @@ const Home = () => {
   <section6 className="imagDiv">
        <img src="src/img/curva3.png" alt="png"></img>
   </section6>
-
+  
   <section7>
   <div className="containerCarrito">
       <header className="fondo">
@@ -544,6 +544,7 @@ const Home = () => {
   </section7>
 
   <section8>
+  <h3 className="textoCentral">COMENTARIOS DE CLIENTES</h3>
   <div className="wrapper2">
     <div className="box">
       <i className="fas fa-quote-left quote"></i>
@@ -551,7 +552,7 @@ const Home = () => {
       <div className="content">
         <div className="info">
           <div className="name">Julieta Castro</div>
-          <div className="job">2:52pm | 20 jun 2023</div>
+          <div className="date">2:52pm | 20 jun 2023</div>
           <div className="stars">
             <i className="fas fa-star"></i>
             <i className="fas fa-star"></i>
@@ -571,7 +572,7 @@ const Home = () => {
       <div className="content">
         <div className="info">
           <div className="name">Marcelo Lobos</div>
-          <div className="job">8:33pm | 3 marzo 2023</div>
+          <div className="date">8:33pm | 3 marzo 2023</div>
           <div className="stars">
             <i className="fas fa-star"></i>
             <i className="fas fa-star"></i>
@@ -591,7 +592,7 @@ const Home = () => {
       <div className="content">
         <div className="info">
           <div className="name">Karina Medina</div>
-          <div className="job">9:05am | 2 agosto 2023</div>
+          <div className="date">9:05am | 2 agosto 2023</div>
           <div className="stars">
             <i className="fas fa-star"></i>
             <i className="fas fa-star"></i>

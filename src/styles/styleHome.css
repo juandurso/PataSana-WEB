@@ -112,7 +112,7 @@ main {
   top:-45px
 }
 
-@media (max-width: 530px) {
+/* @media (max-width: 530px) {
   #contenedor, #caja1, #caja2, #caja3{
     margin: auto;
     top: 5px;
@@ -121,8 +121,8 @@ main {
     vertical-align: middle;
     left: 100px;
   }
-}
-@media (max-width: 1237px) {
+} */
+@media (max-width: 1021px) {
   #contenedor, #caja1, #caja2, #caja3{
     margin: auto;
     width: -80px;
@@ -130,6 +130,17 @@ main {
     text-align: center;
     vertical-align: middle;
     left: 100px;
+  }
+}
+@media (max-width: 1100px) {
+  #contenedor, #caja1, #caja2, #caja3{
+    margin: auto;
+    width: auto;
+    /* display: inline-block; */
+    text-align: center;
+    vertical-align: middle;
+    left: 5px;
+    top: 5px;
   }
 }
 /* FIN API CLIMA */
@@ -821,11 +832,12 @@ header .totalQuantity{
 .box .info .name{
   font-weight: 600;
   font-size: 17px;
+  text-transform: capitalize;
 }
-.box .info .job{
+.box .info .date{
   font-size: 16px;
   font-weight: 500;
-  color: #17a2b8;
+  color: #9c6b4b;
 }
 .box .info .stars{
   margin-top: 2px;
@@ -837,7 +849,7 @@ header .totalQuantity{
   height: 75px;
   width: 75px;
   padding: 3px;
-  background: #17a2b8;
+  background: #01655b;
   border-radius: 50%;
 }
 .content .image img{
@@ -863,9 +875,5 @@ header .totalQuantity{
   }
 }
 /* FIN COMETARIOS CLIENTES */
-
-
-
-
 
 
