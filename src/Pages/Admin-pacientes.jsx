@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import { Link } from 'react-router-dom';
 
 const Adminpacientes = () => {
   const [validated, setValidated] = useState(false);
@@ -22,10 +23,8 @@ const Adminpacientes = () => {
    
   
 
-  const [patients, setPatients] = useState(() => {
-    const savedPatients = window.localStorage.getItem('patients');
-    return savedPatients ? JSON.parse(savedPatients) : [];
-  });
+  const [patients, setPatients] = useState([]);
+  
   const [openPatientIndex, setOpenPatientIndex] = useState(-1);
 
   const handlePatientInputChange = (event) => {
@@ -115,6 +114,29 @@ const Adminpacientes = () => {
   const handleSearchInputChange = (event) => {
     setSearchDNI(event.target.value);
   };
+  
+  
+  const filteredPatients = patients.filter(
+    (patient) => patient.dni.includes(searchDNI)
+  );
+
+  //LOGICA DE CONEXION 
+
+   const getAllDuenios = async () => {
+     var requestOptions = {
+       method: 'GET',
+     };
+
+     const response = await fetch ("http://localhost:8000/duenio/find-all", requestOptions)
+     const result = await response.json()
+     setPatients()
+
+     console.log(response)
+   }
+
+   useEffect(() => {
+     getAllDuenios()
+   }, []);
   
 
 
@@ -407,6 +429,7 @@ const Adminpacientes = () => {
                     >
                       Eliminar Paciente
                     </Button>
+                    <Link to="/Admin-turnos"><Button type="submit" className='btn-warning'>Editar datos del paciente</Button></Link>
                   </Form>
                 )}
               </Accordion.Body>
