@@ -30,9 +30,9 @@ function AcercaDeNosotros() {
           {/* hijo 2 */}
           {/* <!-- fila 1 --> */}
           <div className="container-fluid py-3 text-white">
-            <div className="row col-12 mb-4">
+            <div className="row col-12 mb-4 mx-auto pb-5 row-fotos rounded">
 
-              <div className="col-10  col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-4">
+              <div className="col-10  col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5">
                 <img
                   className="img-fluid rounded-circle"
                   src="/juan.jpg"
@@ -41,7 +41,7 @@ function AcercaDeNosotros() {
                 <p className="nombres h6 mt-2">Juan Durso <span className='juan'><i>(scrum-master)</i></span></p>
               </div>
 
-              <div className="col-10 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-4">
+              <div className="col-10 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5 mx-auto">
                 <img
                   className="img-fluid rounded-circle"
                   src="/fabian.jpg"
@@ -50,7 +50,7 @@ function AcercaDeNosotros() {
                 <p className="nombres h6 mt-2">Fabián Brizuela</p>
               </div>
 
-              <div className="col-10 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-4">
+              <div className="col-10 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5">
                 <img
                   className="img-fluid rounded-circle"
                   src="/nacho.jpg"

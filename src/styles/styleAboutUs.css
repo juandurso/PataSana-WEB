@@ -4,6 +4,9 @@
   opacity: 90%;
 }
 
+.acerca {
+  opacity: 80%;
+}
 
 video {
   position: fixed;
@@ -17,11 +20,12 @@ video {
   /* z-index: -1; */
 }
 
-.acerca{
-  opacity: 80%;
-}
+/* .row-fotos {
+  background-color:rgba(0, 255, 255, 0.492);
+} */
 
 .nombres{
+  color:#000000;
   color: #eca400;
 }
 
@@ -35,8 +39,8 @@ video {
 }
 
 .img-fluid {
-  width: 230px;
-  height: 230px;
+  width: 200px;
+  height: 200px;
   border-radius: 40%;
   border: 5px solid #eca400;
 }
