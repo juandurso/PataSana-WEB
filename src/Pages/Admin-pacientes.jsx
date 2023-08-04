@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
@@ -116,12 +116,7 @@ const Adminpacientes = () => {
     setSearchDNI(event.target.value);
   };
   
-  
-  const filteredPatients = patients.filter(
-    (patient) => patient.dni.includes(searchDNI)
-  );
 
-  
 
   
 
