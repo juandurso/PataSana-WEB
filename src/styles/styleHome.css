@@ -513,6 +513,47 @@ main {
   }
 /* FIN PLANES DE SALUD */
 
+
+.btnStart {
+  border: none;
+  width: 15em;
+  height: 5em;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #9c6b4b;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+}
+.sparkle {
+  fill: #fff;
+  transition: all 800ms ease;
+}
+.text {
+  font-weight: 600;
+  color: #fff;
+  font-size: medium;
+}
+.btnStart:hover {
+  background: linear-gradient(0deg,#0a9789,#013d37);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+  inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+  0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+  0px 0px 180px 0px #9917FF;
+  transform: translateY(-2px);
+}
+.btnStart:hover .text {
+  color: white;
+}
+.btnStart:hover .sparkle {
+  fill: white;
+  transform: scale(1.2);
+} 
+
+
+
 /* SLADER PROPAGANDA */
 .slider {
     width: 90vw;

@@ -344,8 +344,8 @@ const Home = () => {
     <img src="src/img/curva2.png" alt="png"></img>
   </section4>
 
-  <section4>
-   <div className="wrapper2">
+  <section5>
+   <div className="wrapper2 my-5">
     <div className="table basic">
       <div className="price-section">
         <div className="price-area">
@@ -417,9 +417,96 @@ const Home = () => {
       <div className="btn2"><button>Detalles</button></div>
     </div>
   </div>
-  </section4>
+  </section5>
+  <br />
 
-  <sectionSlader>
+  <section6>
+  <h3 className="textoCentral my-5">COMENTARIOS DE CLIENTES</h3>
+  <div className="wrapper2">
+    <div className="box">
+      <i className="fas fa-quote-left quote"></i>
+      <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+      <div className="content">
+        <div className="info">
+          <div className="name">Julieta Castro</div>
+          <div className="date">2:52pm | 20 jun 2023</div>
+          <div className="stars">
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="far fa-star"></i>
+            <i className="far fa-star"></i>
+            <i className="far fa-star"></i>
+          </div>
+        </div>
+        <div class="image">
+          <img src="src/img/comentario2.jpg" alt=""></img>
+        </div>
+      </div>
+    </div>
+    <div className="box">
+      <i className="fas fa-quote-left quote"></i>
+      <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+      <div className="content">
+        <div className="info">
+          <div className="name">Marcelo Lobos</div>
+          <div className="date">8:33pm | 3 marzo 2023</div>
+          <div className="stars">
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="far fa-star"></i>
+            <i className="far fa-star"></i>
+          </div>
+        </div>
+        <div className="image">
+          <img src="src/img/comentario1.jpg" alt=""></img>
+        </div>
+      </div>
+    </div>
+    <div className="box">
+      <i className="fas fa-quote-left  quote"></i>
+      <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+      <div className="content">
+        <div className="info">
+          <div className="name">Karina Medina</div>
+          <div className="date">9:05am | 2 agosto 2023</div>
+          <div className="stars">
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="far fa-star"></i>
+          </div>
+        </div>
+        <div className="image">
+          <img src="src/img/comentario3.jpg" alt=""></img>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section6>
+
+  <section className='d-flex justify-content-center my-5'>
+  <button className="btnStart">
+    <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+        <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+    </svg>
+    <span className="text">Ver más comentarios</span>
+  </button>
+  </section>
+
+  <br /><br />
+  
+
+  <section7 className="imagDiv">
+       <img src="src/img/curva3.png" alt="png"></img>
+  </section7>
+
+  <section8 className="imagDiv">
+      <img src="src/img/alimento.png" alt="png"></img>
+  </section8>
+
+  <section9>
     <div className="slider">
       <div className="slide-track">
           <div className="slide">
@@ -485,129 +572,57 @@ const Home = () => {
         </div>
       </div>
   </div>
-  </sectionSlader>
+  </section9>
 
-  <section5 className="imagDiv">
-      <img src="src/img/alimento.png" alt="png"></img>
-  </section5>
+  <section10>
+       <div className="containerCarrito">
+           <header className="fondo">
+               <h3>PRODUCTOS DESTACADOS</h3>
+               <div className="iconCart">
+                 <img src="src/img/icono-carrito.png"></img>
+                 <div className="totalQuantity">0</div>
+               </div>
+           </header>
+     
+           <div className="listProduct">
+             <div className="item">
+                 <img src="src/img/1.webp.png" alt=""></img>
+                 <h2>CoPilot / Black / Automatic</h2>
+                 <div className="price">$550</div>
+                 <button>Añadir</button>
+             </div>
+           </div>
+         </div>
+       <div className="cart">
+         <h2>
+             CARRITO
+         </h2>
+         <div className="listCart">
+             <div className="item">
+                 <img src="src/img/1.webp.png"></img>
+                 <div className="content">
+                     <div className="name">CoPilot / Black / Automatic</div>
+                     <div className="price">$550 / 1 product</div>
+                 </div>
+                 <div className="quantity">
+                     <button>-</button>
+                     <span className="value">3</span>
+                     <button>+</button>
+                 </div>
+             </div>
+         </div>
+         <div className="buttons">
+             <div className="close">
+                 CERRAR
+             </div>
+             <div className="checkout">
+                 <a href="checkout.html">COMPRAR</a>
+             </div>
+         </div>
+       </div>
+  </section10>
 
-  <section6 className="imagDiv">
-       <img src="src/img/curva3.png" alt="png"></img>
-  </section6>
-  
-  <section7>
-  <div className="containerCarrito">
-      <header className="fondo">
-          <h3>PRODUCTOS DESTACADOS</h3>
-          <div className="iconCart">
-            <img src="src/img/icono-carrito.png"></img>
-            <div className="totalQuantity">0</div>
-          </div>
-      </header>
-
-      <div className="listProduct">
-        <div className="item">
-            <img src="src/img/1.webp.png" alt=""></img>
-            <h2>CoPilot / Black / Automatic</h2>
-            <div className="price">$550</div>
-            <button>Añadir</button>
-        </div>
-      </div>
-    </div>
-  <div className="cart">
-    <h2>
-        CARRITO
-    </h2>
-    <div className="listCart">
-        <div className="item">
-            <img src="src/img/1.webp.png"></img>
-            <div className="content">
-                <div className="name">CoPilot / Black / Automatic</div>
-                <div className="price">$550 / 1 product</div>
-            </div>
-            <div className="quantity">
-                <button>-</button>
-                <span className="value">3</span>
-                <button>+</button>
-            </div>
-        </div>
-    </div>
-    <div className="buttons">
-        <div className="close">
-            CERRAR
-        </div>
-        <div className="checkout">
-            <a href="checkout.html">COMPRAR</a>
-        </div>
-    </div>
-  </div>
-  </section7>
-
-  <section8>
-  <h3 className="textoCentral">COMENTARIOS DE CLIENTES</h3>
-  <div className="wrapper2">
-    <div className="box">
-      <i className="fas fa-quote-left quote"></i>
-      <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
-      <div className="content">
-        <div className="info">
-          <div className="name">Julieta Castro</div>
-          <div className="date">2:52pm | 20 jun 2023</div>
-          <div className="stars">
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="far fa-star"></i>
-            <i className="far fa-star"></i>
-            <i className="far fa-star"></i>
-          </div>
-        </div>
-        <div class="image">
-          <img src="src/img/comentario2.jpg" alt=""></img>
-        </div>
-      </div>
-    </div>
-    <div className="box">
-      <i className="fas fa-quote-left quote"></i>
-      <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
-      <div className="content">
-        <div className="info">
-          <div className="name">Marcelo Lobos</div>
-          <div className="date">8:33pm | 3 marzo 2023</div>
-          <div className="stars">
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="far fa-star"></i>
-            <i className="far fa-star"></i>
-          </div>
-        </div>
-        <div className="image">
-          <img src="src/img/comentario1.jpg" alt=""></img>
-        </div>
-      </div>
-    </div>
-    <div className="box">
-      <i className="fas fa-quote-left  quote"></i>
-      <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
-      <div className="content">
-        <div className="info">
-          <div className="name">Karina Medina</div>
-          <div className="date">9:05am | 2 agosto 2023</div>
-          <div className="stars">
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="far fa-star"></i>
-          </div>
-        </div>
-        <div className="image">
-          <img src="src/img/comentario3.jpg" alt=""></img>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section8>
+ 
 
 
 
