@@ -4,9 +4,6 @@
   opacity: 90%;
 }
 
-.acerca {
-  opacity: 80%;
-}
 
 video {
   position: fixed;
@@ -54,6 +51,80 @@ video {
   width: 75%;
 }
 
+@media screen and (min-width: 1024px) {
+  .tres-ultimas-fotos {
+    margin-top: 68px !important; 
+  }
+}
+
+@media screen and (max-width: 4000px) {  
+  .padre { 
+    margin-top: 40px !important; 
+    margin-bottom: 48px !important;
+    margin-right: 110px !important;
+    margin-left: 110px !important;
+  }
+  .img-fluid {
+    width: 230px; 
+    height: 230px; 
+  }
+}
+
+@media screen and (max-width: 1440px) {  
+  .img-fluid {
+    width: 200px; 
+    height: 200px; 
+  }
+}
+
+
+@media screen and (max-width: 1025px) {  
+  .padre { 
+    margin-top: 48px !important; 
+    margin-bottom: 48px !important;
+    margin-right: 48px !important;
+    margin-left: 48px !important;
+  }
+}
+
+@media screen and (max-width: 630px) {  
+  .parrafos {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 426px) {  
+  .padre { 
+    margin-top: 35px !important; 
+    margin-bottom: 35px !important;
+    margin-right: 35px !important;
+    margin-left: 35px !important;
+  }
+  .fila-fotos{
+    padding-bottom: 24px !important ;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .img-fluid {
+    width: 142px; 
+    height: 151px; 
+  }
+  .parrafos {
+    font-size: 14px;
+    /* margin-right: 10px !important;
+    margin-left: 10px !important; */
+  } 
+}
+
+@media screen and (max-width: 321px) {  
+  .padre { 
+    margin-top: 27px !important; 
+    margin-bottom: 27px !important;
+    margin-right: 25px !important;
+    margin-left: 25px !important;
+  }
+}
 
 
 

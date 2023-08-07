@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/styleAboutUs.css';
-import v from "../assets/videoBgAboutUs.mp4"
-
+import vComp from "../assets/videoComp.mp4"
 
 
 function AcercaDeNosotros() {
@@ -14,7 +13,7 @@ function AcercaDeNosotros() {
 
         {/* <!-- video --> */}
         <video
-          src={v}
+          src={vComp}
           autoPlay
           loop
           muted
@@ -30,7 +29,7 @@ function AcercaDeNosotros() {
           {/* hijo 2 */}
           {/* <!-- fila 1 --> */}
           <div className="container-fluid py-3 text-white">
-            <div className="row col-12 mb-4 mx-auto pb-5 row-fotos rounded">
+            <div className="row col-12 mb-3 mx-auto pb-5 row-fotos rounded fila-fotos">
 
               <div className="col-10  col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5">
                 <img
@@ -59,7 +58,7 @@ function AcercaDeNosotros() {
                 <p className="nombres h6 mt-2">Nacho Castro</p>
               </div>
 
-              <div className="col-10 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5">
+              <div className="col-10 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5 tres-ultimas-fotos">
                 <img
                   className="img-fluid rounded-circle"
                   src="/mariano.jpg"
@@ -68,7 +67,7 @@ function AcercaDeNosotros() {
                 <p className="nombres h6 mt-2">Mariano Ghidara</p>
               </div>
 
-              <div className="col-10 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5">
+              <div className="col-10 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5 tres-ultimas-fotos">
                 <img
                   className="img-fluid rounded-circle"
                   src="/conty.jpg"
@@ -77,7 +76,7 @@ function AcercaDeNosotros() {
                 <p className="nombres h6 mt-2">Constanza López</p>
               </div>
 
-              <div className="col-10 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5">
+              <div className="col-10 col-sm-8 col-md-6 col-lg-4 container-fluid text-center mt-5 tres-ultimas-fotos">
                 <img
                   className="img-fluid rounded-circle"
                   src="/santiago.jpg"
@@ -92,7 +91,7 @@ function AcercaDeNosotros() {
 
           {/* hijo 3 */}
           {/* <!-- fila 2 --> */}
-          <div className="container py-3 text-center container-texto">
+          <div className="container pt-3 pb-5 text-center container-texto">
 
             <div className="row">
 
@@ -115,7 +114,7 @@ function AcercaDeNosotros() {
                           clasificamos los lugares en Cervecerías, Cafeterías, Restaurantes,
                           Comida al paso, Bares Temáticos
                         </p> */}
-                    <p>
+                    <p className='text-center'>
                       Hola! Somos <b>Web Pets!</b> Alumnos de la Comisión 47i del curso <b>"Full Stack"</b> que dicta la academia <b>Rolling Code School</b> en la provincia de Tucumán, Argentina, y éste es nuestro <b>Proyecto Final</b> de finalización del curso!
                     </p>
                   </div>
