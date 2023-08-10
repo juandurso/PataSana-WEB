@@ -60,15 +60,6 @@ const Formulario = () => {
 							<ErrorMessage name="correo" component={() => (<div className="error">{errors.correo}</div>)} />
 						</div>
 						<div>
-							<label>
-								<Field type="radio" name="sexo" value="hombre" /> Hombre
-							</label>
-							<label>
-								<Field type="radio" name="sexo" value="mujer" /> Mujer
-							</label>
-						</div>
-
-						<div>
 							<Field name="mensaje" as="textarea" placeholder="Mensaje" />
 						</div>
 
