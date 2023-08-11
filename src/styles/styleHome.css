@@ -19,7 +19,7 @@ main {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background: url(img/website-images/images/bg-dot.png), url(img/website-images/images/bg-dot.png), url(img/website-images/images/bg-round.png), url(img/website-images/images/bg-tree.png);
+  background: url(img/website-images/images/bg-dot.png), url(src/img/website-images/images/bg-dot.png), url(src/img/website-images/images/bg-round.png), url(src/img/website-images/images/bg-tree.png);
   background-position: 10px 10px, bottom 215px right 10px, left 55% top -1%, left 45% bottom -1px;
   background-repeat: no-repeat;
 }
@@ -52,9 +52,9 @@ main {
   color: #fff;
 }
 .btn:last-child {
-  border: 2px solid #9c6b4b;
-  background: transparent;
-  color: #9c6b4b;
+  border: 2px solid #fff;
+  background: #01342f;
+  color: #fff;
 }
 .btn:last-child:hover {
   background-color: #fff;
