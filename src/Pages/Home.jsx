@@ -82,144 +82,133 @@ window.addEventListener('load', () => {
 
 
 // //CARRITO
-// let iconCart = document.querySelector('.iconCart');
-// let cart = document.querySelector('.cart');
-// let container = document.querySelector('.container');
-// let close = document.querySelector('.close');
+// const btnCart = document.querySelector('.container-cart-icon');
+// const containerCartProducts = document.querySelector(
+// 	'.container-cart-products'
+// );
 
-// iconCart.addEventListener('click', function(){
-//     if(cart.style.right == '-100%'){
-//         cart.style.right = '0';
-//         container.style.transform = 'translateX(-400px)';
-//     }else{
-//         cart.style.right = '-100%';
-//         container.style.transform = 'translateX(0)';
-//     }
-// })
-// close.addEventListener('click', function (){
-//     cart.style.right = '-100%';
-//     container.style.transform = 'translateX(0)';
-// })
+// btnCart.addEventListener('click', () => {
+// 	containerCartProducts.classList.toggle('hidden-cart');
+// });
 
+// /* ========================= */
+// const cartInfo = document.querySelector('.cart-product');
+// const rowProduct = document.querySelector('.row-product');
 
-// let products = null;
-// // obtengo datos de json
-// fetch('product.json')
-//     .then(response => response.json())
-//     .then(data => {
-//         products = data;
-//         addDataToHTML();
-// })
+// // Lista de todos los contenedores de productos
+// const productsList = document.querySelector('.container-items');
 
-// muestra el producto de datos en la lista 
-// function addDataToHTML(){
-//     elimina los datos predeterminados de HTML
-//     let listProductHTML = document.querySelector('.listProduct');
-//     listProductHTML.innerHTML = '';
+// // Variable de arreglos de Productos
+// let allProducts = [];
 
-//     // agregar nuevas datos
-//     // if(products != null) // si tiene datos
+// const valorTotal = document.querySelector('.total-pagar');
 
-//     {
-//         products.forEach(product => {
-//             let newProduct = document.createElement('div');
-//             newProduct.classList.add('item');
-//             newProduct.innerHTML = 
-//             `<img src="src/${product.image}" alt="">
-//             <h2>${product.name}</h2>
-//             <div class="price">$${product.price}</div>
-//             <button onclick="addCart(${product.id})">COMPRAR</button>`;
+// const countProducts = document.querySelector('#contador-productos');
 
-//             listProductHTML.appendChild(newProduct);
+// const cartEmpty = document.querySelector('.cart-empty');
+// const cartTotal = document.querySelector('.cart-total');
 
-//         });
-//     }
-// }
-// usa una cookie para que el carrito no se pierda al actualizar la página
+// productsList.addEventListener('click', e => {
+// 	if (e.target.classList.contains('btn-add-cart')) {
+// 		const product = e.target.parentElement;
 
+// 		const infoProduct = {
+// 			quantity: 1,
+// 			title: product.querySelector('h4').textContent,
+// 			price: product.querySelector('p').textContent,
+// 		};
 
-// let listCart = [];
-// function checkCart(){
-//     var cookieValue = document.cookie
-//     .split('; ')
-//     .find(row => row.startsWith('listCart='));
-//     if(cookieValue){
-//         listCart = JSON.parse(cookieValue.split('=')[1]);
-//     }else{
-//         listCart = [];
-//     }
-// }
-// checkCart();
-// function addCart($idProduct){
-//     let productsCopy = JSON.parse(JSON.stringify(products));
-//     si este producto no esta en el carrito
-//     if(!listCart[$idProduct]) 
-//     {
-//         listCart[$idProduct] = productsCopy.filter(product => product.id == $idProduct)[0];
-//         listCart[$idProduct].quantity = 1;
-//     }else{
-//         si este producto ya esta en el carrito
-//         //aumeto cantidad
-//         listCart[$idProduct].quantity++;
-//     }
-//     document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+// 		const exits = allProducts.some(
+// 			product => product.title === infoProduct.title
+// 		);
 
-//     addCartToHTML();
-// }
-// addCartToHTML();
-// function addCartToHTML(){
-//     borrar datos por defecto
-//     let listCartHTML = document.querySelector('.listCart');
-//     listCartHTML.innerHTML = '';
+// 		if (exits) {
+// 			const products = allProducts.map(product => {
+// 				if (product.title === infoProduct.title) {
+// 					product.quantity++;
+// 					return product;
+// 				} else {
+// 					return product;
+// 				}
+// 			});
+// 			allProducts = [...products];
+// 		} else {
+// 			allProducts = [...allProducts, infoProduct];
+// 		}
 
-//     let totalHTML = document.querySelector('.totalQuantity');
-//     let totalQuantity = 0;
-//     si tiene producto en el carrito
-//     if(listCart){
-//         listCart.forEach(product => {
-//             if(product){
-//                 let newCart = document.createElement('div');
-//                 newCart.classList.add('item');
-//                 newCart.innerHTML = 
-//                     `<img src="${product.image}">
-//                     <div class="content">
-//                         <div class="name">${product.name}</div>
-//                         <div class="price">$${product.price} / 1 product</div>
-//                     </div>
-//                     <div class="quantity">
-//                         <button onclick="changeQuantity(${product.id}, '-')">-</button>
-//                         <span class="value">${product.quantity}</span>
-//                         <button onclick="changeQuantity(${product.id}, '+')">+</button>
-//                     </div>`;
-//                 listCartHTML.appendChild(newCart);
-//                 totalQuantity = totalQuantity + product.quantity;
-//             }
-//         })
-//     }
-//     totalHTML.innerText = totalQuantity;
-// }
-// function changeQuantity($idProduct, $type){
-//     switch ($type) {
-//         case '+':
-//             listCart[$idProduct].quantity++;
-//             break;
-//         case '-':
-//             listCart[$idProduct].quantity--;
+// 		showHTML();
+// 	}
+// });
 
-//             si la cantidad <= 0 entonces elimina el producto del carrito
-//             if(listCart[$idProduct].quantity <= 0){
-//                 delete listCart[$idProduct];
-//             }
-//             break;
-    
-//         default:
-//             break;
-//     }
-//     guardar nuevos datos en la cookie
-//     document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
-//      recargar el carrito de vista html
-//     addCartToHTML();
-// }
+// rowProduct.addEventListener('click', e => {
+// 	if (e.target.classList.contains('icon-close')) {
+// 		const product = e.target.parentElement;
+// 		const title = product.querySelector('p').textContent;
+
+// 		allProducts = allProducts.filter(
+// 			product => product.title !== title
+// 		);
+
+// 		console.log(allProducts);
+
+// 		showHTML();
+// 	}
+// });
+
+// // Funcion para mostrar  HTML
+// const showHTML = () => {
+// 	if (!allProducts.length) {
+// 		cartEmpty.classList.remove('hidden');
+// 		rowProduct.classList.add('hidden');
+// 		cartTotal.classList.add('hidden');
+// 	} else {
+// 		cartEmpty.classList.add('hidden');
+// 		rowProduct.classList.remove('hidden');
+// 		cartTotal.classList.remove('hidden');
+// 	}
+
+// 	// Limpiar HTML
+// 	rowProduct.innerHTML = '';
+
+// 	let total = 0;
+// 	let totalOfProducts = 0;
+
+// 	allProducts.forEach(product => {
+// 		const containerProduct = document.createElement('div');
+// 		containerProduct.classList.add('cart-product');
+
+// 		containerProduct.innerHTML = `
+//             <div className="info-cart-product">
+//                 <span className="cantidad-producto-carrito">${product.quantity}</span>
+//                 <p className="titulo-producto-carrito">${product.title}</p>
+//                 <span className="precio-producto-carrito">${product.price}</span>
+//             </div>
+//             <svg
+//                 xmlns="http://www.w3.org/2000/svg"
+//                 fill="none"
+//                 viewBox="0 0 24 24"
+//                 stroke-width="1.5"
+//                 stroke="currentColor"
+//                 className="icon-close"
+//             >
+//                 <path
+//                     stroke-linecap="round"
+//                     stroke-linejoin="round"
+//                     d="M6 18L18 6M6 6l12 12"
+//                 />
+//             </svg>
+//         `;
+
+// 		rowProduct.append(containerProduct);
+
+// 		total =
+// 			total + parseInt(product.quantity * product.price.slice(1));
+// 		totalOfProducts = totalOfProducts + product.quantity;
+// 	});
+
+// 	valorTotal.innerText = `$${total}`;
+// 	countProducts.innerText = totalOfProducts;
+// };
 
 //FIN CARRITO
 
@@ -236,7 +225,7 @@ const Home = () => {
             <h2>¡Bienvenidos a nuestra veterinaria de confianza!</h2>
             <p> En Pata Sana, nuestro compromiso es proporcionar el más alto nivel de cuidado y cariño a todos los animales que atendemos. Somos un equipo apasionado de médicos veterinarios y profesionales dedicados que comparten una profunda conexión con los animales y una misión común: mejorar la salud y el bienestar de las mascotas.</p>
             <div className="buttons">
-              <button className="btn">CONOCE MÁS</button>
+              <button className="btn">CONTACTANOS</button>
               <button className="btn">SUCURSALES</button>
             </div>
           </div>
@@ -367,10 +356,10 @@ const Home = () => {
           <span className="list-name">¡Entrá a ver los detalles del plan y todo lo que incluye!</span>
         </li>
       </ul>
-      <div className="btn2"><button>Detalles</button></div>
+      {/* <div ><button className="btn2">Detalles</button></div> */}
     </div>
     <div className="table premium">
-      <div className="ribbon"><span>Promoción</span></div>
+      {/* <div className="ribbon"><span>Promoción</span></div> */}
       <div className="price-section">
         <div className="price-area">
           <div className="inner-area">
@@ -391,7 +380,7 @@ const Home = () => {
           <span className="list-name">¡Entrá a ver los detalles del plan y todo lo que incluye!</span>
         </li>
       </ul>
-      <div className="btn2"><button>Detalles</button></div>
+      {/* <div ><button className="btn2">Detalles</button></div> */}
     </div>
     <div className="table ultimate">
       <div className="price-section">
@@ -414,10 +403,14 @@ const Home = () => {
           <span className="list-name">¡Entrá a ver los detalles del plan y todo lo que incluye!</span>
         </li>
       </ul>
-      <div className="btn2"><button>Detalles</button></div>
     </div>
+    
   </div>
   </section5>
+
+  <div className='d-flex justify-content-center my-5'>
+    <button className="btn2 fw-bold">¡ HAZ CLICK AQUÍ PARA CONOCER LOS PLANES QUE TENEMOS PARA TU MASCOTA !</button>
+    </div>
   <br />
 
   <section6>
@@ -438,7 +431,7 @@ const Home = () => {
             <i className="far fa-star"></i>
           </div>
         </div>
-        <div class="image">
+        <div className="image">
           <img src="src/img/comentario2.jpg" alt=""></img>
         </div>
       </div>
@@ -575,58 +568,142 @@ const Home = () => {
   </section9>
 
   <section10>
-       <div className="containerCarrito">
-           <header className="fondo">
-               <h3>PRODUCTOS DESTACADOS</h3>
-               <div className="iconCart">
-                 <img src="src/img/icono-carrito.png"></img>
-                 <div className="totalQuantity">0</div>
-               </div>
-           </header>
-     
-           <div className="listProduct">
-             <div className="item">
-                 <img src="src/img/1.webp.png" alt=""></img>
-                 <h2>CoPilot / Black / Automatic</h2>
-                 <div className="price">$550</div>
-                 <button>Añadir</button>
-             </div>
-           </div>
-         </div>
-       <div className="cart">
-         <h2>
-             CARRITO
-         </h2>
-         <div className="listCart">
-             <div className="item">
-                 <img src="src/img/1.webp.png"></img>
-                 <div className="content">
-                     <div className="name">CoPilot / Black / Automatic</div>
-                     <div className="price">$550 / 1 product</div>
-                 </div>
-                 <div className="quantity">
-                     <button>-</button>
-                     <span className="value">3</span>
-                     <button>+</button>
-                 </div>
-             </div>
-         </div>
-         <div className="buttons">
-             <div className="close">
-                 CERRAR
-             </div>
-             <div className="checkout">
-                 <a href="checkout.html">COMPRAR</a>
-             </div>
-         </div>
-       </div>
+  <header>
+    <h3 className="my-4">PRODUCTOS DESTACADOS</h3>
+
+			<div className="container-icon">
+				{/* <div className="container-cart-icon">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth="1.5"
+						stroke="currentColor"
+						class="icon-cart"
+					>
+						<path
+							strokeinecap="round"
+							strokeLinejoin="round"
+							d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+						/>
+					</svg>
+					<div className="count-products">
+						<span id="contador-productos">0</span>
+					</div>
+				</div> */}
+
+				<div className="container-cart-products hidden-cart">
+					<div className="row-product hidden">
+						<div className="cart-product">
+							{/* <div className="info-cart-product">
+								<span className="cantidad-producto-carrito">1</span>
+								<p className="titulo-producto-carrito">Whisker Fiesta - Pez</p>
+								<span className="precio-producto-carrito">$1100</span>
+							</div> */}
+							{/* <svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								className="icon-close"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M6 18L18 6M6 6l12 12"
+								/>
+							</svg> */}
+						</div>
+					</div>
+
+					{/* <div className="cart-total hidden">
+						<h3>Total:</h3>
+						<span className="total-pagar">$200</span>
+                        <button>Comprar</button>
+					</div> */}
+					{/* <p className="cart-empty">El carrito está vacío</p> */}
+				</div>
+			</div>
+		</header>
+		<div className="container-items">
+			<div className="item">
+				<figure className='imgCarrito'>
+					<img src="src/img/1.webp.png" alt="producto" />
+				</figure >
+				<div className="info-product">
+					<h4>Juguete Pez</h4>
+					<p className="price">$1100</p>
+					<button className="btn-add-cart">COMPRAR</button>
+				</div>
+			</div>
+			<div className="item">
+				<figure className='imgCarrito'>
+					<img
+						src="src/img/2.webp.png"
+						alt="producto"
+					/>
+				</figure>
+				<div className="info-product">
+					<h4>ProPlan</h4>
+					<p className="price">$22760</p>
+					<button className="btn-add-cart">COMPRAR</button>
+				</div>
+			</div>
+			<div className="item">
+				<figure className='imgCarrito'>
+					<img
+						src="src/img/3.webp.png"
+						alt="producto"
+					/>
+				</figure>
+				<div className="info-product">
+					<h4>Artrin X30comp.</h4>
+					<p className="price">$4500</p>
+					<button className="btn-add-cart">COMPRAR</button>
+				</div>
+			</div>
+			<div className="item">
+				<figure className='imgCarrito'>
+					<img
+						src="src/img/4.webp.png"
+						alt="producto"
+					/>
+				</figure>
+				<div className="info-product">
+					<h4>Royal Canin Mini</h4>
+					<p className="price">$16480</p>
+					<button className="btn-add-cart">COMPRAR</button>
+				</div>
+			</div>
+			<div className="item">
+				<figure className='imgCarrito'>
+					<img
+						src="src/img/5.webp.png"
+						alt="producto"
+					/>
+				</figure>
+				<div className="info-product">
+					<h4>Purina Dental</h4>
+					<p className="price">$650</p>
+					<button className="btn-add-cart">COMPRAR</button>
+				</div>
+			</div>
+        <div className="item">
+				  <figure className='imgCarrito'>
+					<img
+						src="src/img/6.webp.png"
+						alt="producto"
+					/>
+				  </figure>
+				<div className="info-product">
+					<h4>Agility</h4>
+					<p className="price">$730</p>
+					<button className="btn-add-cart">COMPRAR</button>
+				</div>
+			</div>
+		</div>
   </section10>
-
- 
-
-
-
-
 
 
 </div>
