@@ -1,7 +1,12 @@
-import React from 'react';
+
 import '../styles/styleHome.css';
+import ReactModal from 'react-modal';
+import React, { useState, useRef } from 'react';
+import emailjs from 'emailjs-com';
+import toast, { Toaster } from 'react-hot-toast';
 
 window.addEventListener('load', () => {
+
   let lon;
   let lat;
 
@@ -215,6 +220,65 @@ window.addEventListener('load', () => {
 
 
 const Home = () => {
+    //modal
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      message: '',
+    });
+  
+    const handleOpenModal = () => {
+      setIsModalOpen(true);
+    };
+  
+    const handleCloseModal = () => {
+      setIsModalOpen(false);
+    };
+    const handleSubmit = (e) => {
+      e.preventDefault();
+  
+      // Enviamos el formulario usando el paquete emailjs-com
+      emailjs
+        .sendForm('service_cyy6gui', 'template_v5rxhon', e.target, 'F9ADarLVUQU5W4bMm')
+        .then(
+          (result) => {
+            console.log(result.text);
+            // Después de enviar el formulario, cerramos la ventana modal
+            handleCloseModal();
+        //toast
+        toast.success('Formulario enviado correctamente!', {
+        style: {
+          background: '#013D37',
+          color: '#fff',
+          padding: '12px',
+          fontFamily: 'Poppins, sans-serif',
+        },
+        });
+          },
+          (error) => {
+            console.log(error.text);
+        //toast error 
+        toast.error('Error al enviar el formulario.', {
+        style: {
+          background: '#f44336',
+          color: '#fff',
+          padding: '12px',
+          fontFamily: 'Poppins, sans-serif',
+        },
+        });
+          }
+        );
+    };
+    const handleChange = (e) => {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+    };
+    
+    //modal
+  
   return (
 <div>
   <main>
@@ -634,7 +698,7 @@ const Home = () => {
 				<div className="info-product">
 					<h4>Juguete Pez</h4>
 					<p className="price">$1100</p>
-					<button className="btn-add-cart">COMPRAR</button>
+					<button className="btn-add-cart" onClick={handleOpenModal}>COMPRAR</button>
 				</div>
 			</div>
 			<div className="item">
@@ -647,7 +711,7 @@ const Home = () => {
 				<div className="info-product">
 					<h4>ProPlan</h4>
 					<p className="price">$22760</p>
-					<button className="btn-add-cart">COMPRAR</button>
+					<button className="btn-add-cart" onClick={handleOpenModal}>COMPRAR</button>
 				</div>
 			</div>
 			<div className="item">
@@ -660,7 +724,7 @@ const Home = () => {
 				<div className="info-product">
 					<h4>Artrin X30comp.</h4>
 					<p className="price">$4500</p>
-					<button className="btn-add-cart">COMPRAR</button>
+					<button className="btn-add-cart" onClick={handleOpenModal}>COMPRAR</button>
 				</div>
 			</div>
 			<div className="item">
@@ -673,7 +737,7 @@ const Home = () => {
 				<div className="info-product">
 					<h4>Royal Canin Mini</h4>
 					<p className="price">$16480</p>
-					<button className="btn-add-cart">COMPRAR</button>
+					<button className="btn-add-cart" onClick={handleOpenModal}>COMPRAR</button>
 				</div>
 			</div>
 			<div className="item">
@@ -686,7 +750,7 @@ const Home = () => {
 				<div className="info-product">
 					<h4>Purina Dental</h4>
 					<p className="price">$650</p>
-					<button className="btn-add-cart">COMPRAR</button>
+					<button className="btn-add-cart" onClick={handleOpenModal}>COMPRAR</button>
 				</div>
 			</div>
         <div className="item">
@@ -699,11 +763,69 @@ const Home = () => {
 				<div className="info-product">
 					<h4>Agility</h4>
 					<p className="price">$730</p>
-					<button className="btn-add-cart">COMPRAR</button>
+					<button className="btn-add-cart" onClick={handleOpenModal}>COMPRAR</button>
 				</div>
 			</div>
 		</div>
   </section10>
+  <Toaster
+  position="bottom-right"
+  reverseOrder={false} />
+      <ReactModal
+        className='ModalContacto'
+        ariaHideApp={false}
+        isOpen={isModalOpen}
+        contentLabel='Ventana Modal de Contacto'
+        onRequestClose={handleCloseModal}
+      >
+        {/* Contenido de la ventana modal */}
+        <form onSubmit={handleSubmit} className='contacto-from'>
+		<h2>Contacto</h2>
+          <div className='formulario-modal'>
+            <label htmlFor='name'>Nombre:</label>
+            <input
+  maxLength={20}  // Cambiado a maxLength y usando llaves
+  className='label-style'
+  type='text'
+  id='name'
+  name='name'
+  value={formData.name}
+  onChange={handleChange}
+  required
+/>
+
+          </div>
+          <div className='formulario-modal'>
+            <label htmlFor='email'>Email:</label>
+            <input
+			maxlength="35"
+			className='label-style'
+              type='email'
+              id='email'
+              name='email'
+              value={formData.email}
+              onChange={handleChange}
+			  required
+            />
+          </div>
+          <div className='formulario-modal form-group-textarea'>
+            <label htmlFor='message'>Mensaje:</label>
+            <textarea
+			maxlength="120"
+			className='label-style'
+              id='message'
+              name='message'
+              value={formData.message}
+              onChange={handleChange}
+			  required
+            />
+          </div>
+		  <div className='formulario-modal'>
+          <button type='submit'className='label-style button1'>Enviar</button>
+		  <button onClick={handleCloseModal}className='label-style button2'>Cerrar</button>
+		  </div>
+        </form>
+      </ReactModal>
 
 
 </div>

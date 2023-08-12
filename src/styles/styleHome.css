@@ -847,4 +847,78 @@ header{
 
 /* FIN PRODUCTOS Y CARRITO */
 
-
+/* Modal contactos */
+.ModalContacto{
+	font-family: "Poppins", sans-serif;
+  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  background: #013D37;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  width: 430px;
+  height: 500px;
+  }
+  
+  .contact-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .formulario-modal {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 16px;
+  }
+  
+  label {
+	font-weight: bold;
+  }
+  
+  input,
+  textarea {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: auto;
+  }
+  
+  input[type="submit"] {
+	background-color: #11131e;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+.label-style{
+	outline: none;
+	border-radius: 7px;
+}
+.form-group-textarea {
+	resize: vertical;
+	height: 100px;
+  }
+  .button1 {
+    border: none;
+    background: none;
+    background-color: #00e676;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+    margin-bottom: 6px;
+  }
+  
+  .button2 {
+    border: none;
+    background: none;
+    background-color: #4fa8fb;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+  }
+ /* Modal contactos Fin*/
