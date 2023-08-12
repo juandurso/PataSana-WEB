@@ -1,0 +1,23 @@
+.container-padre {
+  /* background-color: #9c6b4b; */
+  background-color: #011714;
+  color: antiquewhite;
+}
+
+.rows {
+  background-color: #664026;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .formTurnos {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+}
+
+/* @media screen and (min-width: 1024px) {
+
+} */
