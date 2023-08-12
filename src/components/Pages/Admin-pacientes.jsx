@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
@@ -6,7 +6,6 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
-import { Link } from 'react-router-dom';
 
 const Adminpacientes = () => {
   const [validated, setValidated] = useState(false);
@@ -23,8 +22,10 @@ const Adminpacientes = () => {
    
   
 
-  const [patients, setPatients] = useState([]);
-  
+  const [patients, setPatients] = useState(() => {
+    const savedPatients = window.localStorage.getItem('patients');
+    return savedPatients ? JSON.parse(savedPatients) : [];
+  });
   const [openPatientIndex, setOpenPatientIndex] = useState(-1);
 
   const handlePatientInputChange = (event) => {
@@ -120,57 +121,7 @@ const Adminpacientes = () => {
     (patient) => patient.dni.includes(searchDNI)
   );
 
-  //LOGICA DE CONEXION 
-
-   const getAllDuenios = async () => {
-     var requestOptions = {
-       method: 'GET',
-     };
-
-     const response = await fetch ("http://localhost:8000/duenio/find-all", requestOptions)
-     const result = await response.json()
-     setPatients()
-
-     console.log(response)
-   }
-
-   useEffect(() => {
-     getAllDuenios()
-   }, []);
-
-  //  CREAR DUEÑO
-
-//   const crearDuenio = () => {
-//   const myHeaders = new Headers();
-//   myHeaders.append("Content-Type", "application/json");
-
-// var raw = JSON.stringify({
-//   "nombre": firstName.value,
-//   "apellido": lastName.value,
-//   "dni": dni.value,
-//   "email": "juandurso1@gmail.com",
-//   "telefono": celular.value
-// });
-
-// var requestOptions = {
-//   method: 'POST',
-//   headers: myHeaders,
-//   body: raw,
-//   redirect: 'follow'
-// }
   
-
-// fetch("http://localhost:8000/duenio/create", requestOptions)
-//   .then(response => response.json())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
-// }
-  
-  
-  
-
-  
-
 
   
 
@@ -305,7 +256,7 @@ const Adminpacientes = () => {
               </InputGroup>
             </Form.Group>
           </Row>
-          <Button  className='btn-warning' onClick={crearDuenio}>Agregar Paciente</Button>
+          <Button  className='btn-warning' onClick={handleAddPatient}>Agregar Paciente</Button>
         </Form>
 
         <h2 className="mt-5">LISTA DE PACIENTES</h2>
@@ -461,7 +412,6 @@ const Adminpacientes = () => {
                     >
                       Eliminar Paciente
                     </Button>
-                    <Link to="/Admin-turnos"><Button type="submit" className='btn-warning'>Editar datos del paciente</Button></Link>
                   </Form>
                 )}
               </Accordion.Body>
