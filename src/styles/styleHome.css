@@ -27,6 +27,7 @@ main {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: auto;
   pointer-events: none;
 }
 .hero .row h2,

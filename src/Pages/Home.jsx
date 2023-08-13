@@ -4,8 +4,8 @@ import ReactModal from 'react-modal';
 import React, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
 import toast, { Toaster } from 'react-hot-toast';
-import heroImg from "../img/website-images/images/hero.png"
-import curvaHero from "../img/website-images/images/bg-bottom-hero.png"
+// import heroImg from "../img/website-images/images/hero.png"
+// import curvaHero from "../img/website-images/images/bg-bottom-hero.png"
 
 window.addEventListener('load', () => {
 
@@ -48,35 +48,35 @@ window.addEventListener('load', () => {
           console.log(data.weather[0].main);
           switch (data.weather[0].main) {
             case 'Thunderstorm':
-              iconoAnimado.src = 'src/animated/thunder.svg';
+              iconoAnimado.src = '/thunder.svg';
               console.log('TORMENTA');
               break;
             case 'Drizzle':
-              iconoAnimado.src = 'src/animated/rainy-2.svg';
+              iconoAnimado.src = '/rainy-2.svg';
               console.log('LLOVIZNA');
               break;
             case 'Rain':
-              iconoAnimado.src = 'src/animated/rainy-7.svg';
+              iconoAnimado.src = '/rainy-7.svg';
               console.log('LLUVIA');
               break;
             case 'Snow':
-              iconoAnimado.src = 'src/animated/snowy-6.svg';
+              iconoAnimado.src = '/snowy-6.svg';
               console.log('NIEVE');
               break;
             case 'Clear':
-              iconoAnimado.src = 'src/animated/day.svg';
+              iconoAnimado.src = '/day.svg';
               console.log('LIMPIO');
               break;
             case 'Atmosphere':
-              iconoAnimado.src = 'src/animated/weather.svg';
+              iconoAnimado.src = '/weather.svg';
               console.log('ATMOSFERA');
               break;
             case 'Clouds':
-              iconoAnimado.src = 'src/animated/cloudy-day-1.svg';
+              iconoAnimado.src = '/cloudy-day-1.svg';
               console.log('NUBES');
               break;
             default:
-              iconoAnimado.src = 'src/animated/cloudy-day-1.svg';
+              iconoAnimado.src = '/cloudy-day-1.svg';
               console.log('por defecto');
           }
         })
@@ -164,7 +164,7 @@ const Home = () => {
             </div>
           </div>
           <div className="col-lg-6 my-5">
-            <img src={heroImg} alt="heroImg" className="hero_img"/>
+            <img src="/hero.png" alt="png" className="hero_img"/>
           </div>
           </div>
         </div>
@@ -191,7 +191,7 @@ const Home = () => {
       <div className="box">
          <div className="front-face">
             <div className="icon img">
-               <img src="src/img/iconoCirugia.png" alt="png"></img>
+               <img src="/iconoCirugia.png" alt="png"></img>
             </div>
             <span>SERVICIOS: Clínica y Cirugías</span>
          </div>
@@ -206,7 +206,7 @@ const Home = () => {
       <div className="box">
          <div className="front-face">
             <div className="icon">
-               <img src="src/img/iconoEspecialidades.png" alt="png"></img>
+               <img src="/iconoEspecialidades.png" alt="png"></img>
             </div>
             <span>SERVICIOS: Especialidades y Laboratorio</span>
          </div>
@@ -221,7 +221,7 @@ const Home = () => {
       <div className="box">
          <div className="front-face">
             <div className="icon">
-               <img src="src/img/iconoMedIntegral.png" alt="png"></img>
+               <img src="/iconoMedIntegral.png" alt="png"></img>
             </div>
             <span>SERVICIO: Medicina Preventiva</span>
          </div>
@@ -245,17 +245,17 @@ const Home = () => {
           <p className="especialista">Especialista en Cardiología y Clínica</p>
       </div>
       <div className="animation-show">
-          <img src="src/img/10.png"></img>
+          <img src="/10.png"></img>
           <h3 className="especialista fs-5">Doctor Rodrigo Ponce</h3>
           <p className="especialista">Especialista en Cirugías</p>
       </div>
       <div className="animation-show">
-          <img src="src/img/11.png"></img>
+          <img src="/11.png"></img>
           <h3 className="especialista fs-5">Doctora Daniela Díaz</h3>
           <p className="especialista">Especialista en Medicina Preventiva</p>
       </div>
       <div className="animation-show">
-          <img src="src/img/12.png"></img>
+          <img src="/12.png"></img>
           <h3 className="especialista fs-5">Doctor Leandro Martínez</h3>
           <p className="especialista">Especialista en Laboratorio</p>
       </div>
@@ -263,7 +263,7 @@ const Home = () => {
   </section3>
 
   <section4 className="imagDiv">
-    <img src="src/img/curva2.png" alt="png"></img>
+    <img src="/curva2.png" alt="png"></img>
   </section4>
 
   <section5>
@@ -365,7 +365,7 @@ const Home = () => {
           </div>
         </div>
         <div className="image">
-          <img src="src/img/comentario2.jpg" alt=""></img>
+          <img src="/comentario2.jpg" alt="jpg"></img>
         </div>
       </div>
     </div>
@@ -385,7 +385,7 @@ const Home = () => {
           </div>
         </div>
         <div className="image">
-          <img src="src/img/comentario1.jpg" alt=""></img>
+          <img src="/comentario1.jpg" alt="jpg"></img>
         </div>
       </div>
     </div>
@@ -405,7 +405,7 @@ const Home = () => {
           </div>
         </div>
         <div className="image">
-          <img src="src/img/comentario3.jpg" alt=""></img>
+          <img src="/comentario3.jpg" alt=""></img>
         </div>
       </div>
     </div>
@@ -424,76 +424,76 @@ const Home = () => {
   <br /><br />
   
   <section7 className="imagDiv">
-       <img src="src/img/curva3.png" alt="png"></img>
+       <img src="/curva3.png" alt="png"></img>
   </section7>
 
   <section8 className="imagDiv">
-      <img src="src/img/alimento.png" alt="png"></img>
+      <img src="/alimento.png" alt="png"></img>
   </section8>
 
   <section9>
     <div className="slider">
       <div className="slide-track">
           <div className="slide">
-              <img src="src/img/a.webp" alt="webp"></img>
+              <img src="/a.webp" alt="webp"></img>
           </div>
           <div className="slide">
-              <img src="src/img/b.webp" alt="webp"></img>
+              <img src="/b.webp" alt="webp"></img>
           </div>
           <div className="slide">
-              <img src="src/img/c.webp" alt="webp"></img>
+              <img src="/c.webp" alt="webp"></img>
           </div>
           <div className="slide">
-              <img src="src/img/d.webp" alt="webp"></img>
+              <img src="/d.webp" alt="webp"></img>
           </div>
           <div className="slide">
-              <img src="src/img/e.webp" alt="webp"></img>
+              <img src="/e.webp" alt="webp"></img>
           </div>
           <div className="slide">
-              <img src="src/img/f.webp" alt="webp"></img>
+              <img src="/f.webp" alt="webp"></img>
           </div>
           <div className="slide">
-              <img src="src/img/g.webp" alt="webp"></img>
+              <img src="/g.webp" alt="webp"></img>
           </div>
           <div className="slide">
-              <img src="src/img/h.webp" alt="webp"></img>
+              <img src="/h.webp" alt="webp"></img>
           </div>
           <div className="slide">
-              <img src="src/img/i.webp" alt="webp"></img>
+              <img src="/i.webp" alt="webp"></img>
           </div>
           <div className="slide">
-              <img src="src/img/j.webp" alt="webp"></img>
+              <img src="/j.webp" alt="webp"></img>
           </div>
           
           <div className="slide">
-            <img src="src/img/a.webp" alt="webp"></img>
+            <img src="/a.webp" alt="webp"></img>
         </div>
         <div className="slide">
-            <img src="src/img/b.webp" alt="webp"></img>
+            <img src="/b.webp" alt="webp"></img>
         </div>
         <div className="slide">
-            <img src="src/img/c.webp" alt="webp"></img>
+            <img src="/c.webp" alt="webp"></img>
         </div>
         <div className="slide">
-            <img src="src/img/d.webp" alt="webp"></img>
+            <img src="/d.webp" alt="webp"></img>
         </div>
         <div className="slide">
-            <img src="src/img/e.webp" alt="webp"></img>
+            <img src="/e.webp" alt="webp"></img>
         </div>
         <div className="slide">
-            <img src="src/img/f.webp" alt="webp"></img>
+            <img src="/f.webp" alt="webp"></img>
         </div>
         <div className="slide">
-            <img src="src/img/g.webp" alt="webp"></img>
+            <img src="/g.webp" alt="webp"></img>
         </div>
         <div className="slide">
-            <img src="src/img/h.webp" alt="webp"></img>
+            <img src="/h.webp" alt="webp"></img>
         </div>
         <div className="slide">
-            <img src="src/img/i.webp" alt="webp"></img>
+            <img src="/i.webp" alt="webp"></img>
         </div>
         <div className="slide">
-            <img src="src/img/j.webp" alt="webp"></img>
+            <img src="/j.webp" alt="webp"></img>
         </div>
       </div>
   </div>
@@ -516,7 +516,7 @@ const Home = () => {
 		<div className="container-items">
 			<div className="item">
 				<figure className='imgCarrito'>
-					<img src="src/img/1.webp.png" alt="producto" />
+					<img src="/1.webp.png" alt="producto" />
 				</figure >
 				<div className="info-product">
 					<h4>Juguete Pez</h4>
@@ -527,7 +527,7 @@ const Home = () => {
 			<div className="item">
 				<figure className='imgCarrito'>
 					<img
-						src="src/img/2.webp.png"
+						src="/2.webp.png"
 						alt="producto"
 					/>
 				</figure>
@@ -540,7 +540,7 @@ const Home = () => {
 			<div className="item">
 				<figure className='imgCarrito'>
 					<img
-						src="src/img/3.webp.png"
+						src="/3.webp.png"
 						alt="producto"
 					/>
 				</figure>
@@ -553,7 +553,7 @@ const Home = () => {
 			<div className="item">
 				<figure className='imgCarrito'>
 					<img
-						src="src/img/4.webp.png"
+						src="/4.webp.png"
 						alt="producto"
 					/>
 				</figure>
@@ -566,7 +566,7 @@ const Home = () => {
 			<div className="item">
 				<figure className='imgCarrito'>
 					<img
-						src="src/img/5.webp.png"
+						src="/5.webp.png"
 						alt="producto"
 					/>
 				</figure>
@@ -579,7 +579,7 @@ const Home = () => {
         <div className="item">
 				  <figure className='imgCarrito'>
 					<img
-						src="src/img/6.webp.png"
+						src="/6.webp.png"
 						alt="producto"
 					/>
 				  </figure>
@@ -646,7 +646,7 @@ const Home = () => {
 		  <div className='formulario-modal col-12'>
           <button type='submit'className='label-style button1 col-4'>Enviar</button>
 		  <button onClick={handleCloseModal}className='label-style button2 col-4'>Cerrar</button>
-      <img className='logoForm' src="src/img/logo.png" alt="" />
+      <img className='logoForm' src="/logo.png" alt="png" />
 
 		  </div>
         </form>
