@@ -2,7 +2,7 @@ import React from 'react'
 import "../styles/styleError404.css"
 
 
-const error404Copia2 = () => {
+const Error404 = () => {
 
   return (
     <div className='granPadre text-center'>
@@ -27,4 +27,4 @@ const error404Copia2 = () => {
   )
 }
 
-export default error404Copia2
+export default Error404
