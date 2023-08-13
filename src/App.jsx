@@ -7,7 +7,6 @@ import Adminpacientes from "./Pages/Admin-pacientes";
 import Adminturnos from "./Pages/Admin-turnos";
 // import signUp from "./Pages/signup";
 import SignUp2 from "./Pages/SignUp2";
-import Home from "./Pages/Home";
 import AcercaDeNosotros from "./Pages/Acerca-de-nosotros";
 import Error404 from "./Pages/Error404";
 // FIN MIO
