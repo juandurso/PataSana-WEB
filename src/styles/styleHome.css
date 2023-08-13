@@ -112,16 +112,7 @@ main {
   top:-45px
 }
 
-/* @media (max-width: 530px) {
-  #contenedor, #caja1, #caja2, #caja3{
-    margin: auto;
-    top: 5px;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    left: 100px;
-  }
-} */
+
 @media (max-width: 1021px) {
   #contenedor, #caja1, #caja2, #caja3{
     margin: auto;
@@ -325,13 +316,7 @@ main {
     color: #fff;
     position: relative;
   }
-  /* .price-area .inner-area .text{
-    font-size: 25px;
-    font-weight: 400;
-    position: absolute;
-    top: -10px;
-    left: 17px;
-  } */
+  
   .price-area .inner-area .price{
     font-size: 40px;
     font-weight: 500;
@@ -662,113 +647,6 @@ header{
   /* padding: 30px 0 40px 0; */
 }
 
-/* .container-icon{
-  position: relative;
-  top: 5px;
-  left: 10px;
-  background-color:#013d37;
-} */
-
-/* .count-products {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  right: 0;
-  background-color: #f70707;
-  color: #fff;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-} */
-
-/* #contador-productos{
-  font-size: 22px;
-} */
-
-/* .container-cart-products{
-  position: fixed;
-  top: 90px;
-  right: 0;
-  background-color: #fff;
-  width: 300px;
-  z-index: 1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
-  border-radius: 10px;
-  color: #013d37;
-} */
-
-/* .cart-product{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
-} */
-
-/* .info-cart-product{
-  display: flex;
-  justify-content: space-between;
-  flex: 0.8;
-} */
-
-/* .titulo-producto-carrito{
-  font-size: 20px;
-  color: #013d37;
-  text-transform: capitalize;
-}
-
-.precio-producto-carrito{
-  font-weight: 700;
-  font-size: 20px;
-  margin-left: 10px;
-  color: #013d37;
-}
-
-.cantidad-producto-carrito{
-  font-weight: 400;
-  font-size: 20px;
-  color: #f70707;
-} */
-
-/* .icon-close{
-  width: 25px;
-  height: 25px;
-}
-
-.icon-close:hover{
-  stroke: red;
-  cursor: pointer;
-}
-
-.cart-total{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-  gap: 20px;
-  background-color: #01655b;
-}
-
-.cart-total h3{
-  font-size: 20px;
-  font-weight: 700;
-  color: #f70707;
-}
-
-.total-pagar{
-  font-size: 20px;
-  font-weight: 700;
-  color: #f70707;
-} */
-
-/* .hidden-cart{
-  display: none;
-} */
-
-
 
 
 /* Main */
@@ -904,9 +782,9 @@ header{
 	height: 100px;
   }
   .button1 {
-    border: none;
+    border-radius: 30px;
     background: none;
-    background-color: #00e676;
+    background-color: #9c6b4b;
     color: #fff;
     padding: 15px 10px;
     cursor: pointer;
@@ -914,11 +792,30 @@ header{
   }
   
   .button2 {
-    border: none;
+    border-radius: 30px;
     background: none;
-    background-color: #4fa8fb;
+    background-color: #01655b;
     color: #fff;
     padding: 15px 10px;
     cursor: pointer;
   }
+
+
+
+  .logoForm {
+    position: relative;
+    top:-125px;
+    left:70px;
+    width: 350px;
+  }
+  @media (max-width: 400px) {
+    .logoForm{
+      position: relative;
+    top:-120px;
+    left:40px;
+    width: 350px;
+      
+    }
+  }
+
  /* Modal contactos Fin*/

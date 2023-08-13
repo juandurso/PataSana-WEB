@@ -86,138 +86,6 @@ window.addEventListener('load', () => {
 });
 
 
-// //CARRITO
-// const btnCart = document.querySelector('.container-cart-icon');
-// const containerCartProducts = document.querySelector(
-// 	'.container-cart-products'
-// );
-
-// btnCart.addEventListener('click', () => {
-// 	containerCartProducts.classList.toggle('hidden-cart');
-// });
-
-// /* ========================= */
-// const cartInfo = document.querySelector('.cart-product');
-// const rowProduct = document.querySelector('.row-product');
-
-// // Lista de todos los contenedores de productos
-// const productsList = document.querySelector('.container-items');
-
-// // Variable de arreglos de Productos
-// let allProducts = [];
-
-// const valorTotal = document.querySelector('.total-pagar');
-
-// const countProducts = document.querySelector('#contador-productos');
-
-// const cartEmpty = document.querySelector('.cart-empty');
-// const cartTotal = document.querySelector('.cart-total');
-
-// productsList.addEventListener('click', e => {
-// 	if (e.target.classList.contains('btn-add-cart')) {
-// 		const product = e.target.parentElement;
-
-// 		const infoProduct = {
-// 			quantity: 1,
-// 			title: product.querySelector('h4').textContent,
-// 			price: product.querySelector('p').textContent,
-// 		};
-
-// 		const exits = allProducts.some(
-// 			product => product.title === infoProduct.title
-// 		);
-
-// 		if (exits) {
-// 			const products = allProducts.map(product => {
-// 				if (product.title === infoProduct.title) {
-// 					product.quantity++;
-// 					return product;
-// 				} else {
-// 					return product;
-// 				}
-// 			});
-// 			allProducts = [...products];
-// 		} else {
-// 			allProducts = [...allProducts, infoProduct];
-// 		}
-
-// 		showHTML();
-// 	}
-// });
-
-// rowProduct.addEventListener('click', e => {
-// 	if (e.target.classList.contains('icon-close')) {
-// 		const product = e.target.parentElement;
-// 		const title = product.querySelector('p').textContent;
-
-// 		allProducts = allProducts.filter(
-// 			product => product.title !== title
-// 		);
-
-// 		console.log(allProducts);
-
-// 		showHTML();
-// 	}
-// });
-
-// // Funcion para mostrar  HTML
-// const showHTML = () => {
-// 	if (!allProducts.length) {
-// 		cartEmpty.classList.remove('hidden');
-// 		rowProduct.classList.add('hidden');
-// 		cartTotal.classList.add('hidden');
-// 	} else {
-// 		cartEmpty.classList.add('hidden');
-// 		rowProduct.classList.remove('hidden');
-// 		cartTotal.classList.remove('hidden');
-// 	}
-
-// 	// Limpiar HTML
-// 	rowProduct.innerHTML = '';
-
-// 	let total = 0;
-// 	let totalOfProducts = 0;
-
-// 	allProducts.forEach(product => {
-// 		const containerProduct = document.createElement('div');
-// 		containerProduct.classList.add('cart-product');
-
-// 		containerProduct.innerHTML = `
-//             <div className="info-cart-product">
-//                 <span className="cantidad-producto-carrito">${product.quantity}</span>
-//                 <p className="titulo-producto-carrito">${product.title}</p>
-//                 <span className="precio-producto-carrito">${product.price}</span>
-//             </div>
-//             <svg
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 fill="none"
-//                 viewBox="0 0 24 24"
-//                 stroke-width="1.5"
-//                 stroke="currentColor"
-//                 className="icon-close"
-//             >
-//                 <path
-//                     stroke-linecap="round"
-//                     stroke-linejoin="round"
-//                     d="M6 18L18 6M6 6l12 12"
-//                 />
-//             </svg>
-//         `;
-
-// 		rowProduct.append(containerProduct);
-
-// 		total =
-// 			total + parseInt(product.quantity * product.price.slice(1));
-// 		totalOfProducts = totalOfProducts + product.quantity;
-// 	});
-
-// 	valorTotal.innerText = `$${total}`;
-// 	countProducts.innerText = totalOfProducts;
-// };
-
-//FIN CARRITO
-
-
 
 const Home = () => {
     //modal
@@ -247,7 +115,7 @@ const Home = () => {
             // Después de enviar el formulario, cerramos la ventana modal
             handleCloseModal();
         //toast
-        toast.success('Formulario enviado correctamente!', {
+        toast.success('¡Formulario enviado correctamente! Recibimos tu pedido, pronto nos pondremos en contacto contigo.', {
         style: {
           background: '#013D37',
           color: '#fff',
@@ -636,57 +504,12 @@ const Home = () => {
     <h3 className="my-4">PRODUCTOS DESTACADOS</h3>
 
 			<div className="container-icon">
-				{/* <div className="container-cart-icon">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						strokeWidth="1.5"
-						stroke="currentColor"
-						class="icon-cart"
-					>
-						<path
-							strokeinecap="round"
-							strokeLinejoin="round"
-							d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-						/>
-					</svg>
-					<div className="count-products">
-						<span id="contador-productos">0</span>
-					</div>
-				</div> */}
-
+		
 				<div className="container-cart-products hidden-cart">
 					<div className="row-product hidden">
 						<div className="cart-product">
-							{/* <div className="info-cart-product">
-								<span className="cantidad-producto-carrito">1</span>
-								<p className="titulo-producto-carrito">Whisker Fiesta - Pez</p>
-								<span className="precio-producto-carrito">$1100</span>
-							</div> */}
-							{/* <svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								className="icon-close"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M6 18L18 6M6 6l12 12"
-								/>
-							</svg> */}
 						</div>
 					</div>
-
-					{/* <div className="cart-total hidden">
-						<h3>Total:</h3>
-						<span className="total-pagar">$200</span>
-                        <button>Comprar</button>
-					</div> */}
-					{/* <p className="cart-empty">El carrito está vacío</p> */}
 				</div>
 			</div>
 		</header>
@@ -780,7 +603,7 @@ const Home = () => {
       >
         {/* Contenido de la ventana modal */}
         <form onSubmit={handleSubmit} className='contacto-from'>
-		<h2>Contacto</h2>
+		<h3>Envío de Productos</h3>
           <div className='formulario-modal'>
             <label htmlFor='name'>Nombre:</label>
             <input
@@ -820,9 +643,11 @@ const Home = () => {
 			  required
             />
           </div>
-		  <div className='formulario-modal'>
-          <button type='submit'className='label-style button1'>Enviar</button>
-		  <button onClick={handleCloseModal}className='label-style button2'>Cerrar</button>
+		  <div className='formulario-modal col-12'>
+          <button type='submit'className='label-style button1 col-4'>Enviar</button>
+		  <button onClick={handleCloseModal}className='label-style button2 col-4'>Cerrar</button>
+      <img className='logoForm' src="src/img/logo.png" alt="" />
+
 		  </div>
         </form>
       </ReactModal>
