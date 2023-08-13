@@ -168,7 +168,7 @@ const Home = () => {
           </div>
           </div>
         </div>
-        <img src={curvaHero} alt="png" className="curveImg" />
+        <img src="/bg-bottom-hero.png" alt="png" className="curveImg" />
       </section>
   </main>
 
