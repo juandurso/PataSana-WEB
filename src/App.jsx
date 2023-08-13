@@ -31,9 +31,7 @@ const App = () => {
           {/* <Route path="/Signup" element={<signup />} /> */}
           <Route path="/Signup2" element={<SignUp2 />} />
           <Route path="/aboutus" element={<AcercaDeNosotros />} />
-
           <Route path="/error404" element={<Error404 />} />
-
           <Route path="/DetallesDePlanes" element={<DetallesDePlanes />} />
         </Routes>
       </BrowserRouter>
