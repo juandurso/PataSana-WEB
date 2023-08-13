@@ -51,7 +51,7 @@
     --bs-accordion-active-color: white;
     --bs-accordion-active-bg: var(--bs-primary-bg-subtle);
     
-};
+}
 .btn-primary {
     --bs-btn-color: #fff;
     --bs-btn-bg: #01655B;

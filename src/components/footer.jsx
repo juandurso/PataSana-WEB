@@ -6,7 +6,7 @@ import '../../src/img/logonavbar.png'
 
 const Footer = () => {
   return (
-    <footer className="nav-bg text-light mt-5 justify-content-center ">
+    <footer className="nav-bg text-light mt-2 justify-content-center ">
       <Container fluid>
         <Row className='text-center'>
         <Col xs={12} md={3} className='border-end'>

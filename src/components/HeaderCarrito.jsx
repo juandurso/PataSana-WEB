@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
+
 export const Header = ({
 	allProducts,
 	setAllProducts,
@@ -51,7 +52,7 @@ export const Header = ({
 		}
 	}
 	return (
-		<header>
+		<header className='header2'>
              <h1>Planes</h1>
 			<div className='container-icon'>
 				<div

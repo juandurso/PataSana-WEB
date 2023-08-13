@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com'; // Cambiamos el import para usar el paquete emailjs-com
 import toast, { Toaster } from 'react-hot-toast';
 
+
 export const ProductList = ({
   allProducts,
   setAllProducts,
