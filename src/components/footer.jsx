@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 import '../styles/styleNavBar.css';
-import '../../src/img/logonavbar.png'
+import logoNav from '../../src/img/logonavbar.png'
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
       <Container fluid>
         <Row className='text-center'>
         <Col xs={12} md={3} className='border-end'>
-        <Image src="../../src/img/logonavbar.png" alt="logo" width={165} height={115} className='my-1 me-0' />
+        <Image src={logoNav} alt="logo" width={165} height={115} className='my-1 me-0' />
           </Col>
           <Col xs={12} md={3} className='border-end'>
             <h5 className='my-1'>
