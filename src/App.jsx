@@ -1,7 +1,7 @@
 import React from "react";
 import NavbarComponent from "./components/Navegation/navbar";
 import Footer from "./components/footer";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import Adminpacientes from "./Pages/Admin-pacientes";
 import Adminturnos from "./Pages/Admin-turnos";
 import Signin from "./Pages/signin";
