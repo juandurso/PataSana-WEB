@@ -169,6 +169,7 @@ main {
   }
   .box .front-face .icon img{
     height: 140px;
+    width: auto;
     position: relative;
     top: 5px;
     left: 100px;
