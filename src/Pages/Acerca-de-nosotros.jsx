@@ -4,21 +4,13 @@ import vComp from "../assets/videoComp.mp4";
 // import mComp from "../assets/strangerThings.mp3";
 // import m2Comp from "../assets/music.mp3";
 
-
 function AcercaDeNosotros() {
-
-
   return (
     <div>
-
       <div>
         {/* <!-- video --> */}
 
-
-
         <video src={vComp} autoPlay loop muted></video>
-
-
 
         {/* <audio src={mComp} autoPlay loop></audio> */}
 
@@ -31,7 +23,6 @@ function AcercaDeNosotros() {
           <h1 className="text-center pt-3 text-warning display-2 fw-normal acerca mx-2 acerca-h1">
             Acerca de nosotros
           </h1>
-
 
           {/* hijo 2 */}
           {/* <!-- fila 1 FOTOS --> */}
@@ -120,11 +111,14 @@ function AcercaDeNosotros() {
                           Comida al paso, Bares Temáticos
                         </p> */}
                     <p className="text-center">
-                      Hola! Somos <span className="span-webPets"><b>Web Pets!</b></span> Alumnos de la Comisión 47i
-                      del curso <b>"Full Stack"</b> que dicta la academia{" "}
-                      <b>Rolling Code School</b> en la provincia de Tucumán,
-                      Argentina, y éste es nuestro <b>Proyecto Final</b> de
-                      finalización del curso!
+                      Hola! Somos{" "}
+                      <span className="span-webPets">
+                        <b>Web Pets!</b>
+                      </span>{" "}
+                      Alumnos de la Comisión 47i del curso <b>"Full Stack"</b>{" "}
+                      que dicta la academia <b>Rolling Code School</b> en la
+                      provincia de Tucumán, Argentina, y éste es nuestro{" "}
+                      <b>Proyecto Final</b> de finalización del curso!
                     </p>
                   </div>
 
