@@ -423,7 +423,6 @@ const Home = () => {
 
   <br /><br />
   
-
   <section7 className="imagDiv">
        <img src="src/img/curva3.png" alt="png"></img>
   </section7>
