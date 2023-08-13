@@ -4,6 +4,8 @@ import ReactModal from 'react-modal';
 import React, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
 import toast, { Toaster } from 'react-hot-toast';
+import heroImg from "../img/website-images/images/hero.png"
+import curvaHero from "../img/website-images/images/bg-bottom-hero.png"
 
 window.addEventListener('load', () => {
 
@@ -162,11 +164,11 @@ const Home = () => {
             </div>
           </div>
           <div className="col-lg-6 my-5">
-            <img src="src/img/website-images/images/hero.png" alt="heroImg" className="hero_img"/>
+            <img src={heroImg} alt="heroImg" className="hero_img"/>
           </div>
           </div>
         </div>
-        <img src="src/img/website-images/images/bg-bottom-hero.png" alt="png" className="curveImg" />
+        <img src={curvaHero} alt="png" className="curveImg" />
       </section>
   </main>
 
