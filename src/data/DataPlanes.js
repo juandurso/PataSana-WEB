@@ -2,7 +2,7 @@ export const data = [
 	{
 		id: 1,
 		img: 'https://media.istockphoto.com/id/529116816/es/foto/veterinario-médico-y-labrador-cachorro.jpg?s=612x612&w=0&k=20&c=j242HAG5ohG6qlsBVoOA_M8u-KElxMP3Pm-P64797HE=',
-		nameProduct: 'Primeros pasos: mascotas de 0 a 5 años',
+		nameProduct: 'Cachorro: mascotas de 0 a 5 años',
         infoProduct: 'Este plan ofrece servicios veterinarios especializados para cuidar de manera integral a tus mascotas durante sus primeros cinco años de vida. Incluye exámenes de salud regulares, vacunas, esterilización/castración, cuidado dental y asesoramiento nutricional. Nuestro objetivo es garantizar un inicio saludable y feliz.',
 		price: 5000,
 		quantity: 1,

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-
+import '../styles/styleProductosDePlanes.css';
 
 export const Header = ({
 	allProducts,
@@ -52,9 +52,9 @@ export const Header = ({
 		}
 	}
 	return (
-		<header className='header2'>
-             <h1>Planes</h1>
-			<div className='container-icon'>
+		<header id='header2'>
+             <h1>Planes a Tu Medida</h1>
+			<div id='container-icon2'>
 				<div
 					className='container-cart-icon'
 					onClick={() => setActive(!active)}
@@ -65,7 +65,7 @@ export const Header = ({
 						viewBox='0 0 24 24'
 						strokeWidth='1.5'
 						stroke='currentColor'
-						className='icon-cart'
+						id='icon-cart2'
 					>
 						<path
 							strokeLinecap='round'
@@ -73,13 +73,13 @@ export const Header = ({
 							d='M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z'
 						/>
 					</svg>
-					<div className='count-products'>
+					<div id='count-products2'>
 						<span id='contador-productos'>{countProducts}</span>
 					</div>
 				</div>
 
 				<div
-					className={`container-cart-products ${
+				className={`container-cart-products2 ${
 						active ? '' : 'hidden-cart'
 					}`}
 				>
@@ -87,15 +87,15 @@ export const Header = ({
 						<>
 							<div className='row-product'>
 								{allProducts.map(product => (
-									<div className='cart-product' key={product.id}>
-										<div className='info-cart-product'>
-											<span className='cantidad-producto-carrito'>
+									<div id='cart-product2' key={product.id}>
+										<div id='info-cart-product2'>
+											<span id='cantidad-producto-carrito2'>
 												{product.quantity}
 											</span>
-											<p className='titulo-producto-carrito'>
+											<p id='titulo-producto-carrito2'>
 												{product.nameProduct}
 											</p>
-											<span className='precio-producto-carrito'>
+											<span id='precio-producto-carrito2'>
 												${product.price}
 											</span>
 										</div>
@@ -105,7 +105,7 @@ export const Header = ({
 											viewBox='0 0 24 24'
 											strokeWidth='1.5'
 											stroke='currentColor'
-											className='icon-close'
+											id='icon-close2'
 											onClick={() => onDeleteProduct(product)}
 										>
 											<path
@@ -118,9 +118,9 @@ export const Header = ({
 								))}
 							</div>
 
-							<div className='cart-total'>
-								<h3>Total:</h3>
-								<span className='total-pagar'>${total}</span>
+							<div id='cart-total2'>
+								<h3 id='#cart-total-h3'>Total:</h3>
+								<span id='total-pagar2'>${total}</span>
 							</div>
 
 							<button className='btn-clear-all' onClick={onCleanCart}>
@@ -131,7 +131,7 @@ export const Header = ({
 							</button>
 						</>
 					) : (
-						<p className='cart-empty'>El carrito está vacío</p>
+						<p id='cart-empty2'>El carrito está vacío</p>
 					)}
 				</div>
 			</div>
