@@ -21,11 +21,13 @@ function NavbarComponent() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="nav-bg"/>
         <Navbar.Collapse id="basic-navbar-nav" className="nav-bg">
           <Nav className="nav-bg me-auto" >
-            <Nav.Link as={Link} to="/Home">Home</Nav.Link>
+            <Nav.Link as={Link} to="/Home">Inicio</Nav.Link>
             <NavDropdown title="Administración" id="basic-nav-dropdown" className="nav-bg">
               <NavDropdown.Item as={Link} to="/Admin-turnos" className="nav-bg">Turnos</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/Admin-pacientes" className="nav-bg">Pacientes</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={Link} to="/Home">Acerca de nosotros</Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
         <Nav.Link as={Link} to="/signin">
