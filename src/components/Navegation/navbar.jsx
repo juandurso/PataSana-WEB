@@ -34,6 +34,9 @@ function NavbarComponent() {
         <Nav.Link as={Link} to="/signup">
           <Button variant="outline-warning mx-2">Registrarse</Button>
         </Nav.Link>
+        <Nav.Link as={Link} to="/DetallesDePlanes">
+          <Button variant="outline-warning mx-2">DetallesDePlanes</Button>
+        </Nav.Link>
       </Container>
     </Navbar>
   
