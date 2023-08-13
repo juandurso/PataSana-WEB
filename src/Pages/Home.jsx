@@ -184,7 +184,6 @@ const Home = () => {
             <h1 id="viento-velocidad" className='fs-2'></h1>
         </div>
   </div>
-
   <section2>
     <div className="wrapper">
       <div className="box">
