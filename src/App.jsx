@@ -11,7 +11,7 @@ import AcercaDeNosotros from "./Pages/Acerca-de-nosotros";
 import Error404 from "./Pages/Error404";
 // FIN MIO
 
-import SignIn from "./Pages/signin";
+// import SignIn from "./Pages/signin";
 import Home from "./Pages/Home";
 
 import DetallesDePlanes from "./Pages/DetallesDePlanes";
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/Home" element={<Home />} />
           <Route path="/Admin-pacientes" element={<Adminpacientes />} />
           <Route path="/Admin-turnos" element={<Adminturnos />} />
-          <Route path="/Signin" element={<SignIn />} />
+          {/* <Route path="/Signin" element={<SignIn />} /> */}
           {/* <Route path="/Signup" element={<signup />} /> */}
           <Route path="/Signup2" element={<SignUp2 />} />
           <Route path="/aboutus" element={<AcercaDeNosotros />} />
