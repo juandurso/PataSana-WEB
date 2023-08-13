@@ -108,7 +108,7 @@ const Home = () => {
   
       // Enviamos el formulario usando el paquete emailjs-com
       emailjs
-        .sendForm('service_cyy6gui', 'template_v5rxhon', e.target, 'F9ADarLVUQU5W4bMm')
+        .sendForm('service_72sah3s', 'template_q8qw8fc', e.target, '0ku9k9GZc3KaSdMBY')
         .then(
           (result) => {
             console.log(result.text);
