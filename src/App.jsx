@@ -7,12 +7,14 @@ import Adminturnos from "./Pages/Admin-turnos";
 import Signin from "./Pages/signin";
 import Signup from "./Pages/signup";
 import Home from "./Pages/Home";
+
 import DetallesDePlanes from "./Pages/DetallesDePlanes"
 
 
 //<NavbarComponent />
 
 const App = () => {
+
 	return (
     
     <div>
@@ -26,14 +28,13 @@ const App = () => {
           <Route path="/Signup" element={<Signup/>}/>
           <Route path="/DetallesDePlanes"element={<DetallesDePlanes/>}/>
       </Routes>
+
       </BrowserRouter>
-      <Footer/>
-      
+      <Footer />
     </div>
+
 	);
+
 };
 
-
 export default App;
-
-
