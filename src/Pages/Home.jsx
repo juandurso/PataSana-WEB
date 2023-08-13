@@ -240,7 +240,7 @@ const Home = () => {
     <h3 className="textoCentral">NUESTROS PROFESIONALES</h3>
     <div className="tab library">
       <div className="animation-show">
-          <img src="src/img/9.png"></img>
+          <img src="/9.png"></img>
           <h3 className="especialista fs-5">Doctora Carmen Brizuela</h3>
           <p className="especialista">Especialista en Cardiología y Clínica</p>
       </div>
