@@ -130,6 +130,7 @@ const SignUp = () => {
                 onChange={handleChangeDni}
               />
             </Form.Group> */}
+            
 
             <Form.Group className="mt-4 mb-3" controlId="dni">
               <Form.Label className="text-white mb-1 labels">DNI:</Form.Label>
