@@ -158,7 +158,9 @@ const Home = () => {
             <p> En Pata Sana, nuestro compromiso es proporcionar el más alto nivel de cuidado y cariño a todos los animales que atendemos. Somos un equipo apasionado de médicos veterinarios y profesionales dedicados que comparten una profunda conexión con los animales y una misión común: mejorar la salud y el bienestar de las mascotas.</p>
             <div className="buttons">
               <button className="btn" onClick={handleOpenModal} >CONTACTANOS</button>
-              <button className="btn">SUCURSALES</button>
+              <a href="/error404">
+              <button className="btn text-decoration-none">SUCURSALES</button>
+              </a>
             </div>
           </div>
           <div className="col-lg-6 my-5">

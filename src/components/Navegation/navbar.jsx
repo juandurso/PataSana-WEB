@@ -24,7 +24,6 @@ function NavbarComponent() {
             <Nav.Link as={Link} to="/Home">Home</Nav.Link>
             <Nav.Link as={Link} to="/Acerca-de-nosotros">Acerca de Nosotros</Nav.Link>
             <NavDropdown title="Administración" id="basic-nav-dropdown" className="nav-bg">
-              <NavDropdown.Item as={Link} to="/Admin-turnos" className="nav-bg">Turnos</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/AdminPacientes" className="nav-bg">Pacientes</NavDropdown.Item>
             </NavDropdown>
           </Nav>
