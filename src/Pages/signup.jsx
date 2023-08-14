@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/styleSignUp2.css";
+import "../styles/styleSignUp.css";
 import { Container, Form, Button} from "react-bootstrap";
 
 const SignUp = () => {
