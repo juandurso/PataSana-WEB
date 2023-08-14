@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Table from "react-bootstrap/Table";
 import { json, useParams } from "react-router-dom";
+import { API_URL } from "../common/constants"
 
 function AdminTurnos() {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ function AdminTurnos() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/paciente/find-by-id/" + params.id,
+        API_URL + "/paciente/find-by-id/" + params.id,
         requestOptions
       );
       if (!response.ok) throw new Error("No se pudo buscar el paciente");
@@ -67,7 +68,7 @@ function AdminTurnos() {
     };
     try {
       const response = await fetch(
-        "http://localhost:8000/turnos/create",
+        API_URL + "/turnos/create",
         requestOptions
       );
 
@@ -155,7 +156,7 @@ function AdminTurnos() {
 
       try {
         const response = await fetch(
-          "http://localhost:8000/turnos/delete-by-id/" + _id,
+          API_URL + "/turnos/delete-by-id/" + _id,
           requestOptions
         );
 

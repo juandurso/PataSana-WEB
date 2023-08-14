@@ -5,6 +5,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
+import { API_URL } from "../common/constants"
 
 function UpdateDuenio() {
   const navigate = useNavigate();
@@ -51,7 +52,7 @@ function UpdateDuenio() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/duenio/update-by-id/" + params?.id,
+        API_URL + "/duenio/update-by-id/" + params?.id,
         requestOptions
       );
       const result = await response.json();
@@ -69,7 +70,7 @@ function UpdateDuenio() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/duenio/find-by-id/" + params.id,
+        API_URL + "/duenio/find-by-id/" + params.id,
         requestOptions
       );
       if (!response.ok) throw new Error("No se pudo buscar el duenio");

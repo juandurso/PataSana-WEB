@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import { Container } from "react-bootstrap";
+import { API_URL } from "../common/constants"
 
 export default function MascotasDuenio() {
   const params = useParams();
@@ -36,7 +37,7 @@ export default function MascotasDuenio() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/duenio/find-by-id/" + params.id,
+        API_URL + "/duenio/find-by-id/" + params.id,
         requestOptions
       );
       if (!response.ok) throw new Error("No se pudo buscar el duenio");
@@ -73,7 +74,7 @@ export default function MascotasDuenio() {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/paciente/create", requestOptions)
+    fetch(API_URL + "/paciente/create", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         // Aquí se ejecuta después de que el borrado sea exitoso
@@ -95,7 +96,7 @@ export default function MascotasDuenio() {
       };
 
       fetch(
-        "http://localhost:8000/paciente/delete-by-id/" + _id,
+        API_URL + "/paciente/delete-by-id/" + _id,
         requestOptions
       )
         .then((response) => response.json())

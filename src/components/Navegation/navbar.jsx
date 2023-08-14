@@ -25,7 +25,7 @@ function NavbarComponent() {
             <Nav.Link as={Link} to="/Home">Home</Nav.Link>
             <NavDropdown title="Administración" id="basic-nav-dropdown" className="nav-bg">
               <NavDropdown.Item as={Link} to="/Admin-turnos" className="nav-bg">Turnos</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Admin-pacientes" className="nav-bg">Pacientes</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/AdminPacientes" className="nav-bg">Pacientes</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

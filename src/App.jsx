@@ -3,7 +3,7 @@ import React from "react";
 import NavbarComponent from "./components/Navegation/navbar";
 import Footer from "./components/footer";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Adminpacientes from "./Pages/Admin-pacientes";
+import Adminpacientes from "./Pages/AdminPacientes";
 import Adminturnos from "./Pages/Admin-turnos";
 // import signUp from "./Pages/signup";
 import SignUp2 from "./Pages/SignUp2";
@@ -30,7 +30,7 @@ const App = () => {
         <NavbarComponent />
         <Routes>
           <Route path="/Home" element={<Home />} />
-          <Route path="/Admin-pacientes" element={<Adminpacientes />} />
+          <Route path="/AdminPacientes" element={<Adminpacientes />} />
           <Route path="/Admin-turnos" element={<Adminturnos />} />
           {/* <Route path="/Signin" element={<SignIn />} /> */}
           {/* <Route path="/Signup" element={<signup />} /> */}

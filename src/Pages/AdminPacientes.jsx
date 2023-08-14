@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../common/constants"
 
 const Adminpacientes = () => {
   // ESTADOS
@@ -129,7 +130,7 @@ const Adminpacientes = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/duenio/find-all",
+        API_URL + "/duenio/find-all",
         requestOptions
       );
 
@@ -162,7 +163,7 @@ const Adminpacientes = () => {
     };
 
     const response = await fetch(
-      "http://localhost:8000/duenio/create",
+      API_URL + "/duenio/create",
       requestOptions
     );
     const result = await response.json();
@@ -188,7 +189,7 @@ const Adminpacientes = () => {
       };
 
       const response = await fetch(
-        "http://localhost:8000/duenio/delete-by-id/" + _id,
+        API_URL + "/duenio/delete-by-id/" + _id,
         requestOptions
       );
 
