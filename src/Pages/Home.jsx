@@ -388,9 +388,7 @@ const Home = () => {
           <div className="box">
             <i className="fas fa-quote-left quote"></i>
             <p>
-              Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing
-              elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos
-              repellendus repudiandae deleniti ideas fuga molestiae, alias.
+            Pensé que seria imposible encontrar un veterinario para mi conejito Pompón y mi perrita Nala, realmente la veterinaria es la mejor!
             </p>
             <div className="content">
               <div className="info">
@@ -412,9 +410,7 @@ const Home = () => {
           <div className="box">
             <i className="fas fa-quote-left quote"></i>
             <p>
-              Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing
-              elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos
-              repellendus repudiandae deleniti ideas fuga molestiae, alias.
+            Recomiendo 100%. Los veterinarios son de confianza, cero comerciantes y apasionados por lo que hacen, me sería dificil dar una segunda referencia que no sea Pata Sana
             </p>
             <div className="content">
               <div className="info">
@@ -436,9 +432,7 @@ const Home = () => {
           <div className="box">
             <i className="fas fa-quote-left  quote"></i>
             <p>
-              Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing
-              elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos
-              repellendus repudiandae deleniti ideas fuga molestiae, alias.
+            La atencion que dan los profesionales es increible super calidos, amables y cariñosos!. Le regalaron un caramelo para que mi gatita se tranquilice,los mas lindos!!
             </p>
             <div className="content">
               <div className="info">
