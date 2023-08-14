@@ -1,16 +1,20 @@
 import {React, useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import "../styles/login.css";
 import { Container, Form, Button } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
+import { API_URL } from "../common/constants"
 
-
-
-const Login = () => {
+const Login = ({ changeJwt = () => {} }) => {
   //ESTADOS
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
+
+
   // HANDLE
-  const handleLogin = () => {
+  const handleLogin = async (event) => {
+    event.preventDefault()
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -26,10 +30,18 @@ const Login = () => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/auth/login", requestOptions)
-      .then((response) => response.json())
-      .then((result) => changeJwt(result.access_token))
-      .catch((error) => console.log("error", error));
+    try {
+      const response = await fetch(API_URL + "/auth/login", requestOptions)
+      if (!response.ok) throw new Error("No se pudo iniciar session")
+
+      const data = await response.json()
+
+      changeJwt(data?.access_token);
+      localStorage.setItem('token', data?.access_token)
+      navigate('/AdminPacientes')
+    } catch {
+      alert("No se pudo iniciar sesion")
+    }
   };
 
   // LOGOUT

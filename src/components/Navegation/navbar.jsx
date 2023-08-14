@@ -12,7 +12,7 @@ import Image from 'react-bootstrap/Image';
 
 
 
-function NavbarComponent() {
+function NavbarComponent({ jwt = "" }) {
   return (
     <Navbar expand="lg" className="nav-bg w-100 font-navbar zIndex"  data-bs-theme="dark">
       <Container fluid className="w-100">
@@ -23,12 +23,17 @@ function NavbarComponent() {
           <Nav className="nav-bg me-auto" >
             <Nav.Link as={Link} to="/Home">Home</Nav.Link>
             <Nav.Link as={Link} to="/Acerca-de-nosotros">Acerca de Nosotros</Nav.Link>
-            <Nav.Link as={Link} to="/login">Iniciar Sesión</Nav.Link>
             <Nav.Link as={Link} to="/Register">Registrarse</Nav.Link>
             <Nav.Link as={Link} to="/DetallesDePlanes">Detalles de planes</Nav.Link>
-            <NavDropdown title="Administración" id="basic-nav-dropdown" className="nav-bg">
-              <NavDropdown.Item as={Link} to="/AdminPacientes" className="nav-bg">Pacientes</NavDropdown.Item>
-            </NavDropdown>
+            {
+              jwt?.length === 0 ? (
+                <Nav.Link as={Link} to="/login">Iniciar Sesión</Nav.Link>
+              ) : (
+                <NavDropdown title="Administración" id="basic-nav-dropdown" className="nav-bg">
+                  <NavDropdown.Item as={Link} to="/AdminPacientes" className="nav-bg">Pacientes</NavDropdown.Item>
+                </NavDropdown>
+              )
+            }
           </Nav>
         </Navbar.Collapse>
         

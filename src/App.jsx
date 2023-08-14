@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavbarComponent from "./components/Navegation/navbar";
 import Footer from "./components/footer";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
@@ -17,27 +17,43 @@ import Login from "./Pages/Login";
 
 
 const App = () => {
+  const [jwt, setJwt] = useState(localStorage.getItem('token') || "")
+
+  const changeJwt = (value) => {
+    setJwt(value)
+  }
+
+  useEffect(() => {
+    if (jwt.length) console.log(jwt)
+  }, [jwt])
+
   return (
     <div>
       <BrowserRouter>
-        <NavbarComponent />
+        <NavbarComponent jwt={jwt}/>
         <Routes>
+          {/* PUBLICAS */}
           <Route path="/Home" element={<Home />} />
-          <Route path="/AdminPacientes" element={<Adminpacientes />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/Admin-turnos" element={<Adminturnos />} />
+          <Route path="/login" element={<Login changeJwt={changeJwt}/>} />
           <Route path="/Register" element={<SignUp3/>} />
-          <Route path="/aboutus" element={<AcercaDeNosotros />} />
-          <Route path="/error404" element={<Error404 />} />
+          <Route path="/*" element={<Error404 />} />
           <Route path="/DetallesDePlanes" element={<DetallesDePlanes />} />
-          <Route path="/duenio/mascotas/:id" element={<MascotasDuenio />} />
-          <Route path="/duenio/actualizar/:id" element={<UpdateDuenio />} />
-          <Route path="/mascotas/actualizar/:id" element={<UpdateMascota />} />
-          <Route path="/turnos/actualizar/:id" element={<UpdateTurno />} />
-          <Route path="/mascotas/Adminturnos/:id" element={<Adminturnos />} />
+          <Route path="/aboutus" element={<AcercaDeNosotros />} />
           <Route path="/acerca-de-nosotros" element={<AcercaDeNosotros />} />
-
-
+          {/* PRIVADAS */}
+          {
+            jwt.length > 0 && (
+              <>
+                <Route path="/AdminPacientes" element={<Adminpacientes />} />
+                <Route path="/Admin-turnos" element={<Adminturnos />} />
+                <Route path="/duenio/mascotas/:id" element={<MascotasDuenio />} />
+                <Route path="/duenio/actualizar/:id" element={<UpdateDuenio />} />
+                <Route path="/mascotas/actualizar/:id" element={<UpdateMascota />} />
+                <Route path="/turnos/actualizar/:id" element={<UpdateTurno />} />
+                <Route path="/mascotas/Adminturnos/:id" element={<Adminturnos />} />
+              </>
+            )
+          }
         </Routes>
       </BrowserRouter>
       <Footer />
