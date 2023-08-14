@@ -12,7 +12,7 @@ import UpdateTurno from "./Pages/UpdateTurno";
 import Home from "./Pages/Home";
 import DetallesDePlanes from "./Pages/DetallesDePlanes";
 import MascotasDuenio from "./Pages/MascotasDuenio";
-import SignUp from "./Pages/SignUp";
+// import SignUp from "./Pages/SignUp";
 
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/Home" element={<Home />} />
           <Route path="/AdminPacientes" element={<Adminpacientes />} />
           <Route path="/Admin-turnos" element={<Adminturnos />} />
-          <Route path="/Signup" element={<SignUp />} />
+          {/* <Route path="/Signup" element={<SignUp />} /> */}
           <Route path="/aboutus" element={<AcercaDeNosotros />} />
           <Route path="/error404" element={<Error404 />} />
           <Route path="/DetallesDePlanes" element={<DetallesDePlanes />} />
