@@ -9,6 +9,9 @@
 main {
   background: #013d37;
 }
+.link{
+  text-decoration: none;
+}
 .rowcontainer {
   max-width: 1300px;
   width: 100%;

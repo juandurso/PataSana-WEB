@@ -1,18 +1,18 @@
-.granPadre {
+.error404GranPadre {
   background-color:#014f47 ;
   /* border: 4px solid fuchsia; */
 }
 
-.padre {
+.error404Padre {
   position: relative;
 }
 
-img {
+.error404Imagen {
   width: 100%;
   height: 100%;
 }
 
-.hijoSuperior {
+.error404HijoSuperior {
   position: absolute;
   background-color:#014f47 ;
   top: 10px;
