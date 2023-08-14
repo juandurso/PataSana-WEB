@@ -200,9 +200,7 @@ const Home = () => {
             <p>
                ¡Entra para conocer nuestros servicios especializados en cirugía y clinica!
             </p>
-            <a href="error404"><button className="btn">Más información</button></a>
-            
-
+            <a href="error404"><button className="btn text-decoration-none">Más información</button></a>
             
          </div>
       </div>
@@ -218,7 +216,8 @@ const Home = () => {
             <p>
                ¡Entra y conoce los servicios de laboratorio y especialidades!
             </p>
-            <button className="btn">Más información</button>
+            <a href="error404"><button className="btn text-decoration-none">Más información</button></a>
+
          </div>
       </div>
       <div className="box">
@@ -233,7 +232,8 @@ const Home = () => {
             <p>
                ¡Entra para conocer más sobre el chequeo médico integral para tu mascota!
             </p>
-            <button className="btn">Más información</button>
+            <a href="error404"><button className="btn text-decoration-none">Más información</button></a>
+            
          </div>
       </div>
    </div>
@@ -292,10 +292,9 @@ const Home = () => {
           <span className="list-name">¡Entrá a ver los detalles del plan y todo lo que incluye!</span>
         </li>
       </ul>
-      {/* <div ><button className="btn2">Detalles</button></div> */}
+
     </div>
     <div className="table premium">
-      {/* <div className="ribbon"><span>Promoción</span></div> */}
       <div className="price-section">
         <div className="price-area">
           <div className="inner-area">
@@ -316,7 +315,6 @@ const Home = () => {
           <span className="list-name">¡Entrá a ver los detalles del plan y todo lo que incluye!</span>
         </li>
       </ul>
-      {/* <div ><button className="btn2">Detalles</button></div> */}
     </div>
     <div className="table ultimate">
       <div className="price-section">
@@ -344,9 +342,14 @@ const Home = () => {
   </div>
   </section5>
 
+  <div>
+  <a href="DetallesDePlanes">
   <div className='d-flex justify-content-center my-5'>
-    <button className="btn2 fw-bold">¡ HAZ CLICK AQUÍ PARA CONOCER LOS PLANES QUE TENEMOS PARA TU MASCOTA !</button>
+    <button className="btn2 fw-bold text-decoration-none">¡ HAZ CLICK AQUÍ PARA CONOCER LOS PLANES QUE TENEMOS PARA TU MASCOTA !</button>
     </div>
+  </a>
+  </div>
+ 
   <br />
 
   <section6>
@@ -415,13 +418,16 @@ const Home = () => {
   </div>
   </section6>
 
+
   <section className='d-flex justify-content-center my-5'>
-  <button className="btnStart">
+  <a href="error404">
+  <button className="btnStart text-decoration-none">
     <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
         <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
     </svg>
     <span className="text">Ver más comentarios</span>
   </button>
+  </a>
   </section>
 
   <br /><br />
