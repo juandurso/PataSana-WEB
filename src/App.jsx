@@ -43,6 +43,8 @@ const App = () => {
           <Route path="/mascotas/actualizar/:id" element={<UpdateMascota />} />
           <Route path="/turnos/actualizar/:id" element={<UpdateTurno />} />
           <Route path="/mascotas/Adminturnos/:id" element={<Adminturnos />} />
+          <Route path="/acerca-de-nosotros" element={<AcercaDeNosotros />} />
+
 
         </Routes>
       </BrowserRouter>

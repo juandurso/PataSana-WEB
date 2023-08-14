@@ -200,7 +200,10 @@ const Home = () => {
             <p>
                ¡Entra para conocer nuestros servicios especializados en cirugía y clinica!
             </p>
-            <button className="btn">Más información</button>
+            <a href="error404"><button className="btn">Más información</button></a>
+            
+
+            
          </div>
       </div>
       <div className="box">
