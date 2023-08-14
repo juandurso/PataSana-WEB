@@ -84,17 +84,32 @@ export default function MascotasDuenio() {
   };
 
   const borrarMascota = (_id) => {
-    var requestOptions = {
-      method: "DELETE",
-      redirect: "follow",
-    };
+    const confirmacion = window.confirm(
+      "¿Estás seguro de que deseas eliminar esta mascota?"
+    );
 
-    fetch("http://localhost:8000/paciente/delete-by-id/" + _id, requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        // Aquí se ejecuta después de que el borrado sea exitoso
-        getDuenioById(); // Llamar a getDuenioById() después del borrado exitoso
-      });
+    if (confirmacion) {
+      var requestOptions = {
+        method: "DELETE",
+        redirect: "follow",
+      };
+
+      fetch(
+        "http://localhost:8000/paciente/delete-by-id/" + _id,
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((result) => {
+          // Aquí se ejecuta después de que el borrado sea exitoso
+          getDuenioById(); // Llamar a getDuenioById() después del borrado exitoso
+          alert("Mascota eliminada exitosamente");
+        })
+        .catch((error) => {
+          console.error("Error al eliminar la mascota:", error);
+        });
+    } else {
+      alert("Eliminación cancelada");
+    }
   };
 
   // Al iniciar mi aplicacion traigo todos los dueños para que aparezcan en mi pantalla
@@ -107,8 +122,8 @@ export default function MascotasDuenio() {
       <Container>
         <Form className="border border-warning p-3 m-2 rounded border-2 ">
           <Row className="mb-3">
-            <h3 className="text-start">
-              AGREGAR MASCOTAS PARA {duenio.nombre} {duenio.apellido}
+            <h3 className="text-center">
+              AGREGAR MASCOTAS PARA: {duenio.nombre} {duenio.apellido}
             </h3>
             <Form.Group as={Col} md="4" controlId="validationCustom04">
               <Form.Label>Nombre Mascota</Form.Label>
@@ -169,7 +184,7 @@ export default function MascotasDuenio() {
 
       {!!duenio && (
         <div>
-          <h3>
+          <h3 className="text-center">
             {" "}
             Mascotas de: {duenio.nombre} {duenio.apellido}{" "}
           </h3>
@@ -220,7 +235,9 @@ export default function MascotasDuenio() {
               </tbody>
             </Table>
           }
-          <button onClick={() => navigate(-1)}>Volver</button>
+          <Button variant="warning" onClick={() => navigate(-1)}>
+            Volver
+          </Button>
         </div>
       )}
     </div>

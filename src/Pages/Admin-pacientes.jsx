@@ -7,8 +7,6 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import { useNavigate } from "react-router-dom";
-import modalUpdateDuenio from "./UpdateDuenio";
-import Modal from 'react-bootstrap/Modal';
 
 const Adminpacientes = () => {
   // ESTADOS
@@ -25,11 +23,9 @@ const Adminpacientes = () => {
     dni: "",
   });
   const [openPatientIndex, setOpenPatientIndex] = useState(-1);
-  
+
   //LOGICA DE CONEXION AL BACK
   const [patients, setPatients] = useState([]);
-
-
 
   //FUNCIONES HANDLERS
   const handlePatientInputChange = (event) => {
@@ -179,29 +175,29 @@ const Adminpacientes = () => {
       celular: "",
     });
   };
-  
 
   const borrarDuenio = async (_id) => {
-    const confirmacion = window.confirm("¿Estás seguro de que deseas eliminar este dueño?");
-  
+    const confirmacion = window.confirm(
+      "¿Estás seguro de que deseas eliminar este dueño?"
+    );
+
     if (confirmacion) {
       var requestOptions = {
         method: "DELETE",
         redirect: "follow",
       };
-  
+
       const response = await fetch(
         "http://localhost:8000/duenio/delete-by-id/" + _id,
         requestOptions
       );
-  
+
       await getAllDuenios();
       alert("Dueño eliminado exitosamente");
     } else {
       alert("Eliminación cancelada");
     }
   };
-
 
   // Al iniciar mi aplicacion traigo todos los dueños para que aparezcan en mi pantalla
   useEffect(() => {
@@ -421,17 +417,19 @@ const Adminpacientes = () => {
                           </InputGroup>
                         </Form.Group>
                       </Row>
-                      <Button 
-                      type="submit" 
-                      className="btn-warning" 
-                      onClick={() => navigate("/duenio/actualizar/" + patient._id) }>
+                      <Button
+                        type="submit"
+                        className="btn-warning"
+                        onClick={() =>
+                          navigate("/duenio/actualizar/" + patient._id)
+                        }
+                      >
                         Editar datos del dueño
                       </Button>
                       <Button
                         variant="danger"
                         className="my-5 mx-2"
-                        onClick={() => borrarDuenio(patient._id)
-                        }
+                        onClick={() => borrarDuenio(patient._id)}
                       >
                         Eliminar Paciente
                       </Button>

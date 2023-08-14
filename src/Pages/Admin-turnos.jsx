@@ -4,7 +4,6 @@ import { Container, Modal } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import Table from "react-bootstrap/Table";
 import { json, useParams } from "react-router-dom";
@@ -14,10 +13,8 @@ function AdminTurnos() {
   const params = useParams();
 
   const [validated, setValidated] = useState(false);
-  const [showModal, setShowModal] = useState(false);
   const [turnos, setTurnos] = useState([]);
   const [formData, setFormData] = useState({
-    // id: 1,
     firstName: "",
     lastName: "",
     veterinarian: "",
@@ -100,7 +97,6 @@ function AdminTurnos() {
         setEditIndex(-1);
       }
       setFormData({
-        // id: 1,
         firstName: "",
         lastName: "",
         veterinarian: "",
@@ -147,25 +143,38 @@ function AdminTurnos() {
   };
 
   const borrarTurno = async (_id) => {
-    var requestOptions = {
-      method: "DELETE",
-      redirect: "follow",
-    };
-
-    const response = await fetch(
-      "http://localhost:8000/turnos/delete-by-id/" + _id,
-      requestOptions
+    const confirmacion = window.confirm(
+      "¿Estás seguro de que deseas eliminar este turno?"
     );
 
-    await getPacienteById();
-    alert("Turno eliminado exitosamente");
+    if (confirmacion) {
+      var requestOptions = {
+        method: "DELETE",
+        redirect: "follow",
+      };
+
+      try {
+        const response = await fetch(
+          "http://localhost:8000/turnos/delete-by-id/" + _id,
+          requestOptions
+        );
+
+        await getPacienteById();
+        alert("Turno eliminado exitosamente");
+      } catch (error) {
+        console.error("Error al eliminar el turno:", error);
+      }
+    } else {
+      alert("Eliminación cancelada");
+    }
   };
+
   useEffect(() => {
     getPacienteById();
   }, []);
   return (
     <>
-      <h1 className="text-center">Generar un turno para el paciente: {params.id}</h1>
+      <h1 className="text-center mt-2">Generar un turno para el paciente</h1>
       <Container fluid="sm" className="my-5 font-navbar">
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Row className="mb-3">
@@ -257,101 +266,9 @@ function AdminTurnos() {
             ))}
           </tbody>
         </Table>
-        <button onClick={() => navigate(-1)}>Volver</button>
-
-        {/* <Modal show={showModal} onHide={() => setShowModal(false)}>
-          <Modal.Header closeButton>
-            <Modal.Title>Editar Turno</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Form
-              noValidate
-              validated={validated}
-              onSubmit={handleSubmit}
-              style={{ marginTop: "15px" }}
-            >
-              
-              <Row className="mb-3">
-                <Form.Group as={Col} md="6" controlId="validationCustom03">
-                  <Form.Label></Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="veterinarian"
-                    value={formData.veterinarian}
-                    onChange={handleChange}
-                    placeholder="Veterinario"
-                    maxLength={20}
-                    required
-                  />
-                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group as={Col} md="6" controlId="validationCustom04">
-                  <Form.Label></Form.Label>
-                  <Form.Control
-                    required
-                    type="text"
-                    name="pet"
-                    value={formData.pet}
-                    onChange={handleChange}
-                    placeholder="Mascota"
-                  />
-                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                </Form.Group>
-              </Row>
-              <Row className="mb-3">
-                <Form.Group as={Col} md="6" controlId="validationCustom05">
-                  <Form.Label></Form.Label>
-                  <Form.Control
-                    required
-                    type="date"
-                    name="date"
-                    value={formData.date}
-                    onChange={handleChange}
-                    placeholder="Fecha"
-                  />
-                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group as={Col} md="6" controlId="validationCustom06">
-                  <Form.Label>Time</Form.Label>
-                  <Form.Control
-                    required
-                    type="time"
-                    name="time"
-                    value={formData.time}
-                    onChange={handleChange}
-                    placeholder="Time"
-                  />
-                  <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                </Form.Group>
-              </Row>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
-                <Form.Label></Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={3}
-                  name="details"
-                  value={formData.details}
-                  onChange={handleChange}
-                  maxLength={20}
-                  required
-                  placeholder="Detalles de la cita"
-                />
-                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-              </Form.Group>
-            </Form>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="warning" onClick={() => setShowModal(false)}>
-              Cerrar
-            </Button>
-            <Button type="submit" variant="warning" onClick={handleSubmit}>
-              Guardar
-            </Button>
-          </Modal.Footer>
-        </Modal> */}
+        <Button variant="warning" onClick={() => navigate(-1)}>
+          Volver
+        </Button>
       </Container>
     </>
   );

@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
+import { Container } from "react-bootstrap";
 
 function UpdateMascota() {
   const params = useParams();
@@ -81,57 +82,58 @@ function UpdateMascota() {
   }, []);
   return (
     <div>
-      <h1>bienvenido {params.id}</h1>
+      <h1 className="text-center mt-2">
+        Actualizar Datos de: {paciente?.nombre}
+      </h1>
 
-      <h1>Modifique datos</h1>
-
-      <Form
-        id="addPatientForm"
-        className="border border-warning p-3 rounded border-2 "
-      >
-        <Row className="mb-3">
-          <h3 className="text-start">Datos de la mascota</h3>
-          <Form.Group as={Col} md="6" controlId="validationCustom01">
-            <Form.Label>Nombre de la mascota</Form.Label>
-            <Form.Control
-              type="text"
-              name="nombre"
-              placeholder={paciente?.nombre}
-              //   value={setFormValues.nombre}
-              onChange={handleChangeValues}
-              maxLength={15}
-            />
-          </Form.Group>
-          <Form.Group as={Col} md="4" controlId="validationCustom02">
-            <Form.Label>Raza</Form.Label>
-            <Form.Control
-              type="text"
-              name="raza"
-              placeholder={paciente?.raza}
-              value={formValues.raza}
-              onChange={handleChangeValues}
-              maxLength={15}
-            />
-          </Form.Group>
-          <Form.Group as={Col} md="4" controlId="validationCustom03">
-            <Form.Label>Especie</Form.Label>
-            <Form.Control
-              type="text"
-              name="especie"
-              placeholder={paciente?.especie}
-              value={formValues.especie}
-              onChange={handleChangeValues}
-              maxLength={15}
-            />
-          </Form.Group>
-        </Row>
-        <Button className="btn-warning" onClick={handleEditPaciente}>
-          Modificar Datos
-        </Button>
-        <Button className="btn-warning" onClick={() => navigate(-1)}>
-          Volver
-        </Button>
-      </Form>
+      <Container>
+        <Form
+          id="addPatientForm"
+          className="border border-warning p-3 rounded border-2 "
+        >
+          <Row className="mb-3">
+            <h3 className="text-start">Datos de la mascota</h3>
+            <Form.Group as={Col} md="6" controlId="validationCustom01">
+              <Form.Label>Nombre de la mascota</Form.Label>
+              <Form.Control
+                type="text"
+                name="nombre"
+                placeholder={paciente?.nombre}
+                onChange={handleChangeValues}
+                maxLength={15}
+              />
+            </Form.Group>
+            <Form.Group as={Col} md="4" controlId="validationCustom02">
+              <Form.Label>Raza</Form.Label>
+              <Form.Control
+                type="text"
+                name="raza"
+                placeholder={paciente?.raza}
+                value={formValues.raza}
+                onChange={handleChangeValues}
+                maxLength={15}
+              />
+            </Form.Group>
+            <Form.Group as={Col} md="4" controlId="validationCustom03">
+              <Form.Label>Especie</Form.Label>
+              <Form.Control
+                type="text"
+                name="especie"
+                placeholder={paciente?.especie}
+                value={formValues.especie}
+                onChange={handleChangeValues}
+                maxLength={15}
+              />
+            </Form.Group>
+          </Row>
+          <Button className="btn-warning" onClick={handleEditPaciente}>
+            Modificar Datos
+          </Button>
+          <Button className="btn-warning" onClick={() => navigate(-1)}>
+            Volver
+          </Button>
+        </Form>
+      </Container>
     </div>
   );
 }

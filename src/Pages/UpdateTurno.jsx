@@ -4,15 +4,14 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-
+import { Container } from "react-bootstrap";
 
 function UpdateTurno() {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   const params = useParams();
   const [turno, setTurno] = useState(undefined);
   const [validated, setValidated] = useState(false);
   const [formData, setFormData] = useState({
-    // id: 1,
     firstName: "",
     lastName: "",
     veterinarian: "",
@@ -21,7 +20,6 @@ function UpdateTurno() {
     time: "",
     details: "",
   });
-
 
   const getTurnoById = async () => {
     var requestOptions = {
@@ -53,7 +51,7 @@ function UpdateTurno() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData)
+    console.log(formData);
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.stopPropagation();
@@ -67,7 +65,6 @@ function UpdateTurno() {
         setEditIndex(-1);
       }
       setFormData({
-        // id: 1,
         firstName: "",
         lastName: "",
         veterinarian: "",
@@ -77,7 +74,6 @@ function UpdateTurno() {
         details: "",
       });
     }
-    
   };
 
   const handleEditTurno = async () => {
@@ -91,7 +87,6 @@ function UpdateTurno() {
       detalle: !!formData.details ? formData.details : undefined,
       fecha: !!formData.date ? formData.date : undefined,
       hora: !!formData.time ? formData.time : undefined,
-
     });
 
     let requestOptions = {
@@ -138,74 +133,70 @@ function UpdateTurno() {
 
   return (
     <div>
-      UpdateTurno: {params.id}
-      
-<Form noValidate validated={validated} onSubmit={handleSubmit} >
-        <Row className="mb-3">
-          <Form.Group as={Col} md="6" controlId="validationCustom03">
+      <h2 className="text-center mt-2">Actualizar Turno</h2>
+      <Container>
+        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+          <Row className="mb-3">
+            <Form.Group as={Col} md="6" controlId="validationCustom03">
+              <Form.Label></Form.Label>
+              <Form.Control
+                maxLength={30}
+                required
+                type="text"
+                name="veterinarian"
+                value={formData.veterinarian}
+                onChange={handleChange}
+                placeholder={turno?.veterinario}
+              />
+              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group as={Col} md="6" controlId="validationCustom05">
+              <Form.Label></Form.Label>
+              <Form.Control
+                maxLength={30}
+                required
+                type="datetime-local"
+                name="date"
+                value={formData.date}
+                onChange={handleChange}
+                placeholder="Fecha"
+              />
+              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            </Form.Group>
+          </Row>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label></Form.Label>
             <Form.Control
-              maxLength={30}
+              maxLength={50}
               required
-              type="text"
-              name="veterinarian"
-              value={formData.veterinarian}
+              as="textarea"
+              rows={3}
+              name="details"
+              value={formData.details}
               onChange={handleChange}
-              placeholder= {turno?.veterinario}
+              placeholder={turno?.detalle}
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           </Form.Group>
-        </Row>
-        <Row className="mb-3">
-          <Form.Group as={Col} md="6" controlId="validationCustom05">
-            <Form.Label></Form.Label>
-            <Form.Control
-              maxLength={30}
-              required
-              type="datetime-local"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-              placeholder="Fecha"
-            />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+
+          <Form.Group className="mb-3 d-flex justify-content-center">
+            <Button
+              type="submit"
+              className="btn-warning"
+              onClick={handleEditTurno}
+            >
+              Actualizar Turno
+            </Button>
           </Form.Group>
-          {/* <Form.Group as={Col} md="6" controlId="validationCustom06">
-            <Form.Label></Form.Label>
-            <Form.Control
-              maxLength={30}
-              required
-              type="time"
-              name="time"
-              value={formData.time}
-              onChange={handleChange}
-              placeholder="Hora"
-            />
-            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-          </Form.Group> */}
-        </Row>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label></Form.Label>
-          <Form.Control
-            maxLength={50}
-            required
-            as="textarea"
-            rows={3}
-            name="details"
-            value={formData.details}
-            onChange={handleChange}
-            placeholder= {turno?.detalle}
-          />
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-        </Form.Group>
-
-        <Form.Group className="mb-3 d-flex justify-content-center">
-          <Button type="submit" className="btn-warning" onClick={handleEditTurno}>
-            Actualizar Turno
-          </Button>
-        </Form.Group></Form>
-      <button onClick={() => navigate(-1)}>Volver</button>
-
+        </Form>
+      </Container>
+      <Button
+        type="submit"
+        className="btn-warning"
+        onClick={() => navigate(-1)}
+      >
+        Volver
+      </Button>
     </div>
   );
 }

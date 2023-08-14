@@ -12,21 +12,21 @@ function UpdateDuenio() {
 
   const [duenio, setDuenio] = useState(undefined);
   const [formValues, setFormValues] = useState({
-    dni: '',
-    nombre: '',
-    apellido: '',
-    telefono: '',
-    email: ''
-  })
+    dni: "",
+    nombre: "",
+    apellido: "",
+    telefono: "",
+    email: "",
+  });
 
   const handleChangeValues = (event) => {
-    const { name, value } = event.target
+    const { name, value } = event.target;
 
     setFormValues({
       ...formValues,
-      [name]: value
-    })
-  }
+      [name]: value,
+    });
+  };
 
   const handleEditDuenio = async () => {
     if (!params?.id) return undefined;
@@ -55,10 +55,10 @@ function UpdateDuenio() {
         requestOptions
       );
       const result = await response.json();
-      navigate(-1)
-      alert('Duenio actualizado')
+      navigate(-1);
+      alert("Duenio actualizado");
     } catch {
-      alert("No se pudo actualizar")
+      alert("No se pudo actualizar");
     }
   };
 
