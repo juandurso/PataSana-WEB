@@ -1,4 +1,3 @@
-// MIO
 import React from "react";
 import NavbarComponent from "./components/Navegation/navbar";
 import Footer from "./components/footer";
@@ -7,19 +6,14 @@ import Adminpacientes from "./Pages/AdminPacientes";
 import Adminturnos from "./Pages/Admin-turnos";
 import AcercaDeNosotros from "./Pages/Acerca-de-nosotros";
 import Error404 from "./Pages/Error404";
-
 import UpdateDuenio from "./Pages/UpdateDuenio";
 import UpdateMascota from "./Pages/UpdateMascota";
 import UpdateTurno from "./Pages/UpdateTurno";
-
-
 import Home from "./Pages/Home";
-
 import DetallesDePlanes from "./Pages/DetallesDePlanes";
 import MascotasDuenio from "./Pages/MascotasDuenio";
 import SignUp from "./Pages/SignUp";
 
-//<NavbarComponent />
 
 const App = () => {
   return (
