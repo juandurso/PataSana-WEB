@@ -1,4 +1,4 @@
-.padre {
+.aboutPadre {
   background-color: #000000;
   border-radius: 8px;
   
@@ -23,44 +23,44 @@ video {
   background-color:rgba(0, 255, 255, 0.492);
 } */
 
-.acerca-h1 {
+.aboutAcercaH1 {
   font-family: 'Monatic';
   /* color: rgba(11, 239, 239, 0.953) !important; */
   /* color: #eca400 !important; */
 }
 
-.nombres{
+.aboutNombres{
   color:#000000;
   color: #eca400;
 }
 
-.juan {
+.aboutJuan {
   color: aqua;
 }
 
-.texto {
+.aboutTexto {
   font-family: "Cabin", sans-serif;
   color: rgb(221, 180, 93);
   
 }
 
-.img-fluid {
+.aboutFotos {
   width: 200px;
   height: 200px;
   border-radius: 40%;
   border: 5px solid #eca400;
 }
 
-.container-texto {
+.aboutContainerTexto {
   /* background-color: #000000; */
   border-radius: 8px;
 }
 
-.parrafos {
+.aboutParrafos {
   width: 75%;
 }
 
-.span-webPets{
+.aboutSpanWebPets{
   font-size: 30px;
 }
 
@@ -82,30 +82,30 @@ video {
 }  */
 
 @media screen and (min-width: 1440px) {
-    .fila-fotos {
+    .aboutFilaFotos {
     padding-right: 60px;
     padding-left: 60px;
   }
 }  
 @media screen and (min-width: 1024px) {
-  .acerca-h1{
+  .aboutAcercaH1{
     padding-top: 20px !important;
     font-size: 65px;
   }
-  .primera-fila-fotos {
+  .aboutPrimeraFilaFotos {
     margin-top: 20px !important; 
   }
-  .tres-ultimas-fotos {
+  .aboutTresUltimasFotos {
     margin-top: 48px !important; 
   }
 
-  .padre {
+  .aboutPadre {
     border: 3px solid rgba(0, 255, 255, 0.755);    
     /* border: 3px solid #eca400;     */
     border-radius: 8px;
     position: relative;
   }
-    .hijo {
+    .aboutHijo {
     position: absolute;
     top: 0.33%;
     left: 0.5%;
@@ -125,20 +125,20 @@ video {
 }
 
 @media screen and (max-width: 4000px) {  
-  .padre { 
+  .aboutPadre { 
     margin-top: 15px !important; 
     margin-bottom: 44px !important;
     margin-right: 150px !important;
     margin-left: 150px !important;
   }
-  .img-fluid {
+  .aboutFotos {
     width: 190px; 
     height: 190px; 
   }
 }
 
 @media screen and (max-width: 1440px) {  
-  .img-fluid {
+  .aboutFotos {
     width: 200px; 
     height: 200px; 
   }
@@ -146,7 +146,7 @@ video {
 
 
 @media screen and (max-width: 1025px) {  
-  .padre { 
+  .aboutPadre { 
     margin-top: 48px !important; 
     margin-bottom: 48px !important;
     margin-right: 48px !important;
@@ -155,40 +155,40 @@ video {
 }
 
 @media screen and (max-width: 630px) {  
-  .parrafos {
+  .aboutParrafos {
     font-size: 15px;
   }
 }
 
 @media screen and (max-width: 426px) {  
-  .padre { 
+  .aboutPadre { 
     margin-top: 35px !important; 
     margin-bottom: 35px !important;
     margin-right: 35px !important;
     margin-left: 35px !important;
   }
-  .fila-fotos{
+  .aboutFilaFotos{
     padding-bottom: 24px !important ;
   }
 }
 
 @media screen and (max-width: 374px) {
-  .img-fluid {
+  .aboutFotos {
     width: 142px; 
     height: 151px; 
   }
-  .parrafos {
+  .aboutParrafos {
     font-size: 14px;
     /* margin-right: 10px !important;
     margin-left: 10px !important; */
   }
-  .juan {
+  .aboutJuan {
     margin-top: 32px !important;
   } 
 }
 
 @media screen and (max-width: 321px) {  
-  .padre { 
+  .aboutPadre { 
     margin-top: 27px !important; 
     margin-bottom: 27px !important;
     margin-right: 25px !important;
