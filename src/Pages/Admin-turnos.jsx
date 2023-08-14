@@ -129,7 +129,8 @@ function AdminTurnos() {
     const dateObject = new Date(fecha);
 
     // Ajustar la hora para GMT -3 (restar 3 horas)
-    const horaActual = new Date(dateObject.getTime() - 3 * 60 * 60 * 1000);
+    // const horaActual = new Date(dateObject.getTime() - 3 * 60 * 60 * 1000);
+    const horaActual = new Date(dateObject.getTime());
     const horaGMTNeg3 = horaActual.toISOString().split("T")[1].split(".")[0];
 
     return horaGMTNeg3;
