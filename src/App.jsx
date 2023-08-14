@@ -12,7 +12,7 @@ import UpdateTurno from "./Pages/UpdateTurno";
 import Home from "./Pages/Home";
 import DetallesDePlanes from "./Pages/DetallesDePlanes";
 import MascotasDuenio from "./Pages/MascotasDuenio";
-import SignUp from "./Pages/SignUp";
+// import SignUp from "./Pages/SignUp";
 
 
 const App = () => {
