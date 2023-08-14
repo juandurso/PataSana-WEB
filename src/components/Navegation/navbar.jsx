@@ -29,10 +29,10 @@ function NavbarComponent() {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-        <Nav.Link as={Link} to="/signin">
+        <Nav.Link as={Link} to="/login">
           <Button variant="outline-warning mx-2">Iniciar Sesión</Button>
         </Nav.Link>
-        <Nav.Link as={Link} to="/signup">
+        <Nav.Link as={Link} to="/Register">
           <Button variant="outline-warning mx-2">Registrarse</Button>
         </Nav.Link>
         <Nav.Link as={Link} to="/DetallesDePlanes">

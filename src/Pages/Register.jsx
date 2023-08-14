@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/styleSignUp.css";
 import { Container, Form, Button} from "react-bootstrap";
 
-const SignUp = () => {
+const SignUp3 = () => {
   //ESTADOS
   const [apellido, setApellido] = useState("");
   const [nombre, setNombre] = useState("");
@@ -231,4 +231,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUp3;
