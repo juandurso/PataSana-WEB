@@ -6,7 +6,6 @@ import emailjs from 'emailjs-com';
 import toast, { Toaster } from 'react-hot-toast';
 // import heroImg from "../img/website-images/images/hero.png"
 // import curvaHero from "../img/website-images/images/bg-bottom-hero.png"
-
 window.addEventListener('load', () => {
 
   let lon;
@@ -117,7 +116,7 @@ const Home = () => {
             // Después de enviar el formulario, cerramos la ventana modal
             handleCloseModal();
         //toast
-        toast.success('¡Formulario enviado correctamente! Recibimos tu pedido, pronto nos pondremos en contacto contigo.', {
+        toast.success('¡Formulario enviado correctamente!', {
         style: {
           background: '#013D37',
           color: '#fff',
@@ -159,7 +158,7 @@ const Home = () => {
             <h2>¡Bienvenidos a nuestra veterinaria de confianza!</h2>
             <p> En Pata Sana, nuestro compromiso es proporcionar el más alto nivel de cuidado y cariño a todos los animales que atendemos. Somos un equipo apasionado de médicos veterinarios y profesionales dedicados que comparten una profunda conexión con los animales y una misión común: mejorar la salud y el bienestar de las mascotas.</p>
             <div className="buttons">
-              <button className="btn">CONTACTANOS</button>
+              <button className="btn" onClick={handleOpenModal} >CONTACTANOS</button>
               <button className="btn">SUCURSALES</button>
             </div>
           </div>
@@ -602,54 +601,74 @@ const Home = () => {
         onRequestClose={handleCloseModal}
       >
         {/* Contenido de la ventana modal */}
-        <form onSubmit={handleSubmit} className='contacto-from'>
-		<h3>Envío de Productos</h3>
-          <div className='formulario-modal'>
-            <label htmlFor='name'>Nombre:</label>
-            <input
-  maxLength={20}  // Cambiado a maxLength y usando llaves
-  className='label-style'
-  type='text'
-  id='name'
-  name='name'
-  value={formData.name}
-  onChange={handleChange}
-  required
-/>
+<form onSubmit={handleSubmit} className='contacto-form'>
+  <h3>Formulario de Contacto</h3>
 
-          </div>
-          <div className='formulario-modal'>
-            <label htmlFor='email'>Email:</label>
-            <input
-			maxlength="35"
-			className='label-style'
-              type='email'
-              id='email'
-              name='email'
-              value={formData.email}
-              onChange={handleChange}
-			  required
-            />
-          </div>
-          <div className='formulario-modal form-group-textarea'>
-            <label htmlFor='message'>Mensaje:</label>
-            <textarea
-			maxlength="120"
-			className='label-style'
-              id='message'
-              name='message'
-              value={formData.message}
-              onChange={handleChange}
-			  required
-            />
-          </div>
-		  <div className='formulario-modal col-12'>
-          <button type='submit'className='label-style button1 col-4'>Enviar</button>
-		  <button onClick={handleCloseModal}className='label-style button2 col-4'>Cerrar</button>
-      <img className='logoForm' src="/logo.png" alt="png" />
+  <div className='formulario-modal'>
+    <label htmlFor='name'>Nombre:</label>
+    <input
+      maxLength={20}
+      className='label-style'
+      type='text'
+      id='name'
+      name='name'
+      value={formData.name}
+      onChange={handleChange}
+      required
+    />
+  </div>
 
-		  </div>
-        </form>
+  <div className='formulario-modal'>
+    <label htmlFor='email'>Email:</label>
+    <input
+      maxLength='35'
+      className='label-style'
+      type='email'
+      id='email'
+      name='email'
+      value={formData.email}
+      onChange={handleChange}
+      required
+    />
+  </div>
+
+  <div className='formulario-modal col-12'>
+    <label htmlFor='subject'>Asunto:</label>
+    <select
+      className='label-style'
+      id='subject'
+      name='subject'
+      value={formData.subject}
+      onChange={handleChange}
+      required
+    >
+      <option value='general'>General</option>
+      <option value='compra'>Compra</option>
+      <option value='detallesPlanes'>Detalles de Planes</option>
+    </select>
+  </div>
+
+  <div className='formulario-modal form-group-textarea'>
+    <label htmlFor='message'>Mensaje:</label>
+    <textarea
+      maxLength='120'
+      className='label-style'
+      id='message'
+      name='message'
+      value={formData.message}
+      onChange={handleChange}
+      required
+    />
+  </div>
+
+  
+
+  <div className='formulario-modal col-12'id='flex-direct'>
+    <button type='submit' className='label-style button1 col-4'>Enviar</button>
+    <button onClick={handleCloseModal} className='label-style button1 col-4'>Cerrar</button>
+  </div>
+</form>
+
       </ReactModal>
 
 

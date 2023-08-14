@@ -5,13 +5,5 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 
-const Contacto = () => {
-
-    return (
-        <div>
-
-        </div>
-    )
-}
 
 export default Contacto
