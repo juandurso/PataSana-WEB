@@ -5,7 +5,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import '../../styles/styleNavBar.css';
-// import logoNavbar from '../../../src/img/logonavbar.png';
 import Image from 'react-bootstrap/Image';
 
 
@@ -25,7 +24,7 @@ function NavbarComponent() {
             <Nav.Link as={Link} to="/Home">Home</Nav.Link>
             <NavDropdown title="Administración" id="basic-nav-dropdown" className="nav-bg">
               <NavDropdown.Item as={Link} to="/Admin-turnos" className="nav-bg">Turnos</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Admin-pacientes" className="nav-bg">Pacientes</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/AdminPacientes" className="nav-bg">Pacientes</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

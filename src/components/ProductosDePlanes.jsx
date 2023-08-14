@@ -3,7 +3,7 @@ import ReactModal from 'react-modal';
 import React, { useState, useRef } from 'react';
 import emailjs from 'emailjs-com'; // Cambiamos el import para usar el paquete emailjs-com
 import toast, { Toaster } from 'react-hot-toast';
-
+import '../styles/styleProductosDePlanes.css';
 
 export const ProductList = ({
   allProducts,
@@ -87,11 +87,11 @@ export const ProductList = ({
   };
 
   return (
-    <div className='container-items card-plan'>
+    <div className='container-items2 card-plan2'>
       {data.map((product) => (
-        <div className='item' key={product.id}>
-          <figure>
-            <img src={product.img} alt={product.nameProduct} />
+        <div className='item' id='colorBadgra' key={product.id}>
+          <figure className='figure'>
+            <img id='img2'className='imgwitdh' src={product.img} alt={product.nameProduct} />
           </figure>
           <div className='info-product'>
             <h4>{product.nameProduct}</h4>
@@ -100,7 +100,7 @@ export const ProductList = ({
             <button className='button1' onClick={() => onAddProduct(product)}>
               Sumar servicios
             </button>
-            <button className='button2' onClick={handleOpenModal}>
+            <button id='button3' onClick={handleOpenModal}>
               Contactanos
             </button>
           </div>
