@@ -5,7 +5,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import '../../styles/styleNavBar.css';
-// import logoNavbar from '../../../src/img/logonavbar.png';
 import Image from 'react-bootstrap/Image';
 
 
