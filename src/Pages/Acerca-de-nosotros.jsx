@@ -95,7 +95,7 @@ function AcercaDeNosotros() {
             <div className="row">
               <div className="col-12">
                 <div className="aboutTexto text-warning">
-                  <h2 className="text-center">Acerca de Nosotros</h2>
+                  <h2 className="text-center aboutTitulo2">Hola! Somos Web Pets!</h2>
                   <br />
 
                   <div className="aboutParrafos mx-auto">

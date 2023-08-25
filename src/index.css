@@ -2,3 +2,13 @@
     font-family: 'Monatic';
     src: local('Monatic'), url(./fonts/Monatic.ttf) format('truetype');
 }
+
+@font-face {
+    font-family: 'Bombing';
+    src: local('Bombing'), url(./fonts/Bombing.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Caramel';
+    src: local('Caramel'), url(./fonts/Caramel.ttf) format('truetype');
+}
