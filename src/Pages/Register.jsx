@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "../styles/styleSignUp2.css";
+import "../styles/styleSignUp.css";
 import { Container, Form, Button} from "react-bootstrap";
 
-const SignUp2 = () => {
+const SignUp3 = () => {
   //ESTADOS
   const [apellido, setApellido] = useState("");
   const [nombre, setNombre] = useState("");
@@ -130,6 +130,7 @@ const SignUp2 = () => {
                 onChange={handleChangeDni}
               />
             </Form.Group> */}
+            
 
             <Form.Group className="mt-4 mb-3" controlId="dni">
               <Form.Label className="text-white mb-1 labels">DNI:</Form.Label>
@@ -230,4 +231,4 @@ const SignUp2 = () => {
   );
 };
 
-export default SignUp2;
+export default SignUp3;

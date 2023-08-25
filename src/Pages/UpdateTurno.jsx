@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import { Container } from "react-bootstrap";
+import { API_URL } from "../common/constants"
 
 function UpdateTurno() {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ function UpdateTurno() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/turnos/find-by-id/" + params.id,
+        API_URL + "/turnos/find-by-id/" + params.id,
         requestOptions
       );
       if (!response.ok) throw new Error("No se pudo buscar el Turno");
@@ -98,7 +99,7 @@ function UpdateTurno() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/turnos/update-by-id/" + params?.id,
+        API_URL + "/turnos/update-by-id/" + params?.id,
         requestOptions
       );
       const result = await response.json();

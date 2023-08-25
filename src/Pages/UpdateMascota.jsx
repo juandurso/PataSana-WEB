@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import { Container } from "react-bootstrap";
+import { API_URL } from "../common/constants"
 
 function UpdateMascota() {
   const params = useParams();
@@ -32,7 +33,7 @@ function UpdateMascota() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/paciente/find-by-id/" + params.id,
+        API_URL + "/paciente/find-by-id/" + params.id,
         requestOptions
       );
       if (!response.ok) throw new Error("No se pudo buscar el paciente");
@@ -66,7 +67,7 @@ function UpdateMascota() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/paciente/update-by-id/" + params?.id,
+        API_URL + "/paciente/update-by-id/" + params?.id,
         requestOptions
       );
       const result = await response.json();

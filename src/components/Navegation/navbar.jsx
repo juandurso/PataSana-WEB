@@ -5,7 +5,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import '../../styles/styleNavBar.css';
-// import logoNavbar from '../../../src/img/logonavbar.png';
 import Image from 'react-bootstrap/Image';
 
 
@@ -13,31 +12,31 @@ import Image from 'react-bootstrap/Image';
 
 
 
-function NavbarComponent() {
+function NavbarComponent({ jwt = "" }) {
   return (
-    <Navbar expand="lg" className="nav-bg w-100 font-navbar"  data-bs-theme="dark">
+    <Navbar expand="lg" className="nav-bg w-100 font-navbar zIndex"  data-bs-theme="dark">
       <Container fluid className="w-100">
         <Navbar.Brand as={Link} to="/Home" className='mx-3'>
-          <Image src="../../../src/img/logonavbar.png" alt="logo"  width={100} height={70}   /></Navbar.Brand>
+          <Image src="/logonavbar.png" alt="logo"  className="imgNavbar"   /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="nav-bg"/>
         <Navbar.Collapse id="basic-navbar-nav" className="nav-bg">
           <Nav className="nav-bg me-auto" >
             <Nav.Link as={Link} to="/Home">Home</Nav.Link>
-            <NavDropdown title="Administración" id="basic-nav-dropdown" className="nav-bg">
-              <NavDropdown.Item as={Link} to="/Admin-turnos" className="nav-bg">Turnos</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Admin-pacientes" className="nav-bg">Pacientes</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link as={Link} to="/Acerca-de-nosotros">Acerca de Nosotros</Nav.Link>
+            <Nav.Link as={Link} to="/Register">Registrarse</Nav.Link>
+            <Nav.Link as={Link} to="/DetallesDePlanes">Detalles de planes</Nav.Link>
+            {
+              jwt?.length === 0 ? (
+                <Nav.Link as={Link} to="/login">Iniciar Sesión</Nav.Link>
+              ) : (
+                <NavDropdown title="Administración" id="basic-nav-dropdown" className="nav-bg">
+                  <NavDropdown.Item as={Link} to="/AdminPacientes" className="nav-bg">Pacientes</NavDropdown.Item>
+                </NavDropdown>
+              )
+            }
           </Nav>
         </Navbar.Collapse>
-        <Nav.Link as={Link} to="/signin">
-          <Button variant="outline-warning mx-2">Iniciar Sesión</Button>
-        </Nav.Link>
-        <Nav.Link as={Link} to="/signup">
-          <Button variant="outline-warning mx-2">Registrarse</Button>
-        </Nav.Link>
-        <Nav.Link as={Link} to="/DetallesDePlanes">
-          <Button variant="outline-warning mx-2">DetallesDePlanes</Button>
-        </Nav.Link>
+        
       </Container>
     </Navbar>
   

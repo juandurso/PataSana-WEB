@@ -21,6 +21,19 @@
     overflow-anchor: none;
     transition: var(--bs-accordion-transition);
 }
+.imgNavbar{
+    width: 100px;
+}
+.imgFooter{
+    
+    height: 150px;
+    position: relative;
+}
+
+.zIndex{
+    z-index: 1000;
+}
+
 
 .accordion-button:not(.collapsed) {
     color: var(--bs-accordion-active-color);
