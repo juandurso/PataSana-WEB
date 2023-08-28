@@ -175,6 +175,8 @@ const Adminpacientes = () => {
       dni: "",
       celular: "",
     });
+
+    
   };
 
   const borrarDuenio = async (_id) => {
@@ -222,26 +224,43 @@ const Adminpacientes = () => {
                 name="dni"
                 placeholder="DNI"
                 value={newPatient.dni}
-                onChange={handlePatientInputChange}
+                onChange={(event) => {
+                  const onlyNumbers = event.target.value.replace(/\D/g, ''); 
+                  setNewPatient((prevPatient) => ({
+                    ...prevPatient,
+                    dni: onlyNumbers
+                  }));
+                }}
                 maxLength={15}
                 required
+                pattern="\d*" // 
+                title="Solo se permiten números en el DNI."
               />
               <Form.Control.Feedback type="invalid">
-                Olvidaste poner el DNI.
+                Por favor, ingresa un DNI válido.
               </Form.Control.Feedback>
             </Form.Group>
+              
             <Form.Group as={Col} md="6" controlId="validationCustom01">
-              <Form.Label>Nombre del dueño</Form.Label>
-              <Form.Control
+            <Form.Label>Nombre del Dueño</Form.Label>
+            <Form.Control
                 type="text"
                 name="firstName"
                 placeholder="Nombre del Dueño"
                 value={newPatient.firstName}
-                onChange={handlePatientInputChange}
-                maxLength={15}
+                onChange={(event) => {
+                  const inputValue = event.target.value;
+                  const onlyLettersAndSpaces = inputValue.replace(/[^A-Za-z\s]/g, '');
+                  setNewPatient((prevPatient) => ({
+                    ...prevPatient,
+                    firstName: onlyLettersAndSpaces
+                  }));
+                }}
+                maxLength={34}
                 required
               />
             </Form.Group>
+              
             <Form.Group as={Col} md="4" controlId="validationCustom02">
               <Form.Label>Apellido del Dueño</Form.Label>
               <Form.Control
@@ -249,8 +268,15 @@ const Adminpacientes = () => {
                 name="lastName"
                 placeholder="Apellido del Dueño"
                 value={newPatient.lastName}
-                onChange={handlePatientInputChange}
-                maxLength={15}
+                onChange={(event) => {
+                  const inputValue = event.target.value;
+                  const onlyLettersAndSpaces = inputValue.replace(/[^A-Za-z\s]/g, '');
+                  setNewPatient((prevPatient) => ({
+                    ...prevPatient,
+                    lastName: onlyLettersAndSpaces
+                  }));
+                }}
+                maxLength={20}
                 required
               />
             </Form.Group>
@@ -261,9 +287,17 @@ const Adminpacientes = () => {
                 name="celular"
                 placeholder="Número de Celular"
                 value={newPatient.celular}
-                onChange={handlePatientInputChange}
+                onChange={(event) => {
+                  const onlyNumbers = event.target.value.replace(/\D/g, ''); 
+                  setNewPatient((prevPatient) => ({
+                    ...prevPatient,
+                    celular: onlyNumbers
+                  }));
+                }}
                 maxLength={15}
                 required
+                pattern="\d*" // 
+                title="Solo se permiten números en el celular."
               />
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="validationCustomUsername">
@@ -271,7 +305,7 @@ const Adminpacientes = () => {
               <InputGroup hasValidation>
                 <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                 <Form.Control
-                  type="text"
+                  type="email"
                   name="username"
                   placeholder="Mail"
                   aria-describedby="inputGroupPrepend"
@@ -317,7 +351,7 @@ const Adminpacientes = () => {
                       className=""
                     >
                       <Row className="mb-3">
-                        <h3 className="text-start">Datos del dueño</h3>
+                        <h3 className="text-start">Datos del dueñoo</h3>
                         <Form.Group
                           as={Col}
                           md="6"
@@ -353,6 +387,7 @@ const Adminpacientes = () => {
                             onChange={(event) =>
                               handleEditPatientInputChange(event, index)
                             }
+                            
                             maxLength={15}
                             required
                           />
