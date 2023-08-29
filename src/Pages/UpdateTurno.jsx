@@ -128,6 +128,20 @@ function UpdateTurno() {
     return fechaFormateada;
   };
 
+  const handleChangeVeterinario = (event) => {
+    const { name, value } = event.target;
+  
+    // Expresión regular para permitir solo letras y espacios en blanco
+    const regex = /^[A-Za-záéíóúÁÉÍÓÚñÑ\s]*$/;
+  
+    if (regex.test(value) || value === "") {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
+  };
+
   useEffect(() => {
     getTurnoById();
   }, []);
@@ -139,17 +153,22 @@ function UpdateTurno() {
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Form.Group as={Col} md="6" controlId="validationCustom03">
-              <Form.Label></Form.Label>
+              <Form.Label>Veterinario</Form.Label>
               <Form.Control
                 maxLength={30}
                 required
                 type="text"
                 name="veterinarian"
                 value={formData.veterinarian}
-                onChange={handleChange}
+                onChange={handleChangeVeterinario}
                 placeholder={turno?.veterinario}
+
+
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">
+                Por favor, ingresa solo letras.
+              </Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md="6" controlId="validationCustom05">
               <Form.Label></Form.Label>

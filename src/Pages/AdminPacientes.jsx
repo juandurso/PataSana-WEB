@@ -144,9 +144,20 @@ const Adminpacientes = () => {
   };
 
   const createDuenios = async () => {
+    if (
+      !newPatient.firstName ||
+      !newPatient.lastName ||
+      !newPatient.username ||
+      !newPatient.dni ||
+      !newPatient.celular
+    ) {
+      alert("Por favor, completa todos los campos requeridos.");
+      return;
+    }
+  
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-
+  
     let raw = JSON.stringify({
       nombre: newPatient.firstName,
       apellido: newPatient.lastName,
@@ -154,18 +165,15 @@ const Adminpacientes = () => {
       dni: newPatient.dni,
       telefono: newPatient.celular,
     });
-
+  
     let requestOptions = {
       method: "POST",
       headers: myHeaders,
       body: raw,
       redirect: "follow",
     };
-
-    const response = await fetch(
-      API_URL + "/duenio/create",
-      requestOptions
-    );
+  
+    const response = await fetch(API_URL + "/duenio/create", requestOptions);
     const result = await response.json();
     getAllDuenios();
     setNewPatient({
@@ -175,9 +183,8 @@ const Adminpacientes = () => {
       dni: "",
       celular: "",
     });
-
-    
   };
+  
 
   const borrarDuenio = async (_id) => {
     const confirmacion = window.confirm(
@@ -310,6 +317,7 @@ const Adminpacientes = () => {
                   placeholder="Mail"
                   aria-describedby="inputGroupPrepend"
                   value={newPatient.username}
+                  
                   onChange={handlePatientInputChange}
                   maxLength={64}
                   required
