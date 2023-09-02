@@ -119,6 +119,21 @@ function AdminTurnos() {
     }));
   };
 
+  const handleChangeveterinario = (event) => {
+    const { name, value } = event.target;
+  
+    // Expresión regular para permitir solo letras y espacios en blanco
+    const regex = /^[A-Za-záéíóúÁÉÍÓÚñÑ\s]*$/;
+  
+    if (regex.test(value) || value === "") {
+      // Actualizar el estado con el nuevo valor si cumple con la expresión regular
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
+  };
+
   const handleDelete = (index) => {
     const updatedTurnos = [...turnos];
     updatedTurnos.splice(index, 1);
@@ -188,7 +203,7 @@ function AdminTurnos() {
                 type="text"
                 name="veterinarian"
                 value={formData.veterinarian}
-                onChange={handleChange}
+                onChange={handleChangeveterinario}
                 placeholder="Veterinario"
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>

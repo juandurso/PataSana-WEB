@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import { Container } from "react-bootstrap";
-import { API_URL } from "../common/constants"
+import { API_URL } from "../common/constants";
 
 function UpdateMascota() {
   const params = useParams();
@@ -17,13 +17,28 @@ function UpdateMascota() {
     raza: "",
     especie: "",
   });
+
+  // const handleChangeValues = (event) => {
+  //   const { name, value } = event.target;
+
+  //   setFormValues({
+  //     ...formValues,
+  //     [name]: value,
+  //   });
+  // };
   const handleChangeValues = (event) => {
     const { name, value } = event.target;
-
-    setFormValues({
-      ...formValues,
-      [name]: value,
-    });
+  
+    // Expresión regular para permitir solo letras y espacios en blanco
+    const regex = /^[A-Za-záéíóúÁÉÍÓÚñÑ\s]*$/;
+  
+    if (regex.test(value) || value === "") {
+      // Actualizar el estado con el nuevo valor si cumple con la expresión regular
+      setFormValues((prevValues) => ({
+        ...prevValues,
+        [name]: value,
+      }));
+    }
   };
 
   const getPacienteById = async () => {
@@ -40,6 +55,7 @@ function UpdateMascota() {
 
       const result = await response.json();
       setPaciente(result.data);
+      setFormValues(result.data); // Establecer los valores iniciales de los campos
       console.log(result.data);
     } catch (error) {
       console.log(error);
@@ -53,9 +69,9 @@ function UpdateMascota() {
     myHeaders.append("Content-Type", "application/json");
 
     let raw = JSON.stringify({
-      nombre: !!formValues.nombre ? formValues.nombre : undefined,
-      especie: !!formValues.especie ? formValues.especie : undefined,
-      raza: !!formValues.raza ? formValues.raza : undefined,
+      nombre: formValues.nombre,
+      especie: formValues.especie,
+      raza: formValues.raza,
     });
 
     let requestOptions = {
@@ -81,16 +97,14 @@ function UpdateMascota() {
   useEffect(() => {
     getPacienteById();
   }, []);
+
   return (
     <div>
-      <h1 className="text-center mt-2">
-        Actualizar Datos de: {paciente?.nombre}
-      </h1>
-
+      <h1 className="text-center mt-2">Actualizar Datos de: {paciente?.nombre}</h1>
       <Container>
         <Form
           id="addPatientForm"
-          className="border border-warning p-3 rounded border-2 "
+          className="border border-warning p-3 rounded border-2"
         >
           <Row className="mb-3">
             <h3 className="text-start">Datos de la mascota</h3>
@@ -99,7 +113,7 @@ function UpdateMascota() {
               <Form.Control
                 type="text"
                 name="nombre"
-                placeholder={paciente?.nombre}
+                value={formValues.nombre}
                 onChange={handleChangeValues}
                 maxLength={15}
               />
@@ -109,7 +123,6 @@ function UpdateMascota() {
               <Form.Control
                 type="text"
                 name="raza"
-                placeholder={paciente?.raza}
                 value={formValues.raza}
                 onChange={handleChangeValues}
                 maxLength={15}
@@ -120,7 +133,6 @@ function UpdateMascota() {
               <Form.Control
                 type="text"
                 name="especie"
-                placeholder={paciente?.especie}
                 value={formValues.especie}
                 onChange={handleChangeValues}
                 maxLength={15}

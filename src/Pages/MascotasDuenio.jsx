@@ -21,14 +21,30 @@ export default function MascotasDuenio() {
     raza: "",
   });
 
+  // const handleChangeValues = (event) => {
+  //   const { name, value } = event.target;
+
+  //   setFormValues({
+  //     ...formValues,
+  //     [name]: value,
+  //   });
+  // };
+
   const handleChangeValues = (event) => {
     const { name, value } = event.target;
-
-    setFormValues({
-      ...formValues,
-      [name]: value,
-    });
+  
+    // Expresión regular para permitir solo letras y espacios en blanco
+    const regex = /^[A-Za-záéíóúÁÉÍÓÚñÑ\s]*$/;
+  
+    if (regex.test(value) || value === "") {
+      // Actualizar el estado con el nuevo valor si cumple con la expresión regular
+      setFormValues((prevValues) => ({
+        ...prevValues,
+        [name]: value,
+      }));
+    }
   };
+  
 
   const getDuenioById = async () => {
     var requestOptions = {
@@ -57,33 +73,38 @@ export default function MascotasDuenio() {
     });
   };
   const createPaciente = () => {
+    // Verificar si los campos requeridos están completos
+    if (!formValues.nombre || !formValues.especie || !formValues.raza) {
+      alert("Por favor, completa todos los campos requeridos.");
+      return;
+    }
+  
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-
+  
     var raw = JSON.stringify({
       nombre: formValues.nombre,
       especie: formValues.especie,
       raza: formValues.raza,
       idDuenio: duenio._id,
     });
-
+  
     var requestOptions = {
       method: "POST",
       headers: myHeaders,
       body: raw,
       redirect: "follow",
     };
-
+  
     fetch(API_URL + "/paciente/create", requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        // Aquí se ejecuta después de que el borrado sea exitoso
-        getDuenioById(); // Llamar a getDuenioById() después del borrado exitoso
+        // Aquí se ejecuta después de que la creación sea exitosa
+        getDuenioById(); // Llamar a getDuenioById() después de la creación exitosa
       });
-
+  
     limpiarInputs();
   };
-
   const borrarMascota = (_id) => {
     const confirmacion = window.confirm(
       "¿Estás seguro de que deseas eliminar esta mascota?"
@@ -138,9 +159,10 @@ export default function MascotasDuenio() {
                 required
               />
               <Form.Control.Feedback type="invalid">
-                Olvidaste poner el nombre de la mascota.
+                Por favor, ingresa solo letras en el nombre de la mascota.
               </Form.Control.Feedback>
             </Form.Group>
+
             <Form.Group as={Col} md="4" controlId="validationCustom05">
               <Form.Label>Especie</Form.Label>
               <Form.Control
