@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NavbarComponent from "./components/Navegation/navbar";
 import Footer from "./components/footer";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import Adminpacientes from "./Pages/AdminPacientes";
 import Adminturnos from "./Pages/Admin-turnos";
 import AcercaDeNosotros from "./Pages/Acerca-de-nosotros";
@@ -33,6 +33,7 @@ const App = () => {
         <NavbarComponent jwt={jwt}/>
         <Routes>
           {/* PUBLICAS */}
+          <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/login" element={<Login changeJwt={changeJwt}/>} />
           <Route path="/Register" element={<SignUp3/>} />
