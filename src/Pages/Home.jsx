@@ -105,6 +105,8 @@ const Home = () => {
     };
     const handleSubmit = (e) => {
       e.preventDefault();
+
+
   
       // Enviamos el formulario usando el paquete emailjs-com
       emailjs
@@ -115,11 +117,11 @@ const Home = () => {
             // Después de enviar el formulario, cerramos la ventana modal
             handleCloseModal();
         //toast
-        toast.success('¡Formulario enviado correctamente!', {
+        toast.success('¡Mensaje de compra enviado correctamente!', {
         style: {
-          background: '#013D37',
+          background: '#9917FF',
           color: '#fff',
-          padding: '12px',
+          padding: '100px',
           fontFamily: 'Poppins, sans-serif',
         },
         });
@@ -634,7 +636,7 @@ const Home = () => {
             </figure>
             <div className="info-product">
               <h4>Agility</h4>
-              <p className="price">$730</p>
+              <p className='price'>$730</p>
               <button className="btn-add-cart" onClick={handleOpenModal}>
                 COMPRAR
               </button>
@@ -644,6 +646,7 @@ const Home = () => {
           <br />
         </div>
       </section10>
+
       <Toaster position="bottom-right" reverseOrder={false} />
       <ReactModal
         className="ModalContacto"
@@ -705,19 +708,21 @@ const Home = () => {
     <textarea
       maxLength='120'
       className='label-style'
+      type='text'
       id='message'
       name='message'
+      required pattern='^(?!\s*$).+'
       value={formData.message}
       onChange={handleChange}
-      required
+      
     />
   </div>
 
   
 
   <div className='formulario-modal col-12'id='flex-direct'>
-    <button type='submit' className='label-style button1 col-4'>Enviar</button>
-    <button onClick={handleCloseModal} className='label-style button1 col-4'>Cerrar</button>
+    <button type='submit' className='label-style btn col-4'>Enviar</button>
+    <button onClick={handleCloseModal} className='label-style btn col-4'>Cerrar</button>
   </div>
 </form>
 
