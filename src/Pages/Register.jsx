@@ -38,7 +38,7 @@ const SignUp3 = () => {
   
     if (lettersAndSpacesRegex.test(inputValue)) {
       
-      setApellido(inputValue);
+      setNombre(inputValue);
     }
   };
 
@@ -63,7 +63,7 @@ const SignUp3 = () => {
   
     if (lettersAndSpacesRegex.test(inputValue)) {
       
-      setApellido(inputValue);
+      setUserName(inputValue);
     }
   };
 
