@@ -111,9 +111,7 @@ const Home = () => {
         .sendForm('service_72sah3s', 'template_q8qw8fc', e.target, '0ku9k9GZc3KaSdMBY')
         .then(
           (result) => {
-            console.log(result.text);
-            // Después de enviar el formulario, cerramos la ventana modal
-            handleCloseModal();
+            
         //toast
         toast.success('¡Formulario enviado correctamente!', {
         style: {
@@ -139,10 +137,27 @@ const Home = () => {
         );
     };
     const handleChange = (e) => {
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.value,
-      });
+      const inputValue = e.target.value;
+  
+      // Expresión regular para permitir letras y espacios en blanco
+      const lettersAndSpacesRegex = /^[A-Za-z\s]+$/;
+  
+      if (lettersAndSpacesRegex.test(inputValue) || inputValue === '') {
+        // Si el valor cumple con la expresión regular o es una cadena vacía, actualiza el estado
+        setFormData({ name: inputValue });
+      }
+    };
+
+    const handleChangeMessage = (e) => {
+      const inputValue = e.target.value;
+  
+      // Expresión regular para permitir letras y espacios en blanco
+      const lettersAndSpacesRegex = /^[A-Za-z\s]+$/;
+  
+      if (lettersAndSpacesRegex.test(inputValue) || inputValue === '') {
+        // Si el valor cumple con la expresión regular o es una cadena vacía, actualiza el estado
+        setFormData({ message: inputValue });
+      }
     };
     
     //modal
@@ -708,7 +723,7 @@ const Home = () => {
       id='message'
       name='message'
       value={formData.message}
-      onChange={handleChange}
+      onChange={handleChangeMessage}
       required
     />
   </div>

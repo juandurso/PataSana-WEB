@@ -36,11 +36,13 @@ export const ProductList = ({
       setTotal(total + product.price * product.quantity);
       setCountProducts(countProducts + product.quantity);
       return setAllProducts([...products]);
+
     }
 
     setTotal(total + product.price * product.quantity);
     setCountProducts(countProducts + product.quantity);
     setAllProducts([...allProducts, product]);
+    alert('El servicio ha sido añadido al carrito');
   };
 
   const handleChange = (e) => {

@@ -18,11 +18,28 @@ const SignUp3 = () => {
 
   //HANDLERS
   const handleChangeApellido = (event) => {
-    setApellido(event.target.value);
+    const inputValue = event.target.value;
+  
+    
+    const lettersAndSpacesRegex = /^[A-Za-z\s]*$/;
+  
+    if (lettersAndSpacesRegex.test(inputValue)) {
+      
+      setApellido(inputValue);
+    }
   };
+  
 
   const handleChangeNombre = (event) => {
-    setNombre(event.target.value);
+    const inputValue = event.target.value;
+  
+    
+    const lettersAndSpacesRegex = /^[A-Za-z\s]*$/;
+  
+    if (lettersAndSpacesRegex.test(inputValue)) {
+      
+      setApellido(inputValue);
+    }
   };
 
   const handleChangeDni = (event) => {
@@ -39,7 +56,15 @@ const SignUp3 = () => {
   };
 
   const handleChangeUserName = (event) => {
-    setUserName(event.target.value);
+    const inputValue = event.target.value;
+  
+    
+    const lettersAndSpacesRegex = /^[A-Za-z\s]*$/;
+  
+    if (lettersAndSpacesRegex.test(inputValue)) {
+      
+      setApellido(inputValue);
+    }
   };
 
   const handleChangeEmail = (event) => {
@@ -92,7 +117,6 @@ const SignUp3 = () => {
               <Form.Control
                 type="text"
                 style={{ fontStyle: "italic", color: "gray" }}
-                // placeholder="Apellido"
                 minLength={2}
                 maxLength={30}
                 required

@@ -19,7 +19,7 @@ const Footer = () => {
           <Col xs={12} md={3} className="border-end">
             <h5 className="my-1">Nuestras Redes</h5>
 
-            <a href="">
+            <a href="../pages/error404">
               <p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ const Footer = () => {
                 </svg>
               </p>
             </a>
-            <a href="">
+            <a href="../pages/error404">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-brand-facebook"
