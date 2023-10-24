@@ -3,8 +3,7 @@ import ReactModal from "react-modal";
 import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import toast, { Toaster } from "react-hot-toast";
-// import heroImg from "../img/website-images/images/hero.png"
-// import curvaHero from "../img/website-images/images/bg-bottom-hero.png"
+
 window.addEventListener('load', () => {
 
   let lon;

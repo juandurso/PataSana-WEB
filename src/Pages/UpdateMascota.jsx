@@ -18,14 +18,7 @@ function UpdateMascota() {
     especie: "",
   });
 
-  // const handleChangeValues = (event) => {
-  //   const { name, value } = event.target;
-
-  //   setFormValues({
-  //     ...formValues,
-  //     [name]: value,
-  //   });
-  // };
+  
   const handleChangeValues = (event) => {
     const { name, value } = event.target;
   

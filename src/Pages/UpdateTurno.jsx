@@ -113,7 +113,7 @@ function UpdateTurno() {
   const convertirAHora = (fecha) => {
     const dateObject = new Date(fecha);
 
-    // Ajustar la hora para GMT -3 (restar 3 horas)
+    
     const horaActual = new Date(dateObject.getTime() - 3 * 60 * 60 * 1000);
     const horaGMTNeg3 = horaActual.toISOString().split("T")[1].split(".")[0];
 
@@ -122,8 +122,8 @@ function UpdateTurno() {
   const convertirAFecha = (fecha) => {
     const dateObject = new Date(fecha);
 
-    // Extraer la fecha y la hora usando los métodos de Date
-    const fechaFormateada = dateObject.toISOString().split("T")[0]; // Extracción de la fecha
+    
+    const fechaFormateada = dateObject.toISOString().split("T")[0]; 
 
     return fechaFormateada;
   };
@@ -131,7 +131,7 @@ function UpdateTurno() {
   const handleChangeVeterinario = (event) => {
     const { name, value } = event.target;
   
-    // Expresión regular para permitir solo letras y espacios en blanco
+    
     const regex = /^[A-Za-záéíóúÁÉÍÓÚñÑ\s]*$/;
   
     if (regex.test(value) || value === "") {

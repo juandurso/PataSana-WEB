@@ -11,7 +11,7 @@ const Login = ({ changeJwt = () => {} }) => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [incorrectCredentials, setIncorrectCredentials] = useState(false);
-  // const [buttonMarginTop, setButtonMarginTop] = useState(48);
+  
 
   // HANDLE LOGIN
 
@@ -46,9 +46,9 @@ const Login = ({ changeJwt = () => {} }) => {
       localStorage.setItem("token", data?.access_token);
       navigate("/AdminPacientes");
     } catch {
-      // alert("No se pudo iniciar sesion");
+      
       setIncorrectCredentials(true);
-      // setButtonMarginTop(30);
+     
       setUsername("");
       setPassword("");
     }

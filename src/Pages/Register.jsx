@@ -19,26 +19,28 @@ const SignUp3 = () => {
   //HANDLERS
   const handleChangeApellido = (event) => {
     const inputValue = event.target.value;
-  
     
-    const lettersAndSpacesRegex = /^[A-Za-z\s]*$/;
+    
+    if (inputValue.length === 0 || inputValue.trim() !== "") {
+      const lettersAndSpacesRegex = /^[A-Za-z\s]*$/;
   
-    if (lettersAndSpacesRegex.test(inputValue)) {
-      
-      setApellido(inputValue);
+      if (lettersAndSpacesRegex.test(inputValue)) {
+        setApellido(inputValue);
+      }
     }
   };
   
 
   const handleChangeNombre = (event) => {
     const inputValue = event.target.value;
-  
     
-    const lettersAndSpacesRegex = /^[A-Za-z\s]*$/;
+    
+    if (inputValue.length === 0 || inputValue.trim() !== "") {
+      const lettersAndSpacesRegex = /^[A-Za-z\s]*$/;
   
-    if (lettersAndSpacesRegex.test(inputValue)) {
-      
-      setNombre(inputValue);
+      if (lettersAndSpacesRegex.test(inputValue)) {
+        setNombre(inputValue);
+      }
     }
   };
 
@@ -57,13 +59,14 @@ const SignUp3 = () => {
 
   const handleChangeUserName = (event) => {
     const inputValue = event.target.value;
-  
     
-    const lettersAndSpacesRegex = /^[A-Za-z\s]*$/;
+    
+    if (inputValue.length === 0 || inputValue.trim() !== "") {
+      const lettersAndSpacesRegex = /^[A-Za-z\s]*$/;
   
-    if (lettersAndSpacesRegex.test(inputValue)) {
-      
-      setUserName(inputValue);
+      if (lettersAndSpacesRegex.test(inputValue)) {
+        setUserName(inputValue);
+      }
     }
   };
 
@@ -72,11 +75,21 @@ const SignUp3 = () => {
   };
 
   const handleChangePassword = (event) => {
-    setPassword(event.target.value);
+    const inputValue = event.target.value;
+    
+    
+    if (!inputValue.includes(" ")) {
+      setPassword(inputValue);
+    }
   };
 
   const handleChangeRepeatPassword = (event) => {
-    setRepeatPassword(event.target.value);
+    const inputValue = event.target.value;
+    
+    
+    if (!inputValue.includes(" ")) {
+      setRepeatPassword(inputValue);
+    }
   };
 
   const handleRegisterSubmit = (event) => {
@@ -85,7 +98,7 @@ const SignUp3 = () => {
     if (password !== repeatPassword) {
       alert("Las contraseñas no coinciden. Por favor, inténtalo de nuevo.");
     } else {
-      alert("Te has registrado con éxito!");
+      alert("En estos momentos no es posible registrarse, intente de nuevo mas tarde!");
       setApellido("");
       setNombre("");
       setDni("");
@@ -132,7 +145,7 @@ const SignUp3 = () => {
               <Form.Control
                 type="text"
                 style={{ fontStyle: "italic", color: "gray" }}
-                // placeholder="Nombre"
+       
                 minLength={3}
                 maxLength={30}
                 required
@@ -141,19 +154,7 @@ const SignUp3 = () => {
               />
             </Form.Group>
 
-            {/* <Form.Group className="mt-4 mb-3" controlId="formBasicEmail">
-              <Form.Label className="text-white mb-1 labels">DNI:</Form.Label>
-              <Form.Control
-                type="text"
-                style={{ fontStyle: "italic", color: "gray" }}
-                placeholder="Ingrese su dni sin puntos"
-                minLength={7}
-                maxLength={8}
-                required
-                value={dni}
-                onChange={handleChangeDni}
-              />
-            </Form.Group> */}
+            
             
 
             <Form.Group className="mt-4 mb-3" controlId="dni">
@@ -181,7 +182,7 @@ const SignUp3 = () => {
               <Form.Control
                 type="text"
                 style={{ fontStyle: "italic", color: "gray" }}
-                // placeholder="ingrese su nombre de usuario"
+           
                 minLength={5}
                 maxLength={20}
                 required

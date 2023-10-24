@@ -21,14 +21,7 @@ export default function MascotasDuenio() {
     raza: "",
   });
 
-  // const handleChangeValues = (event) => {
-  //   const { name, value } = event.target;
-
-  //   setFormValues({
-  //     ...formValues,
-  //     [name]: value,
-  //   });
-  // };
+  
 
   const handleChangeValues = (event) => {
     const { name, value } = event.target;

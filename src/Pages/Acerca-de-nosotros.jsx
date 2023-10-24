@@ -1,20 +1,19 @@
 import React from "react";
 import "../styles/styleAboutUs.css";
 import vComp from "../assets/videoComp.mp4";
-// import mComp from "../assets/strangerThings.mp3";
-// import m2Comp from "../assets/music.mp3";
+
 
 function AcercaDeNosotros() {
   return (
     <div>
       <div>
-        {/* <!-- video --> */}
+       
 
         <video src={vComp} autoPlay loop muted></video>
 
-        {/* <audio src={mComp} autoPlay loop></audio> */}
+      
 
-        {/* <audio src={m2Comp} autoPlay loop></audio> */}
+     
 
         <div className="aboutPadre m-5">
           <div className="aboutHijo"></div>
@@ -99,17 +98,7 @@ function AcercaDeNosotros() {
                   <br />
 
                   <div className="aboutParrafos mx-auto">
-                    {/* <p>
-                            Hola! Somos un grupo de estudiantes de desarrollo de software y
-                          estamos trabajando en la creación de una página de gastronomía en
-                          Tucumán. El objetivo principal de nuestro proyecto es ofrecer a
-                          los usuarios una plataforma donde puedan encontrar información
-                          sobre restaurantes, platos típicos y otros aspectos relacionados
-                          con la gastronomía. Para lograr este objetivo, hemos identificado
-                          las necesidades y gustos de los diferentes clientes y con ello
-                          clasificamos los lugares en Cervecerías, Cafeterías, Restaurantes,
-                          Comida al paso, Bares Temáticos
-                        </p> */}
+                    
                     <p className="text-center">
                       Hola! Somos{" "}
                       <span className="aboutSpanWebPets">
@@ -134,18 +123,7 @@ function AcercaDeNosotros() {
                     </p>
                   </div>
 
-                  {/* <div className='aboutParrafos mx-auto'>
-                        <ul className='ul mx-auto'>
-                          <li>HTML</li>
-                          <li>CSS</li>
-                          <li>Bootstrap</li>
-                          <li>Javascript</li>
-                          <li>React</li>
-                          <li>Express</li>
-                          <li>Nodejs</li>
-                          <li>MongoDB</li>
-                        </ul>
-                      </div> */}
+                 
 
                   <div className="aboutParrafos mx-auto">
                     <p>
