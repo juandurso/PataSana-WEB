@@ -137,15 +137,24 @@ const Home = () => {
     };
     const handleChange = (e) => {
       const inputValue = e.target.value;
-  
+    
       // Expresión regular para permitir letras y espacios en blanco
       const lettersAndSpacesRegex = /^[A-Za-z\s]+$/;
-  
+    
       if (lettersAndSpacesRegex.test(inputValue) || inputValue === '') {
-        // Si el valor cumple con la expresión regular o es una cadena vacía, actualiza el estado
-        setFormData({ name: inputValue });
+        setFormData((prevData) => ({ ...prevData, name: inputValue }));
       }
     };
+    
+    const handleChangeEmail = (e) => {
+      const inputValue = e.target.value;
+    
+      // Puedes aplicar validaciones específicas para el campo de correo electrónico aquí si es necesario
+    
+      setFormData((prevData) => ({ ...prevData, email: inputValue }));
+    };
+    
+    
 
     const handleChangeMessage = (e) => {
       const inputValue = e.target.value;
@@ -693,7 +702,7 @@ const Home = () => {
       id='email'
       name='email'
       value={formData.email}
-      onChange={handleChange}
+      onChange={handleChangeEmail}
       required
     />
   </div>
