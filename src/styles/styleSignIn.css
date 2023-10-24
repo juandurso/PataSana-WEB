@@ -1,0 +1,98 @@
+.div-padre {
+  background-color: #013d37;
+}
+
+.labels {
+ text-align: left !important;
+ color: #ffc107 !important;
+}
+
+@media screen and (min-width: 320px) {
+    .div-padre {
+      padding-top: 20px;        
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    .container-b {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .div-padre {
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+}
+
+@media screen and (min-width: 425px) {
+  .div-padre {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  /* .inputs {
+    margin-left: 10px ;
+    margin-right: 10px ;
+  } */
+}
+
+@media screen and (min-width: 426px) {
+  .container-b {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .div-padre {
+    padding-top: 40px;
+    padding-right: 220px;
+    padding-left: 220px;
+  }
+  .container-b {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+    .div-padre {
+      padding-right: 350px;
+      padding-left: 350px;
+    }
+    .container-b {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .div-padre {
+      padding-right: 550px;
+      padding-left: 550px;
+    }
+}
+
+@media screen and (min-width: 1520px) {
+    .div-padre {
+      padding-right: 605px;
+      padding-left: 605px;
+    }
+}
+
+/* MAX WIDTH */
+
+@media screen and (max-width: 426px) {
+  .container-b {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-b {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

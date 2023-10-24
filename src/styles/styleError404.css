@@ -1,0 +1,25 @@
+.error404GranPadre {
+  background-color:#014f47 ;
+  /* border: 4px solid fuchsia; */
+}
+
+.error404Padre {
+  position: relative;
+}
+
+.error404Imagen {
+  width: 100%;
+  height: 100%;
+}
+
+.error404HijoSuperior {
+  position: absolute;
+  background-color:#014f47 ;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  padding: 20px; /* Puedes ajustar el relleno según tus necesidades */
+  box-sizing: border-box; /*Para que el relleno no afecte el tamaño total*/
+  color: #9C6B4B; /* Solo para ilustrar el texto sobre la imagen */
+  /* font-size: 18px; Solo para ilustrar el texto sobre la imagen */
+}

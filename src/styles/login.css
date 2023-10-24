@@ -1,0 +1,159 @@
+.div-padre {
+  background-color: #013d37;
+}
+
+.titulo {
+  font-weight: 500;
+}
+
+.login-form {
+  position: relative;
+}
+
+.labels {
+  text-align: left !important;
+  /* color: #ffc107 !important; */
+  color: #deae1e !important;
+  font-weight: 500;
+}
+
+.error-button-container {
+  position: relative;
+  height: 80px; /* Ajusta la altura según tus necesidades */
+  width: 100%;
+}
+
+.mensajeError {
+  /* background-color: rgb(226, 192, 192); */
+  /* border: 1px solid red; */
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(255, 36, 36) !important;
+  padding-left: 3px;
+  padding-right: 3px;
+  width: 120%;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.mensajeError.active {
+  opacity: 1;
+}
+
+.boton {
+  margin-top: 48px;  
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  background-color: #9C6B4B !important;
+}
+
+.olvidaste {
+  font-size: 15px;
+  font-style: italic;
+  text-decoration: underline;
+  /* color: #ffc107; */
+  color: rgb(115, 201, 241);
+}
+
+
+
+/* MEDIAS QUERY INICIO */
+
+@media screen and (min-width: 320px) {
+  .div-padre {
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .container-b {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .div-padre {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .div-padre {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .container-b {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .div-padre {
+    padding-top: 40px;
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+  .container-b {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .div-padre {
+    padding-right: 320px;
+    padding-left: 320px;
+  }
+  .container-b {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .div-padre {
+    padding-right: 520px;
+    padding-left: 520px;
+  }
+}
+
+@media screen and (min-width: 1520px) {
+  .div-padre {
+    padding-right: 560px;
+    padding-left: 560px;
+  }
+}
+
+
+
+@media screen and (max-width: 426px) {
+  .container-b {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-b {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* MEDIAS QUERY FIN */
+
+
+
