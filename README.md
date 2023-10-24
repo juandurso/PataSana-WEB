@@ -26,3 +26,4 @@ Base de Datos: MongoDB (Base de Dato No-Relacional)
 - @karimtucu (https://github.com/karimtucu) [Developer]
 - @marghid (https://github.com/marghid) [Developer]
 - @Nachocastro1 (https://github.com/Nachocastro1) [Developer]
+- @FabianBriz (https://github.com/FabianBriz) [Developer]
